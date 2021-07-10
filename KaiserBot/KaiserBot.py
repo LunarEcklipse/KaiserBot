@@ -1,6 +1,8 @@
 import discord
+import json
 import asyncio
 import time
+from dpyConsole import Console
 
 ### TIMESTAMP STUFF ###
 
@@ -33,6 +35,11 @@ timezones = json.loads(raw)
 file.close()
 print(CreateTimestamp(), "Timezones loaded.")
 
-client = discord.client()
+client = discord.Client()
+console = Console(client)
 
+console.start()
+client.run("ODYzNTE2NjI3NzM5NzM4MTIz.YOoChw.YnxdmspRUcNR86vvCkH7lgHT3xc")
+
+# Bot Token: ODYzNTE2NjI3NzM5NzM4MTIz.YOoChw.YnxdmspRUcNR86vvCkH7lgHT3xc
 
