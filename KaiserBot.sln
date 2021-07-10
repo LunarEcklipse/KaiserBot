@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "KaiserBot", "KaiserBot\KaiserBot.pyproj", "{2FB6B99B-A252-431A-A094-0FFAF22EBC17}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FB6B99B-A252-431A-A094-0FFAF22EBC17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FB6B99B-A252-431A-A094-0FFAF22EBC17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3E646E9-578C-4C01-A60A-AAAC217C777B}
+	EndGlobalSection
+EndGlobal
