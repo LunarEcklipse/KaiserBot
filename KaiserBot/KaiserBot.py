@@ -24,6 +24,8 @@ def CreateTimestamp():
     convert = "[" + str(ts.tm_year) + "-" + AddZeroBelowTen(ts.tm_mon) + "-" + AddZeroBelowTen(ts.tm_mday) + " | " + AddZeroBelowTen(ts.tm_hour) + ":" + AddZeroBelowTen(ts.tm_min) + ":" + AddZeroBelowTen(ts.tm_sec) + " UTC " + utcHrs + ":" + utcMin + "]"
     return convert
 
+### TIME ZONE SHIT ###
+
 ### ACTUAL SHIT ###
 
 print("Kaiserbot v1.0.0")
