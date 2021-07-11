@@ -222,7 +222,10 @@ async def CommandDifference(message, msgSplit, timezone):
     tgmt = time.gmtime()
 
 async def CommandTimeTZ(message, msgSplit, timezones):
-    timezoneSpec = msgSplit[2].upper()
+    try:
+        timezoneSpec = msgSplit[2].upper()
+    except(IndexError) as exception:
+        timezoneSpec = msgSplit[1].upper()
     timezonePossibilities = []
     timezoneCount = 0
     for i in timezones:
@@ -303,6 +306,16 @@ async def CommandTimeTZ(message, msgSplit, timezones):
 
 
 async def CommandTime(message, msgSplit, timezones):
+    noTimezone = False
+    try:
+        testGet = msgSplit[1]
+        if testGet == "time":
+            noTimezone = True
+    except(IndexError) as exception:
+        noTimezone = True
+    if noTimezone == False:
+        await CommandTimeTZ(message, msgSplit, timezones)
+        return
     noTimezone = False
     try:
         testGet = msgSplit[2]

@@ -1712,9 +1712,9 @@
   {
     "value": "Pyongyang Time",
     "abbr": "PYT",
-    "offset": 8.5,
+    "offset": 9,
     "isdst": false,
-    "text": "(UTC+08:30) Pyongyang",
+    "text": "(UTC+09:00) Pyongyang",
     "utc": [
       "Asia/Pyongyang"
     ]
