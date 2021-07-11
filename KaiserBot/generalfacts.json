@@ -1,0 +1,11 @@
+[
+    {
+        "text": "UTC stands for \"Universal Time Coordinated\", and is the world-wide standard for tracking time-zones. Every time zone is relative to UTC. Before 1972, this was known as \"GMT\", or \"Greenwich Mean Time\"."
+    }
+    {
+        "text": "My birthday was March 13, 1414. That means it's been {daysSinceBirthday} days, or about {yearsSinceBirthday} years since!"
+    }
+    {
+        "text": "Today is the {daysYear}{dateSuffix} day of the year."
+    }
+]
