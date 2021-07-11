@@ -26,6 +26,12 @@ def CreateTimestamp():
 
 ### TIME ZONE SHIT ###
 
+### MESSAGE HANDLER ###
+
+def MessageHandler(message):
+
+
+
 ### ACTUAL SHIT ###
 
 print("Kaiserbot v1.0.0")
@@ -36,9 +42,21 @@ raw = file.read()
 timezones = json.loads(raw)
 file.close()
 print(CreateTimestamp(), "Timezones loaded.")
-
 client = discord.Client()
 console = Console(client)
+
+@client.event
+async def on_ready(): 
+    print(CreateTimestamp(), "Kaiser is now ready!")
+    
+@client.event
+async def on_message(message):
+    if message.author == client.user: # Don't answer messages from yourself.
+        return
+
+    MessageHandler(message)
+
+
 
 console.start()
 client.run("ODYzNTE2NjI3NzM5NzM4MTIz.YOoChw.YnxdmspRUcNR86vvCkH7lgHT3xc")
