@@ -5,9 +5,14 @@ import asyncio
 import time
 import random
 import math
+import os
 from dpyConsole import Console
 
 ### TIMESTAMP STUFF ###
+
+absPath = os.path.abspath(__file__)
+dname = os.path.dirname(absPath)
+os.chdir(dname)
 
 def AddZeroBelowTen(inNum): # This function is used for time-stamping as it adds a 0 before any number less than 10 to make it easier to read. It also converts the number to a string so that's cool.
     outStr = ""
@@ -498,6 +503,7 @@ def FunFactGenerator():
 
 print("Kaiserbot v1.0.0")
 print(CreateTimestamp(), "Awake!")
+print(CreateTimestamp(), "Current Working Directory:", os.getcwd())
 client = discord.Client()
 console = Console(client)
 
@@ -509,7 +515,7 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user: # Don't answer messages from yourself.
         return
-
+    cwd = os.getcwd()
     file = open("Timezones.json", 'r')
     raw = file.read()
     timezones = json.loads(raw)
