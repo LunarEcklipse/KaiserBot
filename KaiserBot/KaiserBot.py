@@ -31,7 +31,7 @@ def CreateTimestamp():
 
 ### MESSAGE HANDLER ###
 
-async def MessageHandler(message, timezones):
+async def MessageHandler(client, message, timezones):
     ResponseDict = {
         "Responses":
         [
@@ -72,8 +72,86 @@ async def MessageHandler(message, timezones):
                 await CommandTime(message, msgSplit, timezones)
                 return
             return
+    else:
+        file = open("response.json", 'r')
+        raw = file.read()
+        file.close()
+        response = json.loads(raw)
+
+        await ResponseHandler(client, message, msg, response)
+        return
 
 ### COMMANDS ###
+
+def GetReactionDict():
+    reactionDict = { # I had to do it this way because json encodes shit out
+        "Reactions":
+        [
+            {
+                "ReactID": 0,
+                "Reaction": "❤️"
+            }
+        ]
+    }
+    return reactionDict
+
+
+async def ResponseHandler(client, message, msg, response):
+    messageContainsPing = False
+    if client.user.mentioned_in(message):
+        messageContainsPing = True
+    for i in response:
+        for j in i["contains"]:
+            if msg.find(j["text"]) != -1:
+                if i["contains_ping"] == True and messageContainsPing == False: # return if the message needs a ping but has none
+                    return
+                if i["send_message"] == True:
+                    count = -1
+                    for k in i["text_response"]:
+                        count += 1
+                        if count == -1:
+                            return
+                    randNum = random.randint(0, count)
+                    replyMsgUnformatted = i["text_response"][randNum]["text"]
+                    replyMsg = replyMsgUnformatted.format(message_author = message.author.mention)
+                    if i["reply"] == True:
+                        await message.channel.send(replyMsg, reference = message)
+                    else:
+                        await message.channel.send(replyMsg)
+                    return
+                else:
+                    if i["react_to_message"] == True:
+                        reactionDict = GetReactionDict()
+                        reaction = "❓"
+                        for k in reactionDict["Reactions"]:
+                            if i["reaction"] == k["ReactID"]:
+                                reaction = k["Reaction"]
+                        await message.add_reaction(reaction)
+        for j in i["message_compare_full"]:
+            if msg == j["text"]:
+                if i["contains_ping"] == True and messageContainsPing == False: # return if the message needs a ping but has none
+                    return
+                if i["send_message"] == True:
+                    for k in i["text_response"]:
+                        count += 1
+                    if count == -1:
+                        return
+                    randNum = random.randint(0, count)
+                    replyMsgUnformatted = i["text_response"][randNum]["text"]
+                    replyMsg = replyMsgUnformatted.format(message_author = message.author.mention)
+                    if i["reply"] == True:
+                        await message.channel.send(replyMsg, reference = message)
+                    else:
+                        await message.channel.send(replyMsg)
+                    return
+                else:
+                    if i["react_to_message"] == True:
+                        reactionDict = GetReactionDict()
+                        reaction = "❓"
+                        for k in reactionDict["Reactions"]:
+                            if i["reaction"] == k["ReactID"]:
+                                reaction = k["Reaction"]
+                        await message.add_reaction(reaction)
 
 def GetBlankEmbed():
     embed = {
@@ -292,7 +370,7 @@ async def CommandTimeTZ(message, msgSplit, timezones):
                 elif tzDay == 3 or tzDay == 23:
                     dateSuffix == "rd"
 
-                descString = "There, the date is currently " + currWkday + ", the " + str(tzDay) + dateSuffix + " of " + currMonth + ", " + str(tzYear) + ".\nI better recall this timezone as " + value + "."
+                descString = "There, the date is currently " + currWkday + ", the " + str(tzDay) + dateSuffix + " of " + currMonth + ", " + str(tzYear) + ".\nI better recall this time zone as " + value + "."
                 funFactString = FunFactGenerator()
 
                 msgEmbed = GetBlankEmbed()
@@ -376,53 +454,45 @@ async def CommandTime(message, msgSplit, timezones):
 
 def FunFactGenerator():
     random.seed(round(time.time()))
-    FunFactID = random.randint(0,3)
-    if FunFactID == 0:
-        fact = FunFact1()
-        return fact
-    if FunFactID == 1:
-        fact = FunFact2()
-        return fact
-    if FunFactID == 2:
-        fact = FunFact3()
-        return fact
-    if FunFactID == 3:
-        fact = FunFact4()
-        return fact
-    
+    try:
+        file = open("generalfacts.json", 'r')
+        raw = file.read()
+        file.close()
+        generalfacts = json.loads(raw)
+    except(FileNotFoundError) as exception:
+        return "Error: generalfacts.json is missing!"
+    count = -1 # starting at -1 since the first position is 0 in an array
+    for i in generalfacts:
+        count +=1
+    randNum = 0
+    if count == -1:
+        return "null"
+    else:
+        randNum = random.randint(0, count)
+        
+        randFactUnformatted = generalfacts[randNum]["text"]
+        tz = time.localtime()
+        tzOff = tz.tm_gmtoff
+        timeEpoch = math.floor(time.time() + tzOff)
+        daysBirthdayEpoch = math.floor(timeEpoch / 86400)
+        yearsBirthdayEpoch = math.floor(timeEpoch / 365.25) # .25 accounts for leap years
+        daysBirthday = daysBirthdayEpoch + 203004
+        yearsBirthday = yearsBirthdayEpoch + 556
+        dateOfYear = tz.tm_yday
 
-def FunFact1():
-    sinceEpoch = str(math.floor(time.time()))
-    outStr = "It has been exactly " + sinceEpoch + " seconds since January 1, 1970 (GMT). In computer time, this is known as \"epoch\"."
-    return outStr
+        dateOfYearCut = dateOfYear % 100
+        dateOfYearCutCut = dateOfYearCut % 10
+        dateOfYearSuffix = "th"
 
-def FunFact2():
-    daysSinceEpoch = math.floor(time.time() / 86400)
-    daysSinceBirthday = 203004 + daysSinceEpoch
-    yearsSinceBirthday = math.floor(daysSinceBirthday / 365)
-    outStr = "My birthday was March 13, 1414. That means it's been " + str(daysSinceBirthday) + " days, or about " + str(yearsSinceBirthday) + " years since!"
-    return outStr
+        if dateOfYearCutCut == 1 and dateOfYearCut != 11:
+            dateOfYearSuffix = "st"
+        elif dateOfYearCutCut == 2 and dateOfYearCut != 12:
+            dateOfYearSuffix = "nd"
+        elif dateOfYearCutCut == 3 and dateOfYearCut != 13:
+            dateOfYearSuffix = "rd"
 
-def FunFact3():
-    ts = time.localtime()
-    dateTime = ts.tm_yday
-
-    calc = dateTime % 100
-    calcLess = calc % 10
-    dateSuffix = "th"
-    if calcLess == 1 and calc != 11:
-        dateSuffix = "st"
-    elif calcLess == 2 and calc != 12:
-        dateSuffix = "nd"
-    elif calcLess == 3 and calc != 13:
-        dateSuffix == "rd"
-
-    outStr = "Today is the " + str(dateTime) + dateSuffix + " day of the year."
-    return outStr
-
-def FunFact4():
-    outStr = "UTC stands for \"Universal Time Coordinated\", and is the world-wide standard for tracking time-zones. Every time zone is relative to UTC. Before 1972, this was known as \"GMT\", or \"Greenwich Mean Time\"."
-    return outStr
+        randFactFormatted = randFactUnformatted.format(daysSinceBirthday = daysBirthday, yearsSinceBirthday = yearsBirthday, daysYear = dateOfYear, dateSuffix = dateOfYearSuffix)
+        return randFactFormatted
 
 ### ACTUAL SHIT ###
 
@@ -444,7 +514,7 @@ async def on_message(message):
     raw = file.read()
     timezones = json.loads(raw)
     file.close()
-    await MessageHandler(message, timezones)
+    await MessageHandler(client, message, timezones)
 
 console.start()
 client.run("ODYzNTE2NjI3NzM5NzM4MTIz.YOoChw.YnxdmspRUcNR86vvCkH7lgHT3xc")

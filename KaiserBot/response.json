@@ -1,0 +1,82 @@
+[
+    {
+        "contains_ping": true,
+        "contains": 
+        [
+            {
+            "text": "hi"
+            },
+            {
+            "text": "hello"
+            }
+        ],
+        "message_compare_full":
+        [
+        ],
+        "send_message": true,
+        "reply": false,
+        "text_response": 
+        [
+            {
+                "text": "{message_author}, yes?"
+            },
+            {
+                "text": "{message_author}, I exist."
+            }
+        ],
+        "react_to_message": false,
+        "reaction": null
+        
+    },
+    {
+        "contains_ping": false,
+        "contains":
+        [
+        ],
+        "message_compare_full":
+        [
+            {
+                "text": "kaiser date"
+            },
+            {
+                "text": "kaiser smooch"
+            }
+        ],
+        "send_message": false,
+        "reply": false,
+        "text_response":
+        [
+        ],
+        "react_to_message": true,
+        "reaction": 0
+    },
+	{
+        "contains_ping": false,
+        "contains": 
+        [
+            {
+            "text": "what time is it"
+            },
+            {
+            "text": "what's the time"
+            }
+        ],
+        "message_compare_full":
+        [
+        ],
+        "send_message": true,
+        "reply": true,
+        "text_response": 
+        [
+            {
+                "text": "Aye, you forgot about me haven't ye? Type \"!kaiser [timezone abbreviation]\" to ask me what time it is for a specific region."
+            },
+            {
+                "text": "I can help ye with that. Type \"!kaiser [timezone abbreviation]\" to ask me what time it is for a specific region."
+            }
+        ],
+        "react_to_message": false,
+        "reaction": null
+        
+    }
+]
