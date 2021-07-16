@@ -480,7 +480,7 @@ def FunFactGenerator():
         tzOff = tz.tm_gmtoff
         timeEpoch = math.floor(time.time() + tzOff)
         daysBirthdayEpoch = math.floor(timeEpoch / 86400)
-        yearsBirthdayEpoch = math.floor(timeEpoch / 365.25) # .25 accounts for leap years
+        yearsBirthdayEpoch = math.floor(daysBirthdayEpoch / 365.25) # .25 accounts for leap years
         daysBirthday = daysBirthdayEpoch + 203004
         yearsBirthday = yearsBirthdayEpoch + 556
         dateOfYear = tz.tm_yday
@@ -522,7 +522,14 @@ async def on_message(message):
     file.close()
     await MessageHandler(client, message, timezones)
 
-console.start()
-client.run("ODYzNTE2NjI3NzM5NzM4MTIz.YOoChw.YnxdmspRUcNR86vvCkH7lgHT3xc")
+file = open("BotToken.key", 'r')
+token = file.read()
+file.close()
 
-# Bot Token: ODYzNTE2NjI3NzM5NzM4MTIz.YOoChw.YnxdmspRUcNR86vvCkH7lgHT3xc
+if token == "":
+    print(CreateTimestamp(), "Bot token is empty! Make sure that your bot token is in your BotToken.key file!")
+    input("Press enter to continue...")
+    sys.exit()
+
+console.start()
+client.run(token)

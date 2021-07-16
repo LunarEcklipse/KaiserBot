@@ -1747,5 +1747,14 @@
     "text": "(UTC+04:00) Volgograd",
     "utc": [
     ]
+  },
+  {
+    "value": "Argentina Time",
+    "abbr": "ART",
+    "offset": 4,
+    "isdst": false,
+    "text": "(UTC-03:00) Volgograd",
+    "utc": [
+    ]
   }
 ]
