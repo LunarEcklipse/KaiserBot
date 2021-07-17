@@ -91,6 +91,16 @@ async def MessageHandler(client, message, timezones):
 
 ### COMMANDS ###
 
+### ### BLACKLIST / WHITELIST ### ###
+
+def BlacklistChannel(ChannelID): # TODO: FINISH
+    try:
+        file = open(".//Data//blacklist.json", 'r')
+    except(FileNotFoundError) as exception:
+        print(CreateTimestamp(), "blacklist.json not found!")
+        return
+    
+
 def GetReactionDict():
     reactionDict = { # I had to do it this way because json encodes shit out
         "Reactions":
@@ -458,6 +468,7 @@ async def CommandTime(message, msgSplit, timezones):
     msgEmbed = GetBlankEmbed()
     msgEmbed["title"] = titleString
     msgEmbed["description"] = descString
+    msgEmbed["footer"]["text"] = ts.tm_zone
     msgEmbed["fields"][0]["value"] = funFactString
 
     msgEmbedReady = discord.Embed.from_dict(msgEmbed)
@@ -542,4 +553,4 @@ if token == "":
     sys.exit()
 
 console.start()
-client.run(token)
+client.run(token) # Make sure this is always at the bottom!
