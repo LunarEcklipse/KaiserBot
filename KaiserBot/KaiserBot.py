@@ -8,11 +8,14 @@ import math
 import os
 from dpyConsole import Console
 
+version = "1.1.0"
+
 ### TIMESTAMP STUFF ###
 
-absPath = os.path.abspath(__file__)
+absPath = os.path.abspath(__file__) # This little chunk makes sure the working directory is correct.
 dname = os.path.dirname(absPath)
 os.chdir(dname)
+random.seed(round(time.time())) # Hopefully by putting this here, this will fix the bug which caused messages to constantly have the same factoid.
 
 def AddZeroBelowTen(inNum): # This function is used for time-stamping as it adds a 0 before any number less than 10 to make it easier to read. It also converts the number to a string so that's cool.
     outStr = ""
@@ -78,7 +81,7 @@ async def MessageHandler(client, message, timezones):
                 return
             return
     else:
-        file = open("response.json", 'r')
+        file = open(".\\Data\\response.json", 'r')
         raw = file.read()
         file.close()
         response = json.loads(raw)
@@ -167,6 +170,10 @@ def GetBlankEmbed():
         "thumbnail":
         {
             "url": "https://cdn.discordapp.com/app-icons/863516627739738123/d2904b46279d7e669ee95789c3b87241.png?size=256"
+        },
+        "footer":
+        {
+            "text": ""
         },
         "author": 
         {
@@ -378,9 +385,12 @@ async def CommandTimeTZ(message, msgSplit, timezones):
                 descString = "There, the date is currently " + currWkday + ", the " + str(tzDay) + dateSuffix + " of " + currMonth + ", " + str(tzYear) + ".\nI better recall this time zone as " + value + "."
                 funFactString = FunFactGenerator()
 
+                footerString = value
+
                 msgEmbed = GetBlankEmbed()
                 msgEmbed["title"] = titleString
                 msgEmbed["description"] = descString
+                msgEmbed["footer"]["text"] = footerString
                 msgEmbed["fields"][0]["value"] = funFactString
 
                 msgEmbedReady = discord.Embed.from_dict(msgEmbed)
@@ -460,7 +470,7 @@ async def CommandTime(message, msgSplit, timezones):
 def FunFactGenerator():
     random.seed(round(time.time()))
     try:
-        file = open("generalfacts.json", 'r')
+        file = open(".\\Data\\generalfacts.json", 'r')
         raw = file.read()
         file.close()
         generalfacts = json.loads(raw)
@@ -501,7 +511,7 @@ def FunFactGenerator():
 
 ### ACTUAL SHIT ###
 
-print("Kaiserbot v1.0.0")
+print("Kaiserbot v." + version)
 print(CreateTimestamp(), "Awake!")
 print(CreateTimestamp(), "Current Working Directory:", os.getcwd())
 client = discord.Client()
@@ -516,13 +526,13 @@ async def on_message(message):
     if message.author == client.user: # Don't answer messages from yourself.
         return
     cwd = os.getcwd()
-    file = open("Timezones.json", 'r')
+    file = open(".\\Data\\Timezones.json", 'r')
     raw = file.read()
     timezones = json.loads(raw)
     file.close()
     await MessageHandler(client, message, timezones)
 
-file = open("BotToken.key", 'r')
+file = open(".\\Data\\BotToken.key", 'r')
 token = file.read()
 file.close()
 
