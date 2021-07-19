@@ -40,6 +40,21 @@ def CreateTimestamp():
 ### MESSAGE HANDLER ###
 
 async def MessageHandler(client, message, timezones):
+
+    file = open(".//Data//blacklist.json", 'r')
+    raw = file.read()
+    file.close()
+    blacklist = json.loads(raw)
+
+    for i in blacklist["Channels"]:
+        if message.channel.id == i["ChannelID"]:
+            print(CreateTimestamp(), "Command detected in " + message.channel.name + ", but the channel is blacklisted.")
+            return
+    for i in blacklist["Users"]:
+        if message.author.id == i["UserID"]:
+            print(CreateTimestamp(), "Command detected from " + message.author.name + ", but the user is blacklisted.")
+            return
+
     ResponseDict = {
         "Responses":
         [
@@ -54,9 +69,18 @@ async def MessageHandler(client, message, timezones):
             {
                 "Keyword": "time",
                 "RespID": 1
+            },
+            {
+                "Keyword": "blacklist",
+                "RespID": 2
+            },
+            {
+                "Keyword": "whitelist",
+                "RespID": 3
             }
         ]
     }
+
 
     msg = message.content.lower()
     if msg.startswith("!kaiser"):
@@ -73,12 +97,32 @@ async def MessageHandler(client, message, timezones):
                     print(CreateTimestamp(), "Command response code found:", respID)
             except(IndexError) as exception:
                 respID = 1
+
+            if respID != 3:
+                for i in blacklist["Channels"]:
+                if message.channel.id == i["ChannelID"]:
+                    print(CreateTimestamp(), "Command detected in " + message.channel.name + ", but the channel is blacklisted.")
+                    return
+                for i in blacklist["Users"]:
+                if message.author.id == i["UserID"]:
+                    print(CreateTimestamp(), "Command detected from " + message.author.name + ", but the user is blacklisted.")
+                    return
+
             if respID == 0:
                 await CommandDifference(message, msgSplit, timezones)
                 return
             if respID == 1:
                 await CommandTime(message, msgSplit, timezones)
                 return
+            if respID == 2:
+                blacklistSuccess = await CommandBlacklist(message, msgSplit)
+                if blacklistSuccess == False:
+                    message.add_reaction("❌")
+                else:
+                    message.channel.send("You do not have the required permissions to perform this action", reference = message)
+                return
+            if respID == 3:
+                await CommandWhitelist(message, msgSplit)
             return
     else:
         file = open(".\\Data\\response.json", 'r')
@@ -91,15 +135,109 @@ async def MessageHandler(client, message, timezones):
 
 ### COMMANDS ###
 
+def CommandBlacklist(message, msgSplit): # TODO: Update this to determine if it's a user or channel and fix it
+
+    permissions = message.author.permissions_in(message.channel)
+    if permissions.manage_permissions == False:
+        return False
+
+
 ### ### BLACKLIST / WHITELIST ### ###
 
-def BlacklistChannel(ChannelID): # TODO: FINISH
+def BlacklistChannel(ChannelID):
     try:
         file = open(".//Data//blacklist.json", 'r')
     except(FileNotFoundError) as exception:
-        print(CreateTimestamp(), "blacklist.json not found!")
+        print(CreateTimestamp(), "blacklist.json not found! Making a new one.")
+        file = open(".//Data//blacklist.json", 'x')
+        file.close()
+        file = open(".//Data//blacklist.json", 'w')
+        file.write("{\"Channels\": [], \"Users\": []}")
+        file.close()
+        file = open(".//Data//blacklist.json", 'r')
+    raw = file.read()
+    blacklist = json.loads(raw)
+    file.close()
+    for i in blacklist["Channels"]:
+        if i["ChannelID"] == ChannelID:
+            print(CreateTimestamp(), "This channel is already blacklisted.")
+            return
+    blacklist["Channels"].append({"ChannelID": ChannelID})
+    raw = json.dumps(blacklist)
+    file = open(".//Data//blacklist.json", 'w')
+    file.write(raw)
+    file.close()
+    print(CreateTimestamp(), "Channel with ID", ChannelID, "blacklisted.")
+    return
+
+def BlacklistUser(UserID):
+    try:
+        file = open(".//Data//blacklist.json", 'r')
+    except(FileNotFoundError) as exception:
+        print(CreateTimestamp(), "blacklist.json not found! Making a new one.")
+        file = open(".//Data//blacklist.json", 'x')
+        file.close()
+        file = open(".//Data//blacklist.json", 'w')
+        file.write("{\"Channels\": [], \"Users\": []}")
+        file.close()
+        file = open(".//Data//blacklist.json", 'r')
+    raw = file.read()
+    blacklist = json.loads(raw)
+    file.close()
+    for i in blacklist["Users"]:
+        if i["UserID"] == UserID:
+            print(CreateTimestamp(), "This user is already blacklisted.")
+            return
+    blacklist["Users"].append({"UserID": UserID})
+    raw = json.dumps(blacklist)
+    file = open(".//Data//blacklist.json", 'w')
+    file.write(raw)
+    file.close()
+    print(CreateTimestamp(), "User with ID", UserID, "blacklisted.")
+    return
+
+def WhitelistUser(UserID):
+    try:
+        file = open(".//Data//blacklist.json", 'r')
+    except(FileNotFoundError) as exception:
+        print(CreateTimestamp(), "blacklist.json not found! Making a new one.")
+        file = open(".//Data//blacklist.json", 'x')
+        file.close()
         return
-    
+    raw = file.read()
+    blacklist = json.loads(raw)
+    for i in blacklist["Users"]:
+        if i["UserID"] == UserID:
+            del i
+            print(CreateTimestamp(), "This user has been whitelisted.")
+            break
+    raw = json.dumps(blacklist)
+    file = open(".//Data//blacklist.json", 'w')
+    file.write(raw)
+    file.close()
+    return
+
+def WhitelistChannel(ChannelID):
+    try:
+        file = open(".//Data//blacklist.json", 'r')
+    except(FileNotFoundError) as exception:
+        print(CreateTimestamp(), "blacklist.json not found! Making a new one.")
+        file = open(".//Data//blacklist.json", 'x')
+        file.close()
+        return
+    raw = file.read()
+    blacklist = json.loads(raw)
+    for i in blacklist["Channels"]:
+        if i["ChannelID"] == ChannelID:
+            del i
+            print(CreateTimestamp(), "This channel has been whitelisted.")
+            break
+    raw = json.dumps(blacklist)
+    file = open(".//Data//blacklist.json", 'w')
+    file.write(raw)
+    file.close()
+    return
+
 
 def GetReactionDict():
     reactionDict = { # I had to do it this way because json encodes shit out
