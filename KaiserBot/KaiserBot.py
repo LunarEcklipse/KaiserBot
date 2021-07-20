@@ -136,10 +136,39 @@ async def MessageHandler(client, message, timezones):
 ### COMMANDS ###
 
 def CommandBlacklist(message, msgSplit): # TODO: Update this to determine if it's a user or channel and fix it
+    try:
+        check = msgSplit[2]
+    except(IndexError) as exception: # If this field is left blank, assume they are trying to blacklist the channel.
+        permissions = message.author.permissions_in(message.channel)
+        if permissions.manage_permissions == False:
+            return False
+        BlacklistChannel(message.channel.id)
+        return True
+    if check == "me" or check == "myself":
+        BlacklistUser(message.author.id)
+        return True
+    noPerms = False
+    couldNotBlacklist = 0 # How many users the command did not blacklist due to lacking permissions. Return this in a message after.
+    mentions = message.mentions
+    blacklists = 0
+    for i in mentions:
+        if message.author.id == i.id:
+            BlacklistUser(message.author.id)
+            blacklists += 1
+        else:
+            permissions = message.author.permissions_in(message.channel)
+            if permissions.administrator == True or permissions.manage_roles == True:
+                BlacklistUser(i.id)
+                blacklists += 1
+            else:
+                noPerms = True
+                couldNotBlacklist +=1 # TODO: Continue here to make blacklisting channels work.
 
-    permissions = message.author.permissions_in(message.channel)
-    if permissions.manage_permissions == False:
-        return False
+
+
+
+
+
 
 
 ### ### BLACKLIST / WHITELIST ### ###
