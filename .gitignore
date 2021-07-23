@@ -340,3 +340,4 @@ ASALocalRun/
 healthchecksdb
 
 # Stop the private key from going up
+*.key
