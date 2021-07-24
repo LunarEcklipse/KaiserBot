@@ -151,6 +151,7 @@ def CommandBlacklist(message, msgSplit): # TODO: Update this to determine if it'
     couldNotBlacklist = 0 # How many users the command did not blacklist due to lacking permissions. Return this in a message after.
     mentions = message.mentions
     blacklists = 0
+    loops = 0
     for i in mentions:
         if message.author.id == i.id:
             BlacklistUser(message.author.id)
@@ -163,6 +164,11 @@ def CommandBlacklist(message, msgSplit): # TODO: Update this to determine if it'
             else:
                 noPerms = True
                 couldNotBlacklist +=1 # TODO: Continue here to make blacklisting channels work.
+        loops += 1
+    if loops == 0: # This means there was no users, so assume the blacklist was for the channel.
+
+
+
 
 
 
