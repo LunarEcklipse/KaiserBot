@@ -8,14 +8,14 @@ import math
 import os
 from dpyConsole import Console
 
-version = "1.1.0"
-
-### TIMESTAMP STUFF ###
+version = "1.1.0-alpha"
 
 absPath = os.path.abspath(__file__) # This little chunk makes sure the working directory is correct.
 dname = os.path.dirname(absPath)
 os.chdir(dname)
 random.seed(round(time.time())) # Hopefully by putting this here, this will fix the bug which caused messages to constantly have the same factoid.
+
+### TIMESTAMP STUFF ###
 
 def AddZeroBelowTen(inNum): # This function is used for time-stamping as it adds a 0 before any number less than 10 to make it easier to read. It also converts the number to a string so that's cool.
     outStr = ""
@@ -45,15 +45,6 @@ async def MessageHandler(client, message, timezones):
     raw = file.read()
     file.close()
     blacklist = json.loads(raw)
-
-    for i in blacklist["Channels"]:
-        if message.channel.id == i["ChannelID"]:
-            print(CreateTimestamp(), "Command detected in " + message.channel.name + ", but the channel is blacklisted.")
-            return
-    for i in blacklist["Users"]:
-        if message.author.id == i["UserID"]:
-            print(CreateTimestamp(), "Command detected from " + message.author.name + ", but the user is blacklisted.")
-            return
 
     ResponseDict = {
         "Responses":
@@ -93,37 +84,52 @@ async def MessageHandler(client, message, timezones):
         for i in ResponseDict["Responses"]:
             try:
                 if msgSplit[1] == i["Keyword"]:
-                    respID = i["ResponseID"]
+                    respID = i["RespID"]
                     print(CreateTimestamp(), "Command response code found:", respID)
             except(IndexError) as exception:
+                print("Fuck")
                 respID = 1
 
-            if respID != 3:
-                for i in blacklist["Channels"]:
+        userIsBlacklisted = False
+        channelIsBlacklisted = False
+
+        print(respID)
+
+        if respID != 3:
+            for i in blacklist["Channels"]:
                 if message.channel.id == i["ChannelID"]:
                     print(CreateTimestamp(), "Command detected in " + message.channel.name + ", but the channel is blacklisted.")
                     return
-                for i in blacklist["Users"]:
+            for i in blacklist["Users"]:
                 if message.author.id == i["UserID"]:
-                    print(CreateTimestamp(), "Command detected from " + message.author.name + ", but the user is blacklisted.")
+                    if i["GuildID"] == message.guild.id:
+                        print(CreateTimestamp(), "Command detected from " + message.author.name + ", but the user is blacklisted from the bot in this guild.")
                     return
+        else:
+            for i in blacklist["Channels"]:
+                if message.channel.id == i["ChannelID"]:
+                    channelIsBlacklisted = True
+            for i in blacklist["Users"]:
+                if message.author.id == i["UserID"]:
+                    userIsBlacklisted = True
 
-            if respID == 0:
-                await CommandDifference(message, msgSplit, timezones)
-                return
-            if respID == 1:
-                await CommandTime(message, msgSplit, timezones)
-                return
-            if respID == 2:
-                blacklistSuccess = await CommandBlacklist(message, msgSplit)
-                if blacklistSuccess == False:
-                    message.add_reaction("❌")
-                else:
-                    message.channel.send("You do not have the required permissions to perform this action", reference = message)
-                return
-            if respID == 3:
-                await CommandWhitelist(message, msgSplit)
+        if respID == 0:
+            await CommandDifference(message, msgSplit, timezones)
             return
+        if respID == 1:
+            await CommandTime(message, msgSplit, timezones)
+            return
+        if respID == 2:
+            blacklistSuccess = CommandBlacklist(message, msgSplit)
+            if blacklistSuccess == True:
+                await message.add_reaction("❌")
+            else:
+                await message.channel.send("You do not have the required permissions to perform this action", reference = message)
+            return
+        if respID == 3:
+            whitelistSuccess = CommandWhitelist(message, msgSplit, userIsBlacklisted, channelIsBlacklisted)
+            return
+        return
     else:
         file = open(".\\Data\\response.json", 'r')
         raw = file.read()
@@ -140,38 +146,74 @@ def CommandBlacklist(message, msgSplit): # TODO: Update this to determine if it'
         check = msgSplit[2]
     except(IndexError) as exception: # If this field is left blank, assume they are trying to blacklist the channel.
         permissions = message.author.permissions_in(message.channel)
-        if permissions.manage_permissions == False:
+        if permissions.manage_permissions == False and permissions.administrator == False:
             return False
         BlacklistChannel(message.channel.id)
         return True
     if check == "me" or check == "myself":
-        BlacklistUser(message.author.id)
+        BlacklistUser(message.author.id, message.guild.id, False)
         return True
-    noPerms = False
-    couldNotBlacklist = 0 # How many users the command did not blacklist due to lacking permissions. Return this in a message after.
     mentions = message.mentions
     blacklists = 0
-    loops = 0
     for i in mentions:
         if message.author.id == i.id:
-            BlacklistUser(message.author.id)
+            BlacklistUser(message.author.id, message.guild.id, False)
             blacklists += 1
         else:
             permissions = message.author.permissions_in(message.channel)
             if permissions.administrator == True or permissions.manage_roles == True:
-                BlacklistUser(i.id)
+                BlacklistUser(i.id, message.guild.id, True)
                 blacklists += 1
-            else:
-                noPerms = True
-                couldNotBlacklist +=1 # TODO: Continue here to make blacklisting channels work.
-        loops += 1
-    if loops == 0: # This means there was no users, so assume the blacklist was for the channel.
+    if blacklists != 0:
+        return True
+    else:
+        return False
 
-
-
-
-
-
+def CommandWhitelist(message, msgSplit, userBlacklisted, channelBlacklisted):
+    try:
+        check = msgSplit[2]
+    except(IndexError) as exception: # If this field is left blank, assume they are trying to whitelist the channel.
+        permissions = message.author.permissions_in(message.channel)
+        if permissions.manage_permissions == False and permissions.administrator == False:
+            return False
+        WhitelistChannel(message.channel.id)
+        return True
+    if check == "me" or check == "myself":
+        if channelBlacklisted == True:
+            print(CreateTimestamp() + " User " + message.author.name + " tried to whitelist themself, but the channel is blacklisted.")
+            return False
+        permissions = message.author.permissions_in(message.channel)
+        adminAttempt = False
+        if permissions.manage_permissions == True or permissions.administrator == True:
+            adminAttempt = True
+        WhitelistUser(message.author.id, message.guild.id, adminAttempt)
+        return True
+    mentions = message.mentions
+    whitelists = 0
+    for i in mentions:
+        if message.author.id == i.id:
+            if channelBlacklisted == True:
+                print(CreateTimestamp() + " User " + message.author.name + " tried to whitelist themself, but the channel is blacklisted.")
+                return False
+            adminAttempt = False
+            permissions = message.author.permissions_in(message.channel)
+            if permissions.manage_permissions == True or permissions.administrator == True:
+                adminAttempt = True
+            WhitelistUser(message.author.id, message.guild.id, adminAttempt)
+            whitelists += 1
+            continue
+        else:
+            if channelBlacklisted == True or userBlacklisted == True:
+                 print(CreateTimestamp() + " User " + message.author.name + " tried to use a whitelist command, but they were stopped by the blacklist.")
+                 continue
+            permissions = message.author.permissions_in(message.channel)
+            if permissions.administrator == True or permissions.manage_roles == True:
+                WhitelistUser(i.id, message.guild.id, True)
+                whitelists += 1
+    if whitelists != 0:
+        return True
+    else:
+        return False
 
 
 
@@ -205,7 +247,7 @@ def BlacklistChannel(ChannelID):
     print(CreateTimestamp(), "Channel with ID", ChannelID, "blacklisted.")
     return
 
-def BlacklistUser(UserID):
+def BlacklistUser(UserID, GuildID, AdminBlacklist): # Admin blacklist means the user was blacklisted by someone with privileges and they cannot whitelist themselves if they do not have the same perms.
     try:
         file = open(".//Data//blacklist.json", 'r')
     except(FileNotFoundError) as exception:
@@ -223,15 +265,15 @@ def BlacklistUser(UserID):
         if i["UserID"] == UserID:
             print(CreateTimestamp(), "This user is already blacklisted.")
             return
-    blacklist["Users"].append({"UserID": UserID})
+    blacklist["Users"].append({"GuildID": GuildID, "UserID": UserID, "AdminBlacklisted": AdminBlacklist})
     raw = json.dumps(blacklist)
     file = open(".//Data//blacklist.json", 'w')
     file.write(raw)
     file.close()
-    print(CreateTimestamp(), "User with ID", UserID, "blacklisted.")
+    print(CreateTimestamp(), "User with ID: " + str(UserID) + " blacklisted in guild with ID: " + str(GuildID) + ".")
     return
 
-def WhitelistUser(UserID):
+def WhitelistUser(UserID, GuildID, AdminWhitelist):
     try:
         file = open(".//Data//blacklist.json", 'r')
     except(FileNotFoundError) as exception:
@@ -243,7 +285,12 @@ def WhitelistUser(UserID):
     blacklist = json.loads(raw)
     for i in blacklist["Users"]:
         if i["UserID"] == UserID:
-            del i
+            if i["AdminBlacklisted"] == True:
+                if AdminWhitelist == False:
+                    print(CreateTimestamp(), "This user needs to be whitelisted by an admin.")
+                    return False
+            indexPos = blacklist["Users"].index(i)
+            del blacklist["Users"][indexPos]
             print(CreateTimestamp(), "This user has been whitelisted.")
             break
     raw = json.dumps(blacklist)
@@ -264,7 +311,8 @@ def WhitelistChannel(ChannelID):
     blacklist = json.loads(raw)
     for i in blacklist["Channels"]:
         if i["ChannelID"] == ChannelID:
-            del i
+            indexPos = blacklist["Channels"].index(i)
+            del blacklist["Channels"][indexPos]
             print(CreateTimestamp(), "This channel has been whitelisted.")
             break
     raw = json.dumps(blacklist)
@@ -281,6 +329,14 @@ def GetReactionDict():
             {
                 "ReactID": 0,
                 "Reaction": "❤️"
+            },
+            {
+                "ReactID": 1,
+                "Reaction": "🔥"
+            },
+            {
+                "ReactID": 2,
+                "Reaction": "❓"
             }
         ]
     }
@@ -360,9 +416,6 @@ def GetBlankEmbed():
         },
         "author": 
         {
-            "name": "Kaiser",
-            "url": "",
-            "icon_url": "https://cdn.discordapp.com/app-icons/863516627739738123/d2904b46279d7e669ee95789c3b87241.png?size=256"
         },
         "fields":
         [
