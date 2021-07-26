@@ -1,0 +1,1 @@
+add tz offsets to tznames and then merge it with the big file so you can do cool shit with cities

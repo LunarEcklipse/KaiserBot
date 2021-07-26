@@ -6,6 +6,8 @@ import time
 import random
 import math
 import os
+import pytz
+from pytz import timezone
 from dpyConsole import Console
 
 version = "1.1.0-alpha"
