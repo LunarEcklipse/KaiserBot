@@ -2,6 +2,7 @@ import discord
 import discord.ext.tasks
 import json
 import asyncio
+from datetime import datetime
 import time
 import random
 import math
@@ -589,8 +590,9 @@ async def CommandTimeTZ(message, msgSplit, timezones):
                 WeekdayDict = GetWeekdayDict()
                 MonthDict = GetMonthConversion()
 
-                if tzHour > 12:
-                    tzHour = tzHour - 12
+                if tzHour > 11:
+                    if tzHour != 12:
+                        tzHour = tzHour - 12
                     AMPM = "PM"
                 else:
                     AMPM = "AM"
