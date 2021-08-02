@@ -53,7 +53,7 @@ async def MessageHandler(client, message, timezones):
         "Responses":
         [
             {
-                "Keyword": "difference",
+                "Keyword": "difference", # Difference between two time zones
                 "RespID": 0
             },
             {
@@ -71,6 +71,10 @@ async def MessageHandler(client, message, timezones):
             {
                 "Keyword": "whitelist",
                 "RespID": 3
+            }
+            {
+                "Keyword": "register" # For registering people to the bot so their time zone can be tracked.
+                "RespID": 4
             }
         ]
     }
@@ -131,6 +135,9 @@ async def MessageHandler(client, message, timezones):
             return
         if respID == 3:
             whitelistSuccess = CommandWhitelist(message, msgSplit, userIsBlacklisted, channelIsBlacklisted)
+            return
+        if respID == 4:
+            CommandRegister(message, msgSplit)
             return
         return
     else:
@@ -218,6 +225,11 @@ def CommandWhitelist(message, msgSplit, userBlacklisted, channelBlacklisted):
     else:
         return False
 
+def CommandRegister(message, msgSplit):
+    try:
+        test = msgSplit[2]
+    except(IndexError) as exception:
+        await message.channel.send("You need to specify your current offset.", reference=message)
 
 
 
