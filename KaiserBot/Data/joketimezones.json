@@ -1,0 +1,77 @@
+{
+    "pokemon":
+    [
+        {
+            "nodst":
+            [
+                {
+                    "offset": 1,
+                    "utcname": "UTC+01:00",
+                    "offsettext": "+01:00",
+                    "timezones":
+                    [
+                        {
+                            "name": "Kalos Standard Time",
+                            "abbrev": "PKST",
+                            "keywords":
+                            [
+                                {
+                                    "value": "pkst"
+                                }
+                            ],
+                            "databasenames":
+                            [
+                                {
+                                    "value": "Europe/Paris"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "offset": 2,
+                    "utcname": "UTC+02:00",
+                    "offsettext": "+02:00",
+                    "timezones":
+                    [
+                        {
+                            "name": "Kalos Daylight Savings Time",
+                            "abbrev": "PKDT",
+                            "keywords":
+                            [
+                                {
+                                    "value": "pkdt"
+                                }
+                            ],
+                            "databasenames":
+                            [
+                                {
+                                    "value": "Europe/Paris"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "dst":
+            [
+                {
+                    "name": "Kalos Time Zone",
+                    "abbrev": "PKT",
+                    "tzdatabase": "Europe/Paris",
+                    "keywords":
+                    [
+                        {
+                            "value": "pkt"
+                        },
+                        {
+                            "value": "kalos"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

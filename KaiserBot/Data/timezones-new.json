@@ -1,0 +1,1095 @@
+{
+    "nodst":
+    [
+        {
+            "offset": -12,
+            "utcname": "UTC−12:00",
+            "offsettext": "-12:00",
+            "timezones": 
+            [
+                {
+                    "name": "UTC−12:00",
+                    "abbrev": "UTC−12",
+                    "keywords":
+                    [
+                        {
+                            "value": "utc−12"
+                        },
+                        {
+                            "value": "utc-12"
+                        },
+                        {
+                            "value": "utc−12:00"
+                        },
+                        {
+                            "value": "utc-12:00"
+                        },
+                        {
+                            "value": "gmt+12"
+                        },
+                        {
+                            "value": "gmt+12:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+12"
+                        }
+                    ]
+                },
+                {
+                    "name": "Yankee Time Zone",
+                    "abbrev": "Y",
+                    "keywords":
+                    [
+                        {
+                            "value": "yankee"
+                        },
+                        {
+                            "value": "y"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+12"
+                        }
+                    ]
+                },
+                {
+                    "name": "Anywhere on Earth",
+                    "abbrev": "AOE",
+                    "keywords":
+                    [
+                        {
+                            "value": "aoe"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+12"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "offset": -11,
+            "utcname": "UTC−11:00",
+            "offsettext": "-11:00",
+            "timezones": 
+            [
+                {
+                    "name": "UTC−11:00",
+                    "abbrev": "UTC−11",
+                    "keywords":
+                    [
+                        {
+                            "value": "utc−11"
+                        },
+                        {
+                            "value": "utc-11"
+                        },
+                        {
+                            "value": "utc−11:00"
+                        },
+                        {
+                            "value": "utc-11:00"
+                        },
+                        {
+                            "value": "gmt+11"
+                        },
+                        {
+                            "value": "gmt+11:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+11"
+                        }
+                    ]
+                },
+                {
+                    "name": "Samoa Standard Time",
+                    "abbrev": "SST",
+                    "keywords":
+                    [
+                        {
+                        "value": "sst"
+                        },
+                        {
+                            "value": "samoa"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Samoa"
+                        },
+                        {
+                            "value": "US/Samoa"
+                        }
+                    ]
+                },
+                {
+                    "name": "Niue Time",
+                    "abbrev": "NUT",
+                    "keywords":
+                    [
+                        {
+                            "value": "nut"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Niue"
+                        }
+                    ]
+                },
+                {
+                    "name": "X-ray Time Zone",
+                    "abbrev": "X",
+                    "keywords":
+                    [
+                        {
+                            "value": "x"
+                        },
+                        {
+                            "value": "x-ray"
+                        },
+                        {
+                            "value": "xray"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+11"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "offset": -10,
+            "utcname": "UTC−10:00",
+            "offsettext": "-10:00",
+            "timezones":
+            [
+                {
+                    "name": "UTC−10:00",
+                    "abbrev": "UTC−10",
+                    "keywords":
+                [
+                        {
+                            "value": "utc−10"
+                        },
+                        {
+                            "value": "utc-10"
+                        },
+                        {
+                            "value": "utc−10:00"
+                        },
+                        {
+                            "value": "utc-10:00"
+                        },
+                        {
+                            "value": "gmt+10"
+                        },
+                        {
+                            "value": "gmt+10:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+10"
+                        }
+                    ]
+                },
+                {
+                    "name": "Hawaii Standard Time",
+                    "abbrev": "HST",
+                    "keywords":
+                [
+                        {
+                            "value": "hst"
+                        },
+                        {
+                            "value": "hawaii"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "US/Hawaii"
+                        }
+                    ]
+                },
+                {
+                    "name": "Hawaii–Aleutian Standard Time",
+                    "abbrev": "HAST",
+                    "keywords":
+                    [
+                        {
+                            "value": "hast"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "US/Aleutian"
+                        }
+                    ]
+                },
+                {
+                    "name": "Whiskey Time Zone",
+                    "abbrev": "W",
+                    "keywords":
+                    [
+                        {
+                            "value": "w"
+                        },
+                        {
+                            "value": "whiskey"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+10"
+                        }
+                    ]
+                },
+                {
+                    "name": "Cook Island Time",
+                    "abbrev": "CKT",
+                    "keywords":
+                    [
+                        {
+                            "value": "ckt"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+10"
+                        }
+                    ]
+                },
+                {
+                    "name": "Tahiti Time",
+                    "abbrev": "TAHT",
+                    "keywords":
+                    [
+                        {
+                            "value": "taht"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+10"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "offset": -9.5,
+            "utcname": "UTC−09:30",
+            "offsettext": "-09:30",
+            "timezones":
+            [
+                {
+                    "name": "Marquesas Time",
+                    "abbrev": "MART",
+                    "keywords":
+                    [
+                        {
+                        "value": "mart" 
+                        },
+                        {
+                            "value": "marquesas"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Marquesas"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "offset": -9,
+            "utcname": "UTC−09:00",
+            "offsettext": "-09:00",
+            "timezones":
+            [
+                {
+                    "name": "UTC−09:00",
+                    "abbrev": "UTC−9",
+                    "keywords":
+                    [
+                        {
+                        "value": "utc−09:00"
+                        },
+                        {
+                            "value": "utc-09:00"
+                        },
+                        {
+                            "value": "utc−09"
+                        },
+                        {
+                            "value": "utc-09"
+                        },
+                        {
+                            "value": "utc−9"
+                        },
+                        {
+                            "value": "utc-9"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                    {
+                        "value": "Etc/GMT+9"
+                    }
+                    ]
+                },
+                {
+                    "name": "Alaska Standard Time",
+                    "abbrev": "AKST",
+                    "keywords":
+                    [
+                        {
+                            "value": "akst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                    {
+                        "value": "US/Alaska"
+                    }
+                    ]
+                },
+                {
+                    "name": "Hawaii–Aleutian Daylight Savings Time",
+                    "abbrev": "HADT",
+                    "keywords":
+                    [
+                        {
+                            "value": "hadt"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "US/Aleutian"
+                        }
+                    ]
+                },
+                {
+                    "name": "Gambier Time",
+                    "abbrev": "GAMT",
+                    "keywords": 
+                    [
+                        {
+                            "value": "gambier"
+                        },
+                        {
+                            "value": "gamt"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Gambier"
+                        }
+                    ]
+                },
+                {
+                    "name": "Victor Time Zone",
+                    "abbrev": "V",
+                    "keywords":
+                    [
+                        {
+                            "value": "victor"
+                        },
+                        {
+                            "value": "victor time"
+                        },
+                        {
+                            "value": "victor time zone"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+9"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "offset": -8,
+            "utcname": "UTC−08:00",
+            "offsettext": "-08:00",
+            "timezones":
+            [
+                {
+                    "name": "UTC−08:00",
+                    "abbrev": "UTC−8",
+                    "keywords":
+                    [
+                        {
+                        "value": "utc−08:00"
+                        },
+                        {
+                            "value": "utc-08:00"
+                        },
+                        {
+                            "value": "utc−08:00"
+                        },
+                        {
+                            "value": "utc−8:00"
+                        },
+                        {
+                            "value": "utc-8:00"
+                        },
+                        {
+                            "value": "utc−8"
+                        },
+                        {
+                            "value": "utc-8"
+                        },
+                        {
+                            "value": "utc-08"
+                        },
+                        {
+                            "value": "gmt+8"
+                        },
+                        {
+                            "value": "gmt+08:00"
+                        },
+                        {
+                            "value": "gmt+08"
+                        },
+                        {
+                            "value": "gmt+8:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+8"
+                        }
+                    ]
+                },
+                {
+                    "name": "Uniform Time Zone",
+                    "abbrev": "U",
+                    "keywords":
+                    [
+                        {
+                            "value": "u"
+                        },
+                        {
+                            "value": "uniform"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+8"
+                        }
+                    ]
+                },
+                {
+                    "name": "Alaska Daylight Savings Time",
+                    "abbrev": "AKDT",
+                    "keywords":
+                    [
+                        {
+                            "value": "akdt"
+                        },
+                        {
+                            "value": "adst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "US/Alaska"
+                        }
+                    ]
+                },
+                {
+                    "name": "Pacific Standard Time",
+                    "abbrev": "PST",
+                    "keywords":
+                    [
+                        {
+                            "value": "pst"
+                        },
+                        {
+                            "value": "napst"
+                        },
+                        {
+                            "value": "hnp"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "US/Pacific"
+                        },
+                        {
+                            "value": "Canada/Pacific"
+                        }
+                    ]
+                },
+                {
+                    "name": "Pitcairn Standard Time",
+                    "abbrev": "PST",
+                    "keywords": 
+                    [
+                        {
+                            "value": "pst"
+                        },
+                        {
+                            "value": "pitcairn"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Pitcairn"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "offset": -7,
+            "utcname": "UTC−07:00",
+            "offsettext": "-07:00",
+            "timezones": 
+            [
+                {
+                    "name": "UTC−07:00",
+                    "abbrev": "UTC−7",
+                    "keywords":
+                    [
+                        {
+                        "value": "utc−07:00"
+                        },
+                        {
+                            "value": "utc-07:00"
+                        },
+                        {
+                            "value": "utc−07:00"
+                        },
+                        {
+                            "value": "utc−7:00"
+                        },
+                        {
+                            "value": "utc-7:00"
+                        },
+                        {
+                            "value": "utc−7"
+                        },
+                        {
+                            "value": "utc-7"
+                        },
+                        {
+                            "value": "utc-07"
+                        },
+                        {
+                            "value": "gmt+7"
+                        },
+                        {
+                            "value": "gmt+07:00"
+                        },
+                        {
+                            "value": "gmt+07"
+                        },
+                        {
+                            "value": "gmt+7:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+7"
+                        }
+                    ]
+                },
+                {
+                    "name": "Mountain Standard Time",
+                    "abbrev": "MST",
+                    "keywords":
+                    [
+                        {
+                            "value": "mst"
+                        },
+                        {
+                            "value": "namst"
+                        },
+                        {
+                            "value": "hnr"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "US/Mountain"
+                        },
+                        {
+                            "value": "Canada/Mountain"
+                        }
+                    ]
+                },
+                {
+                    "name": "Pacific Daylight Savings Time",
+                    "abbrev": "PDT",
+                    "keywords":
+                    [
+                        {
+                            "value": "pdst"
+                        },
+                        {
+                            "value": "napdt"
+                        },
+                        {
+                            "value": "pdt"
+                        },
+                        {
+                            "value": "hap"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Us/Pacific"
+                        },
+                        {
+                            "value": "Canada/Pacific"
+                        }
+                    ]
+                },
+                {
+                    "name": "Tango Time Zone",
+                    "abbrev": "T",
+                    "keywords":
+                    [
+                        {
+                            "value": "t"
+                        },
+                        {
+                            "value": "tango"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+7"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "offset": -6,
+            "utcname": "UTC−06:00",
+            "offsettext": "-06:00",
+            "timezones":
+            [
+                {
+                    "name": "UTC−06:00",
+                    "abbrev": "UTC−6",
+                    "keywords":
+                    [
+                        {
+                        "value": "utc−06:00"
+                        },
+                        {
+                            "value": "utc-06:00"
+                        },
+                        {
+                            "value": "utc−06:00"
+                        },
+                        {
+                            "value": "utc−6:00"
+                        },
+                        {
+                            "value": "utc-6:00"
+                        },
+                        {
+                            "value": "utc−6"
+                        },
+                        {
+                            "value": "utc-6"
+                        },
+                        {
+                            "value": "utc-06"
+                        },
+                        {
+                            "value": "gmt+6"
+                        },
+                        {
+                            "value": "gmt+06:00"
+                        },
+                        {
+                            "value": "gmt+06"
+                        },
+                        {
+                            "value": "gmt+6:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+6"
+                        }
+                    ]
+                },
+                {
+                    "name": "Central Standard Time",
+                    "abbrev": "CST",
+                    "keywords":
+                    [
+                        {
+                            "value": "cst"
+                        },
+                        {
+                            "value": "nacst"
+                        },
+                        {
+                            "value": "hnc"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "US/Central"
+                        },
+                        {
+                            "value": "Canada/Central"
+                        }
+                    ]
+                },
+                {
+                    "name": "Easter Island Standard Time",
+                    "abbrev": "EAST",
+                    "keywords":
+                    [
+                        {
+                            "value": "east"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Easter"
+                        },
+                        {
+                            "value": "Chile/EasterIsland"
+                        }
+                    ]
+                },
+                {
+                    "name": "Galápagos Time",
+                    "abbrev": "GALT",
+                    "keywords":
+                    [
+                        {
+                            "value": "galt"
+                        },
+                        {
+                            "value": "galapagos"
+                        },
+                        {
+                            "value": "galápagos"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Galapagos"
+                        }
+                    ]
+                },
+                {
+                    "name": "Mountain Daylight Savings Time",
+                    "abbrev": "MDT",
+                    "keywords":
+                    [
+                        {
+                            "value": "mdt"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "US/Mountain"
+                        },
+                        {
+                            "value": "Canada/Mountain"
+                        }
+                    ]
+                },
+                {
+                    "name": "Sierra Time Zone",
+                    "abbrev": "S",
+                    "keywords":
+                    [
+                        {
+                            "value": "s"
+                        },
+                        {
+                            "value": "sierra"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+6"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "offset": -5,
+            "utcname": "UTC−05:00"
+        },
+        {
+            "offset": -4,
+            "utcname": "UTC−04:00"
+        },
+        {
+            "offset": -3.5,
+            "utcname": "UTC−03:30"
+        },
+        {
+            "offset": -3,
+            "utcname": "UTC−03:00"
+        },
+        {
+            "offset": -2
+        },
+        {
+            "offset": -1
+        },
+        {
+            "offset": 0
+        },
+        {
+            "offset": 1,
+            "utcname": "UTC+01:00",
+            "offsettext": "+01:00",
+            "timezones":
+            [
+                
+            ]
+        },
+        {
+            "offset": 2,
+            "utcname": "UTC+02:00",
+            "offsettext": "+02:00",
+            "timezones":
+            [
+
+            ]
+        },
+        {
+            "offset": 3,
+            "utcname": "UTC+03:00",
+            "offsettext": "+03:00",
+            "timezones":
+            [
+                {
+                    "name": "Volgograd Standard Time",
+                    "abbrev": "VST",
+                    "keywords":
+                    [
+                        {
+                            "value": "kst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Europe/Moscow"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "offset": 3.5
+        },
+        {
+            "offset": 4,
+            "utcname": "UTC+04:00",
+            "offsettext": "+04:00",
+            "timezones":
+            [
+                {
+                    "name": "Volgograd Time",
+                    "abbrev": "VOLT",
+                    "keywords":
+                    [
+                        {
+                            "value": "volt"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-4"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "offset": 4.5
+        },
+        {
+            "offset": 5
+        },
+        {
+            "offset": 5.5
+        },
+        {
+            "offset": 5.75
+        },
+        {
+            "offset": 6
+        },
+        {
+            "offset": 6.5
+        },
+        {
+            "offset": 7
+        },
+        {
+            "offset": 8
+        },
+        {
+            "offset": 8.75
+        },
+        {
+            "offset": 9
+        },
+        {
+            "offset": 9.5
+        },
+        {
+            "offset": 10
+        },
+        {
+            "offset": 10.5
+        },
+        {
+            "offset": 11
+        },
+        {
+            "offset": 12
+        },
+        {
+            "offset": 12.75
+        },
+        {
+            "offset": 13
+        },
+        {
+            "offset": 14
+        }
+    ],
+    "dst":
+    [
+        {
+            "name": "Hawaii–Aleutian Time",
+            "abbrev": "HAT",
+            "tzdatabase": "America/Adak",
+            "keywords":
+            [
+                {
+                    "value": "hat"
+                },
+                {
+                    "value": "hawaii-aleutian"
+                },
+                {
+                    "value": "aleutian"
+                }
+            ]
+        },
+        {
+            "name": "Pacific Time",
+            "abbrev": "PT",
+            "tzdatabase": "US/Pacific",
+            "keywords":
+            [
+                {
+                    "value": "pacific"
+                },
+                {
+                    "value": "pt"
+                }
+            ]
+        },
+        {
+            "name": "Mountain Time",
+            "abbrev": "MT",
+            "tzdatabase": "US/Mountain",
+            "keywords":
+            [
+                {
+                    "value": "mt"
+                },
+                {
+                    "value": "mountain"
+                }
+            ]
+        },
+        {
+            "name": "Central Time",
+            "abbrev": "CT",
+            "tzdatabase": "US/Central",
+            "keywords":
+            [
+                {
+                    "value": "ct"
+                },
+                {
+                    "value": "central"
+                }
+            ]
+        },
+        {
+            "name": "Easter Island Time",
+            "abbrev": "EAT",
+            "tzdatabase": "Pacific/Easter",
+            "keywords":
+            [
+                {
+                    "value": "easter"
+                },
+                {
+                    "value": "eat"
+                }
+            ]
+        }
+    ]
+}
