@@ -1119,15 +1119,403 @@
         },
         {
             "offset": -4,
-            "utcname": "UTC−04:00"
+            "utcname": "UTC−04:00",
+            "offsettext": "−04:00",
+            "timezones":
+            [
+                {
+                    "name": "UTC−04:00",
+                    "abbrev": "UTC−4",
+                    "keywords":
+                    [
+                        {
+                        "value": "utc−04:00"
+                        },
+                        {
+                            "value": "utc-04:00"
+                        },
+                        {
+                            "value": "utc−04:00"
+                        },
+                        {
+                            "value": "utc−4:00"
+                        },
+                        {
+                            "value": "utc-4:00"
+                        },
+                        {
+                            "value": "utc−4"
+                        },
+                        {
+                            "value": "utc-4"
+                        },
+                        {
+                            "value": "utc-04"
+                        },
+                        {
+                            "value": "gmt+4"
+                        },
+                        {
+                            "value": "gmt+04:00"
+                        },
+                        {
+                            "value": "gmt+04"
+                        },
+                        {
+                            "value": "gmt+4:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+4"
+                        }
+                    ]
+                },
+                {
+                    "name": "Amazon Time",
+                    "abbrev": "AMT",
+                    "keywords":
+                    [
+                        {
+                            "value": "amt"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "America/Manaus"
+                        }
+                    ]
+                },
+                {
+                    "name": "Atlantic Standard Time",
+                    "abbrev": "AST",
+                    "keywords":
+                    [
+                        {
+                            "value": "ast"
+                        },
+                        {
+                            "value": "hna"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Canada/Atlantic"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bolivia Time",
+                    "abbrev": "BOT",
+                    "keywords":
+                    [
+                        {
+                            "value": "bot"
+                        },
+                        {
+                            "value": "bolivia"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "America/La_Paz"
+                        }
+                    ]
+                },
+                {
+                    "name": "Cuba Daylight Savings Time",
+                    "abbrev": "CDT",
+                    "keywords":
+                    [
+                        {
+                            "value": "cdt"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "America/Havana"
+                        }
+                    ]
+                },
+                {
+                    "name": "Cayman Islands Daylight Savings Time",
+                    "abbrev": "CIDST",
+                    "keywords":
+                    [
+                        {
+                            "value": "cidst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "US/Eastern"
+                        }
+                    ]
+                },
+                {
+                    "name": "Chile Standard Time",
+                    "abbrev": "CLT",
+                    "keywords":
+                    [
+                        {
+                            "value": "clst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Chile/Continental"
+                        },
+                        {
+                            "value": "America/Santiago"
+                        }
+                    ]
+                },
+                {
+                    "name": "Eastern Daylight Savings Time",
+                    "abbrev": "EDST",
+                    "keywords":
+                    [
+                        {
+                            "value": "edst"
+                        },
+                        {
+                            "value": "naedt"
+                        },
+                        {
+                            "value": "hae"
+                        },
+                        {
+                            "value": "edt"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "US/Eastern"
+                        }
+                    ]
+                },
+                {
+                    "name": "Falkland Island Time",
+                    "abbrev": "FKT",
+                    "keywords":
+                    [
+                        {
+                            "value": "fkt"
+                        },
+                        {
+                            "value": "fkdt"
+                        },
+                        {
+                            "value": "falkland"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Atlantic/Stanley"
+                        }
+                    ]
+                },
+                {
+                    "name": "Guyana Time",
+                    "abbrev": "GYT",
+                    "keywords":
+                    [
+                        {
+                            "value": "gyt"
+                        },
+                        {
+                            "value": "gyst"
+                        },
+                        {
+                            "value": "guyana"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "America/Guyana"
+                        }
+                    ]
+                },
+                {
+                    "name": "Paraguay Time",
+                    "abbrev": "PYT",
+                    "keywords":
+                    [
+                        {
+                            "value": "pyt"
+                        },
+                        {
+                            "value": "paraguay"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "America/Asuncion"
+                        }
+                    ]
+                },
+                {
+                    "name": "Quebec Time Zone",
+                    "abbrev": "Q",
+                    "keywords":
+                    [
+                        {
+                            "value": "q"
+                        },
+                        {
+                            "value": "quebec"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+4"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "offset": -3.5,
-            "utcname": "UTC−03:30"
+            "utcname": "UTC−03:30",
+            "offsettext": "−03:30",
+            "timezones":
+            [
+                {
+                    "name": "Newfoundland Standard Time",
+                    "abbrev": "NST",
+                    "keywords":
+                    [
+                        {
+                            "value": "nst"
+                        },
+                        {
+                            "value": "hnt"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "America/St_Johns"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "offset": -3,
-            "utcname": "UTC−03:00"
+            "utcname": "UTC−03:00",
+            "offsettext": "−03:00",
+            "timezones":
+            [
+                {
+                    "name": "UTC−03:00",
+                    "abbrev": "UTC−3",
+                    "keywords":
+                    [
+                        {
+                        "value": "utc−03:00"
+                        },
+                        {
+                            "value": "utc-03:00"
+                        },
+                        {
+                            "value": "utc−03:00"
+                        },
+                        {
+                            "value": "utc−3:00"
+                        },
+                        {
+                            "value": "utc-3:00"
+                        },
+                        {
+                            "value": "utc−3"
+                        },
+                        {
+                            "value": "utc-3"
+                        },
+                        {
+                            "value": "utc-03"
+                        },
+                        {
+                            "value": "utc−03"
+                        },
+                        {
+                            "value": "gmt+3"
+                        },
+                        {
+                            "value": "gmt+03:00"
+                        },
+                        {
+                            "value": "gmt+03"
+                        },
+                        {
+                            "value": "gmt+3:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+3"
+                        }
+                    ]
+                },
+                {
+                    "name": "Atlantic Daylight Savings Time",
+                    "abbrev": "ADT",
+                    "keywords":
+                    [
+                        {
+                            "value": "adt"
+                        },
+                        {
+                            "value": "adst"
+                        },
+                        {
+                            "value": "ast"
+                        },
+                        {
+                            "value": "haa"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Canada/Atlantic"
+                        }
+                    ]
+                },
+                {
+                    "name": "Amazon Summer Time",
+                    "abbrev": "AMST",
+                    "keywords":
+                    [
+                        {
+                            "value": "amst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+3"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "offset": -2.5
         },
         {
             "offset": -2
@@ -1397,6 +1785,51 @@
                 },
                 {
                     "value": "eastern"
+                }
+            ]
+        },
+        {
+            "name": "Atlantic Time",
+            "abbrev": "AT",
+            "tzdatabase": "Canada/Atlantic",
+            "keywords":
+            [
+                {
+                    "value": "at"
+                },
+                {
+                    "value": "atlantic"
+                }
+            ]
+        },
+        {
+            "name": "Chile Time",
+            "abbrev": "CT",
+            "tzdatabase": "America/Santiago",
+            "keywords":
+            [
+                {
+                    "value": "ct"
+                },
+                {
+                    "value": "chile"
+                }
+            ]
+        },
+        {
+            "name": "Newfoundland Time",
+            "abbrev": "NT",
+            "tzdatabase": "America/St_Johns",
+            "keywords":
+            [
+                {
+                    "value": "nt"
+                },
+                {
+                    "value": "newfoundland"
+                },
+                {
+                    "value": "labrador"
                 }
             ]
         }

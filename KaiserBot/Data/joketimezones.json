@@ -12,11 +12,11 @@
                     [
                         {
                             "name": "Kalos Standard Time",
-                            "abbrev": "PKST",
+                            "abbrev": "PKAST",
                             "keywords":
                             [
                                 {
-                                    "value": "pkst"
+                                    "value": "pkast"
                                 }
                             ],
                             "databasenames":
@@ -36,17 +36,41 @@
                     [
                         {
                             "name": "Kalos Daylight Savings Time",
-                            "abbrev": "PKDT",
+                            "abbrev": "PKADT",
                             "keywords":
                             [
                                 {
-                                    "value": "pkdt"
+                                    "value": "pkadt"
                                 }
                             ],
                             "databasenames":
                             [
                                 {
                                     "value": "Europe/Paris"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "offset": 9,
+                    "utcname": "UTC+09:00",
+                    "offsettext": "+09:00",
+                    "timezones":
+                    [
+                        {
+                            "name": "Kanto Standard Time",
+                            "abbrev": "PKT",
+                            "keywords":
+                            [
+                                {
+                                    "value": "pkt"
+                                }
+                            ],
+                            "databasenames":
+                            [
+                                {
+                                    "value": "Asia/Tokyo"
                                 }
                             ]
                         }
@@ -59,12 +83,12 @@
             [
                 {
                     "name": "Kalos Time Zone",
-                    "abbrev": "PKT",
+                    "abbrev": "PKAT",
                     "tzdatabase": "Europe/Paris",
                     "keywords":
                     [
                         {
-                            "value": "pkt"
+                            "value": "pkat"
                         },
                         {
                             "value": "kalos"
