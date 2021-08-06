@@ -423,10 +423,7 @@
                             "value": "victor"
                         },
                         {
-                            "value": "victor time"
-                        },
-                        {
-                            "value": "victor time zone"
+                            "value": "v"
                         }
                     ],
                     "databasenames":
@@ -742,6 +739,9 @@
                             "value": "utc-06"
                         },
                         {
+                            "value": "utc−06"
+                        },
+                        {
                             "value": "gmt+6"
                         },
                         {
@@ -869,7 +869,253 @@
         },
         {
             "offset": -5,
-            "utcname": "UTC−05:00"
+            "utcname": "UTC−05:00",
+            "offsettext": "-05:00",
+            "timezones": 
+            [
+                {
+                    "name": "UTC−05:00",
+                    "abbrev": "UTC−5",
+                    "keywords":
+                    [
+                        {
+                        "value": "utc−05:00"
+                        },
+                        {
+                            "value": "utc-05:00"
+                        },
+                        {
+                            "value": "utc−05:00"
+                        },
+                        {
+                            "value": "utc−5:00"
+                        },
+                        {
+                            "value": "utc-5:00"
+                        },
+                        {
+                            "value": "utc−5"
+                        },
+                        {
+                            "value": "utc-5"
+                        },
+                        {
+                            "value": "utc-05"
+                        },
+                        {
+                            "value": "utc−05"
+                        },
+                        {
+                            "value": "gmt+5"
+                        },
+                        {
+                            "value": "gmt+05:00"
+                        },
+                        {
+                            "value": "gmt+05"
+                        },
+                        {
+                            "value": "gmt+5:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+5"
+                        }
+                    ]
+                },
+                {
+                    "name": "Romeo Time Zone",
+                    "abbrev": "R",
+                    "keywords":
+                    [
+                        {
+                            "value": "r"
+                        },
+                        {
+                            "value": "romeo"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+5"
+                        }
+                    ]
+                },
+                {
+                    "name": "Acre Time",
+                    "abbrev": "ACT",
+                    "keywords":
+                    [
+                        {
+                            "value": "act"
+                        },
+                        {
+                            "value": "acre"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+5"
+                        }
+                    ]
+                },
+                {
+                    "name": "Central Daylight Savings Time",
+                    "abbrev": "CDT",
+                    "keywords":
+                    [
+                        {
+                            "value": "cdt"
+                        },
+                        {
+                            "value": "nacdt"
+                        },
+                        {
+                            "value": "hac"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "US/Central"
+                        },
+                        {
+                            "value": "Canada/Central"
+                        }
+                    ]
+                },
+                {
+                    "name": "Cayman Islands Standard Time",
+                    "abbrev": "CIST",
+                    "keywords":
+                    [
+                        {
+                            "value": "cist"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "US/Eastern"
+                        }
+                    ]
+                },
+                {
+                    "name": "Colombia Time",
+                    "abbrev": "COT",
+                    "keywords":
+                    [
+                        {
+                            "value": "cot"
+                        },
+                        {
+                            "value": "colombia"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+5"
+                        }
+                    ]
+                },
+                {
+                    "name": "Cuba Standard Time",
+                    "abbrev": "CST",
+                    "keywords":
+                    [
+                        {
+                            "value": "cst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "America/Havana"
+                        }
+                    ]
+                },
+                {
+                    "name": "Easter Island Summer Time",
+                    "abbrev": "EASST",
+                    "keywords":
+                    [
+                        {
+                            "value": "easst"
+                        },
+                        {
+                            "value": "eadt"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Easter"
+                        },
+                        {
+                            "value": "Chile/EasterIsland"
+                        }
+                    ]
+                },
+                {
+                    "name": "Ecuador Time",
+                    "abbrev": "ECT",
+                    "keywords":
+                    [
+                        {
+                            "value": "ect"
+                        },
+                        {
+                            "value": "ecuador"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "America/Guayaquil"
+                        }
+                    ]
+                },
+                {
+                    "name": "Eastern Standard Time",
+                    "abbrev": "EST",
+                    "keywords":
+                    [
+                        {
+                            "value": "est"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "US/Eastern"
+                        }
+                    ]
+                },
+                {
+                    "name": "Peru Time",
+                    "abbrev": "PET",
+                    "keywords":
+                    [
+                        {
+                            "value": "pet"
+                        },
+                        {
+                            "value": "peru"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "America/Lima"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "offset": -4,
@@ -986,6 +1232,30 @@
             "offset": 8
         },
         {
+            "offset": 8.5,
+            "utcname": "UTC+08:30",
+            "offsettext": "+08:30",
+            "timezones":
+            [
+                {
+                    "name": "Pyongyang Standard Time",
+                    "abbrev": "PYT",
+                    "keywords":
+                    [
+                        {
+                            "value": "pyt"
+                        },
+                        {
+                            "value": "pyst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                    ]
+                }
+            ]
+        },
+        {
             "offset": 8.75
         },
         {
@@ -1088,6 +1358,45 @@
                 },
                 {
                     "value": "eat"
+                }
+            ]
+        },
+        {
+            "name": "Cayman Islands Time",
+            "abbrev": "CIT",
+            "tzdatabase": "US/Eastern",
+            "keywords":
+            [
+                {
+                    "value": "cit"
+                }
+            ]
+        },
+        {
+            "name": "Cuba Time",
+            "abbrev": "CT",
+            "tzdatabase": "America/Havana",
+            "keywords":
+            [
+                {
+                    "value": "ct"
+                },
+                {
+                    "value": "cuba"
+                }
+            ]
+        },
+        {
+            "name": "Eastern Time",
+            "abbrev": "ET",
+            "tzdatabase": "US/Eastern",
+            "keywords":
+            [
+                {
+                    "value": "et"
+                },
+                {
+                    "value": "eastern"
                 }
             ]
         }

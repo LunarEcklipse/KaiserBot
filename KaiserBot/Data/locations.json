@@ -2,20 +2,17 @@
     {
         "name": "midway islands",
         "tzdatabase": "Pacific/Midway",
-        "designation": "islands",
-        "tzname": "Samoa Standard Time (SST)"
+        "designation": "islands"
     },
     {
         "name": "midway atoll",
         "tzdatabase": "Pacific/Midway",
-        "designation": "islands",
-        "tzname": "Samoa Standard Time (SST)"
+        "designation": "islands"
     },
     {
         "name": "niue",
         "tzdatabase": "Pacific/Niue",
-        "designation": "island country",
-        "tzname": "Niue Time (NUT)"
+        "designation": "island country"
     },
     {
         "name": "pago pago",
@@ -130,6 +127,16 @@
     {
         "name": "volgograd",
         "tzdatabase": "Etc/GMT-3",
+        "designation": "city"
+    },
+    {
+        "name": "guayaquil",
+        "tzdatabase": "America/Guayaquil",
+        "designation": "city"
+    },
+    {
+        "name": "lima",
+        "tzdatabase": "America/Lima",
         "designation": "city"
     }
 ]

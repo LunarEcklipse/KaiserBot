@@ -71,14 +71,13 @@ async def MessageHandler(client, message, timezones):
             {
                 "Keyword": "whitelist",
                 "RespID": 3
-            }
+            },
             {
-                "Keyword": "register" # For registering people to the bot so their time zone can be tracked.
+                "Keyword": "register", # For registering people to the bot so their time zone can be tracked.
                 "RespID": 4
             }
         ]
     }
-
 
     msg = message.content.lower()
     if msg.startswith("!kaiser"):
@@ -224,15 +223,6 @@ def CommandWhitelist(message, msgSplit, userBlacklisted, channelBlacklisted):
         return True
     else:
         return False
-
-def CommandRegister(message, msgSplit):
-    try:
-        test = msgSplit[2]
-    except(IndexError) as exception:
-        await message.channel.send("You need to specify your current offset.", reference=message)
-
-
-
 
 ### ### BLACKLIST / WHITELIST ### ###
 
