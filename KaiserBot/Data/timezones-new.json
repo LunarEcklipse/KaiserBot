@@ -1542,7 +1542,7 @@
                     ]
                 },
                 {
-                    "value": "Chile Summer Time",
+                    "name": "Chile Summer Time",
                     "abbrev": "CLST",
                     "keywords":
                     [
@@ -1768,13 +1768,508 @@
             ]
         },
         {
-            "offset": -2
+            "offset": -2,
+            "utcname": "UTC−02:00",
+            "offsettext": "−02:00",
+            "timezones": 
+            [
+                {
+                    "name": "UTC−02:00",
+                    "abbrev": "UTC−2",
+                    "keywords":
+                    [
+                        {
+                        "value": "utc−02:00"
+                        },
+                        {
+                            "value": "utc-02:00"
+                        },
+                        {
+                            "value": "utc−02:00"
+                        },
+                        {
+                            "value": "utc−2:00"
+                        },
+                        {
+                            "value": "utc-2:00"
+                        },
+                        {
+                            "value": "utc−2"
+                        },
+                        {
+                            "value": "utc-2"
+                        },
+                        {
+                            "value": "utc-02"
+                        },
+                        {
+                            "value": "utc−02"
+                        },
+                        {
+                            "value": "gmt+2"
+                        },
+                        {
+                            "value": "gmt+02:00"
+                        },
+                        {
+                            "value": "gmt+02"
+                        },
+                        {
+                            "value": "gmt+2:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Brasília Summer Time",
+                    "abbrev": "BRST",
+                    "keywords":
+                    [
+                        {
+                            "value": "brst"
+                        },
+                        {
+                            "value": "bst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Fernando de Noronha Time",
+                    "abbrev": "FNT",
+                    "keywords":
+                    [
+                        {
+                            "value": "fnt"
+                        },
+                        {
+                            "value": "fernando"
+                        },
+                        {
+                            "value": "noronha"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "America/Noronha"
+                        }
+                    ]
+                },
+                {
+                    "name": "South Georgia Time",
+                    "abbrev": "GST",
+                    "keywords":
+                    [
+                        {
+                            "value": "gst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Oscar Time Zone",
+                    "abbrev": "O",
+                    "keywords":
+                    [
+                        {
+                            "value": "o"
+                        },
+                        {
+                            "value": "oscar"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Pierre & Miquelon Daylight Savings Time",
+                    "abbrev": "PMDT",
+                    "keywords":
+                    [
+                        {
+                            "value": "pmdt"
+                        },
+                        {
+                            "value": "pmdst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "America/Miquelon"
+                        }
+                    ]
+                },
+                {
+                    "name": "Uruguay Summer Time",
+                    "abbrev": "UYST",
+                    "keywords":
+                    [
+                        {
+                            "value": "uyst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Western Greenland Summer Time",
+                    "abbrev": "WGST",
+                    "keywords":
+                    [
+                        {
+                            "value": "wgst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "America/Nuuk"
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "offset": -1
+            "offset": -1,
+            "utcname":"UTC−01:00",
+            "offsettext": "−01:00",
+            "timezones":
+            [
+                {
+                    "name": "UTC−01:00",
+                    "abbrev": "UTC−1",
+                    "keywords":
+                    [
+                        {
+                        "value": "utc−01:00"
+                        },
+                        {
+                            "value": "utc-01:00"
+                        },
+                        {
+                            "value": "utc−01:00"
+                        },
+                        {
+                            "value": "utc−1:00"
+                        },
+                        {
+                            "value": "utc-1:00"
+                        },
+                        {
+                            "value": "utc−1"
+                        },
+                        {
+                            "value": "utc-1"
+                        },
+                        {
+                            "value": "utc-01"
+                        },
+                        {
+                            "value": "utc−01"
+                        },
+                        {
+                            "value": "gmt+1"
+                        },
+                        {
+                            "value": "gmt+01:00"
+                        },
+                        {
+                            "value": "gmt+01"
+                        },
+                        {
+                            "value": "gmt+1:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+1"
+                        }
+                    ]
+                },
+                {
+                    "name": "Azores Standard Time",
+                    "abbrev": "AZOST",
+                    "keywords":
+                    [
+                        {
+                            "value": "azost"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Atlantic/Azores"
+                        }
+                    ]
+                },
+                {
+                    "name": "Cape Verde Time",
+                    "abbrev": "CVT",
+                    "keywords":
+                    [
+                        {
+                            "value": "cvt"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Atlantic/Cape_Verde"
+                        }
+                    ]
+                },
+                {
+                    "name": "Eastern Greenland Winter Time",
+                    "abbrev": "EGWT",
+                    "keywords":
+                    [
+                        {
+                            "value": "egwt"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "America/Scoresbysund"
+                        }
+                    ]
+                },
+                {
+                    "name": "November Time Zone",
+                    "abbrev": "N",
+                    "keywords":
+                    [
+                        {
+                            "value": "n"
+                        },
+                        {
+                            "value": "november"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+1"
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "offset": 0
+            "offset": 0,
+            "utcname": "UTC",
+            "offsettext": "00:00",
+            "timezones":
+            [
+                {
+                    "name": "Coordinated Universal Time",
+                    "abbrev": "UTC",
+                    "keywords":
+                    [
+                        {
+                        "value": "utc−00:00"
+                        },
+                        {
+                            "value": "utc-00:00"
+                        },
+                        {
+                            "value": "utc−00:00"
+                        },
+                        {
+                            "value": "utc−0:00"
+                        },
+                        {
+                            "value": "utc-0:00"
+                        },
+                        {
+                            "value": "utc−0"
+                        },
+                        {
+                            "value": "utc-0"
+                        },
+                        {
+                            "value": "utc-00"
+                        },
+                        {
+                            "value": "utc−00"
+                        },
+                        {
+                            "value": "utc+00:00"
+                        },
+                        {
+                            "value": "utc+0:00"
+                        },
+                        {
+                            "value": "utc+0"
+                        },
+                        {
+                            "value": "utc"
+                        },
+                        {
+                            "value": "utc+"
+                        },
+                        {
+                            "value": "utc-"
+                        },
+                        {
+                            "value": "utc−"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT"
+                        }
+                    ]
+                },
+                {
+                    "name": "Azores Daylight Savings Time",
+                    "abbrev": "AZODT",
+                    "keywords":
+                    [
+                        {
+                            "value": "azodt"
+                        },
+                        {
+                            "value": "azodst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Atlantic/Azores"
+                        }
+                    ]
+                },
+                {
+                    "name": "Eastern Greenland Summer Time",
+                    "abbrev": "EGST",
+                    "keywords":
+                    [
+                        {
+                            "value": "egst"
+                        },
+                        {
+                            "value": "egdt"
+                        },
+                        {
+                            "value": "egdst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "America/Scoresbysund"
+                        }
+                    ]
+                },
+                {
+                    "name": "Greenwich Mean Time",
+                    "abbrev": "GMT",
+                    "keywords":
+                    [
+                        {
+                            "value": "gmt"
+                        },
+                        {
+                            "value": "gmt+0"
+                        },
+                        {
+                            "value": "gmt+00:00"
+                        },
+                        {
+                            "value": "gmt+00"
+                        },
+                        {
+                            "value": "gmt+0:00"
+                        },
+                        {
+                            "value": "gmt-0"
+                        },
+                        {
+                            "value": "gmt−0"
+                        },
+                        {
+                            "value": "gmt−00:00"
+                        },
+                        {
+                            "value": "gmt-00:00"
+                        },
+                        {
+                            "value": "gmt−00"
+                        },
+                        {
+                            "value": "gmt-00"
+                        },
+                        {
+                            "value": "gmt−0:00"
+                        },
+                        {
+                            "value": "gmt-0:00"
+                        },
+                        {
+                            "value": "gmt+"
+                        },
+                        {
+                            "value": "gmt−"
+                        },
+                        {
+                            "value": "gmt-"
+                        },
+                        {
+                            "value": "greenwich"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT"
+                        }
+                    ]
+                },
+                {
+                    "name": "Western European Standard Time",
+                    "abbrev": "WEST",
+                    "keywords":
+                    [
+                        {
+                            "value": "west"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Atlantic/Canary"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "offset": 1,
@@ -1782,7 +2277,25 @@
             "offsettext": "+01:00",
             "timezones":
             [
-                
+                {
+                    "name": "Western European Daylight Savings Time",
+                    "abbrev": "WEDT",
+                    "keywords":
+                    [
+                        {
+                            "value": "wedt"
+                        },
+                        {
+                            "value": "wedst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Atlantic/Canary"
+                        }
+                    ]
+                }
             ]
         },
         {
@@ -2133,6 +2646,31 @@
                 },
                 {
                     "value": "greenland"
+                }
+            ]
+        },
+        {
+            "name": "Eastern Greenland Time",
+            "abbrev": "EGT",
+            "tzdatabase": "America/Scoresbysund",
+            "keywords":
+            [
+                {
+                    "value": "egt"
+                },
+                {
+                    "value": "greenland"
+                }
+            ]
+        },
+        {
+            "name": "WesterN European Time",
+            "abbrev": "WET",
+            "tzdatabase": "Atlantic/Canary",
+            "keywords":
+            [
+                {
+                    "value": "wet"
                 }
             ]
         }
