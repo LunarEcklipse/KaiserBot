@@ -138,5 +138,30 @@
         "name": "lima",
         "tzdatabase": "America/Lima",
         "designation": "city"
+    },
+    {
+        "name": "buenos aires",
+        "tzdatabase": "America/Argentina/Buenos_Aires",
+        "designation": "city"
+    },
+    {
+        "name": "catamarca",
+        "tzdatabase": "America/Argentina/Catamarca",
+        "designation": "province"
+    },
+    {
+        "name": "london",
+        "tzdatabase": "Europe/London",
+        "designation": "city"
+    },
+    {
+        "name": "Cayenne",
+        "tzdatabase": "America/Cayenne",
+        "designation": "city"
+    },
+    {
+        "name": "Montevideo",
+        "tzdatabase": "America/Montevideo",
+        "designation": "city"
     }
 ]

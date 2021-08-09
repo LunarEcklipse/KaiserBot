@@ -1303,18 +1303,12 @@
                     ]
                 },
                 {
-                    "name": "Falkland Island Time",
-                    "abbrev": "FKT",
+                    "name": "Falkland Islands Standard Time",
+                    "abbrev": "FKST",
                     "keywords":
                     [
                         {
-                            "value": "fkt"
-                        },
-                        {
-                            "value": "fkdt"
-                        },
-                        {
-                            "value": "falkland"
+                            "value": "fkst"
                         }
                     ],
                     "databasenames":
@@ -1347,15 +1341,12 @@
                     ]
                 },
                 {
-                    "name": "Paraguay Time",
-                    "abbrev": "PYT",
+                    "name": "Paraguay Winter Time",
+                    "abbrev": "PYWT",
                     "keywords":
                     [
                         {
-                            "value": "pyt"
-                        },
-                        {
-                            "value": "paraguay"
+                            "value": "pywt"
                         }
                     ],
                     "databasenames":
@@ -1511,11 +1502,270 @@
                             "value": "Etc/GMT+3"
                         }
                     ]
+                },
+                {
+                    "name": "Argentina Time",
+                    "abbrev": "ART",
+                    "keywords":
+                    [
+                        {
+                            "value": "art"
+                        },
+                        {
+                            "value": "argentina"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "America/Argentina/Buenos_Aires"
+                        }
+                    ]
+                },
+                {
+                    "name": "Brasília Time",
+                    "abbrev": "brt",
+                    "keywords":
+                    [
+                        {
+                            "value": "brt"
+                        },
+                        {
+                            "value": "bt"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "America/Sao_Paulo"
+                        }
+                    ]
+                },
+                {
+                    "value": "Chile Summer Time",
+                    "abbrev": "CLST",
+                    "keywords":
+                    [
+                        {
+                            "value": "clst"
+                        },
+                        {
+                            "value": "cldt"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "America/Santiago"
+                        }
+                    ]
+                },
+                {
+                    "name": "Falkland Islands Daylight Savings Time",
+                    "abbrev": "FKDT",
+                    "keywords":
+                    [
+                        {
+                            "value": "fkdt"
+                        },
+                        {
+                            "value": "fkdst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Atlantic/Stanley"
+                        }
+                    ]
+                },
+                {
+                    "name": "French Guiana Time",
+                    "abbrev": "GFT",
+                    "keywords":
+                    [
+                        {
+                            "value": "gft"
+                        },
+                        {
+                            "value": "guiana"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "America/Cayenne"
+                        }
+                    ]
+                },
+                {
+                    "name": "Papa Time Zone",
+                    "abbrev": "P",
+                    "keywords":
+                    [
+                        {
+                            "value": "p"
+                        },
+                        {
+                            "value": "papa"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+3"
+                        }
+                    ]
+                },
+                {
+                    "name": "Pierre & Miquelon Standard Time",
+                    "abbrev": "PMST",
+                    "keywords":
+                    [
+                        {
+                            "value": "pmst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "America/Miquelon"
+                        }
+                    ]
+                },
+                {
+                    "name": "Paraguay Summer Time",
+                    "abbrev": "PYST",
+                    "keywords":
+                    [
+                        {
+                            "value": "pyst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "America/Asuncion"
+                        }
+                    ]
+                },
+                {
+                    "name": "Rothera Time",
+                    "abbrev": "ROTT",
+                    "keywords":
+                    [
+                        {
+                            "value": "rott"
+                        },
+                        {
+                            "value": "rothera"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Antarctica/Rothera"
+                        }
+                    ]
+                },
+                {
+                    "name": "Suriname Time",
+                    "abbrev": "SRT",
+                    "keywords":
+                    [
+                        {
+                            "value": "srt"
+                        },
+                        {
+                            "value": "suriname"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "America/Paramaribo"
+                        }
+                    ]
+                },
+                {
+                    "name": "Uruguay Time",
+                    "abbrev": "UYT",
+                    "keywords":
+                    [
+                        {
+                            "value": "uyt"
+                        },
+                        {
+                            "value": "uruguay"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "America/Montevideo"
+                        }
+                    ]
+                },
+                {
+                    "name": "Western Argentine Summer Time",
+                    "abbrev": "WARST",
+                    "keywords":
+                    [
+                        {
+                            "value": "warst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT+3"
+                        }
+                    ]
+                },
+                {
+                    "name": "Western Greenland Winter Time",
+                    "abbrev": "WGWT",
+                    "keywords":
+                    [
+                        {
+                            "value": "wgwt"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "America/Nuuk"
+                        }
+                    ]
                 }
             ]
         },
         {
-            "offset": -2.5
+            "offset": -2.5,
+            "utcname": "UTC−02:30",
+            "offsettext": "−02:30",
+            "timezones":
+            [
+                {
+                    "name": "Newfoundland Daylight Savings Time",
+                    "abbrev": "NDT",
+                    "keywords":
+                    [
+                        {
+                            "value": "ndt"
+                        },
+                        {
+                            "value": "hat"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "America/St_Johns"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "offset": -2
@@ -1830,6 +2080,59 @@
                 },
                 {
                     "value": "labrador"
+                }
+            ]
+        },
+        {
+            "name": "Falkland Islands Time",
+            "abbrev": "FKT",
+            "tzdatabase": "Atlantic/Stanley",
+            "keywords":
+            [
+                {
+                    "value": "fkt"
+                },
+                {
+                    "value": "falkland"
+                }
+            ]
+        },
+        {
+            "name": "Pierre & Miquelon Time",
+            "abbrev": "PMT",
+            "tzdatabase": "America/Miquelon",
+            "keywords":
+            [
+                {
+                    "value": "pmt"
+                }
+            ]
+        },
+        {
+            "name": "Paraguay Time",
+            "abbrev": "PYT",
+            "tzdatabase": "America/Asuncion",
+            "keywords":
+            [
+                {
+                    "value": "pyt"
+                },
+                {
+                    "value": "paraguay"
+                }
+            ]
+        },
+        {
+            "name": "Western Greenland Time",
+            "abbrev": "WGT",
+            "tzdatabase": "America/Nuuk",
+            "keywords":
+            [
+                {
+                    "value": "wgt"
+                },
+                {
+                    "value": "greenland"
                 }
             ]
         }

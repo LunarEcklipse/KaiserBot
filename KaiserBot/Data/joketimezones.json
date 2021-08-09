@@ -5,6 +5,30 @@
             "nodst":
             [
                 {
+                    "offset": 0,
+                    "utcname": "UTC",
+                    "offsettext": "00:00",
+                    "timezones":
+                    [
+                        {
+                            "name": "Galar Standard Time",
+                            "abbrev": "PGST",
+                            "keywords":
+                            [
+                                {
+                                    "value": "pgst"
+                                }
+                            ],
+                            "databasenames":
+                            [
+                                {
+                                    "value": "Europe/London"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
                     "offset": 1,
                     "utcname": "UTC+01:00",
                     "offsettext": "+01:00",
@@ -23,6 +47,25 @@
                             [
                                 {
                                     "value": "Europe/Paris"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Galar Daylight Savings Time",
+                            "abbrev": "PGDT",
+                            "keywords":
+                            [
+                                {
+                                    "value": "pgdt"
+                                },
+                                {
+                                    "value": "pgdst"
+                                }
+                            ],
+                            "databasenames":
+                            [
+                                {
+                                    "value": "Europe/London"
                                 }
                             ]
                         }
@@ -91,7 +134,33 @@
                             "value": "pkat"
                         },
                         {
+                            "value": "pkatz"
+                        },
+                        {
                             "value": "kalos"
+                        },
+                        {
+                            "value": "kalosian"
+                        }
+                    ]
+                },
+                {
+                    "name": "Galar Time Zone",
+                    "abbrev": "PGT",
+                    "tzdatabase": "Europe/London",
+                    "keywords":
+                    [
+                        {
+                            "value": "pgt"
+                        },
+                        {
+                            "value": "pgtz"
+                        },
+                        {
+                            "value": "galar"
+                        },
+                        {
+                            "value": "galarian"
                         }
                     ]
                 }
