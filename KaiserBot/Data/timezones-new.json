@@ -2265,7 +2265,42 @@
                     "databasenames":
                     [
                         {
-                            "value": "Atlantic/Canary"
+                            "value": "Europe/London"
+                        }
+                    ]
+                },
+                {
+                    "name": "Western Sahara Standard Time",
+                    "abbrev": "WST",
+                    "keywords":
+                    [
+                        {
+                            "value": "wt"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT"
+                        }
+                    ]
+                },
+                {
+                    "name": "Zulu Time Zone",
+                    "abbrev": "Z",
+                    "keywords":
+                    [
+                        {
+                            "value": "z"
+                        },
+                        {
+                            "value": "zulu"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT"
                         }
                     ]
                 }
@@ -2278,6 +2313,156 @@
             "timezones":
             [
                 {
+                    "name": "UTC+01:00",
+                    "abbrev": "UTC+1",
+                    "keywords":
+                    [
+                        {
+                        "value": "gmt−01:00"
+                        },
+                        {
+                            "value": "gmt-01:00"
+                        },
+                        {
+                            "value": "gmt−01:00"
+                        },
+                        {
+                            "value": "gmt−1:00"
+                        },
+                        {
+                            "value": "gmt-1:00"
+                        },
+                        {
+                            "value": "gmt−1"
+                        },
+                        {
+                            "value": "gmt-1"
+                        },
+                        {
+                            "value": "gmt-01"
+                        },
+                        {
+                            "value": "gmt−01"
+                        },
+                        {
+                            "value": "utc+1"
+                        },
+                        {
+                            "value": "utc+01:00"
+                        },
+                        {
+                            "value": "utc+01"
+                        },
+                        {
+                            "value": "utc+1:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-1"
+                        }
+                    ]
+                },
+                {
+                    "name": "Alpha Time Zone",
+                    "abbrev": "A",
+                    "keywords":
+                    [
+                        {
+                            "value": "a"
+                        },
+                        {
+                            "value": "alpha"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-1"
+                        }
+                    ]
+                },
+                {
+                    "name": "British Summer Time",
+                    "abbrev": "BST",
+                    "keywords":
+                    [
+                        {
+                            "value": "bst"
+                        },
+                        {
+                            "value": "bdt"
+                        },
+                        {
+                            "value": "bdst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Europe/London"
+                        }
+                    ]
+                },
+                {
+                    "name": "Central European Standard Time",
+                    "abbrev": "CEWT",
+                    "keywords":
+                    [
+                        {
+                            "value": "cewt"
+                        },
+                        {
+                            "value": "ecwt"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Europe/Rome"
+                        }
+                    ]
+                },
+                {
+                    "name": "Irish Standard Time",
+                    "abbrev": "IST",
+                    "keywords":
+                    [
+                        {
+                            "value": "ist"
+                        },
+                        {
+                            "value": "irish"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Europe/Dublin"
+                        }
+                    ]
+                },
+                {
+                    "name": "West Africa Time",
+                    "abbrev": "WAT",
+                    "keywords":
+                    [
+                        {
+                            "value": "wat"
+                        },
+                        {
+                            "value": "africa"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Africa/Lagos"
+                        }
+                    ]
+                },
+                {
                     "name": "Western European Daylight Savings Time",
                     "abbrev": "WEDT",
                     "keywords":
@@ -2287,12 +2472,31 @@
                         },
                         {
                             "value": "wedst"
+                        },
+                        {
+                            "value": "wesz"
                         }
                     ],
                     "databasenames":
                     [
                         {
-                            "value": "Atlantic/Canary"
+                            "value": "Europe/London"
+                        }
+                    ]
+                },
+                {
+                    "name": "Western Sahara Summer Time",
+                    "abbrev": "WST",
+                    "keywords":
+                    [
+                        {
+                            "value": "wst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-1"
                         }
                     ]
                 }
@@ -2304,7 +2508,185 @@
             "offsettext": "+02:00",
             "timezones":
             [
-
+                {
+                    "name": "UTC+02:00",
+                    "abbrev": "UTC+2",
+                    "keywords":
+                    [
+                        {
+                        "value": "gmt−02:00"
+                        },
+                        {
+                            "value": "gmt-02:00"
+                        },
+                        {
+                            "value": "gmt−02:00"
+                        },
+                        {
+                            "value": "gmt−2:00"
+                        },
+                        {
+                            "value": "gmt-2:00"
+                        },
+                        {
+                            "value": "gmt−2"
+                        },
+                        {
+                            "value": "gmt-2"
+                        },
+                        {
+                            "value": "gmt-02"
+                        },
+                        {
+                            "value": "gmt−02"
+                        },
+                        {
+                            "value": "utc+2"
+                        },
+                        {
+                            "value": "utc+02:00"
+                        },
+                        {
+                            "value": "utc+02"
+                        },
+                        {
+                            "value": "utc+2:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bravo Time Zone",
+                    "abbrev": "B",
+                    "keywords":
+                    [
+                        {
+                            "value": "b"
+                        },
+                        {
+                            "value": "bravo"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Central Africa Time",
+                    "abbrev": "CAT",
+                    "keywords":
+                    [
+                        {
+                            "value": "cat"
+                        },
+                        {
+                            "value": "africa"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Africa/Harare"
+                        }
+                    ]
+                },
+                {
+                    "name": "Central European Summer Time",
+                    "abbrev": "CEST",
+                    "keywords":
+                    [
+                        {
+                            "value": "cest"
+                        },
+                        {
+                            "value": "ecst"
+                        },
+                        {
+                            "value": "mesz"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Europe/Rome"
+                        }
+                    ]
+                },
+                {
+                    "name": "Eastern European Standard Time",
+                    "abbrev": "eest",
+                    "keywords":
+                    [
+                        {
+                            "value": "eest"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Europe/Athens"
+                        }
+                    ]
+                },
+                {
+                    "name": "Israel Standard Time",
+                    "abbrev": "IST",
+                    "keywords":
+                    [
+                        {
+                            "value": "ist"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Jerusalem"
+                        }
+                    ]
+                },
+                {
+                    "name": "South Africa Standard Time",
+                    "abbrev": "SAST",
+                    "keywords":
+                    [
+                        {
+                            "value": "sast"
+                        },
+                        {
+                            "value": "africa"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Africa/Johannesburg"
+                        }
+                    ]
+                },
+                {
+                    "name": "West Africa Summer Time",
+                    "abbrev": "WAST",
+                    "keywords":
+                    [
+                        {
+                            "value": "wast"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-2"
+                        }
+                    ]
+                }
             ]
         },
         {
@@ -2314,12 +2696,247 @@
             "timezones":
             [
                 {
+                    "name": "UTC+03:00",
+                    "abbrev": "UTC+3",
+                    "keywords":
+                    [
+                        {
+                        "value": "gmt−03:00"
+                        },
+                        {
+                            "value": "gmt-03:00"
+                        },
+                        {
+                            "value": "gmt−03:00"
+                        },
+                        {
+                            "value": "gmt−3:00"
+                        },
+                        {
+                            "value": "gmt-3:00"
+                        },
+                        {
+                            "value": "gmt−3"
+                        },
+                        {
+                            "value": "gmt-3"
+                        },
+                        {
+                            "value": "gmt-03"
+                        },
+                        {
+                            "value": "gmt−03"
+                        },
+                        {
+                            "value": "utc+3"
+                        },
+                        {
+                            "value": "utc+03:00"
+                        },
+                        {
+                            "value": "utc+03"
+                        },
+                        {
+                            "value": "utc+3:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-3"
+                        }
+                    ]
+                },
+                {
+                    "name": "Arabia Standard Time",
+                    "abbrev": "AST",
+                    "keywords":
+                    [
+                        {
+                            "value": "ast"
+                        },
+                        {
+                            "value": "arabia"
+                        },
+                        {
+                            "value": "arabian"
+                        },
+                        {
+                            "value": "manamah"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Baghdad"
+                        }
+                    ]
+                },
+                {
+                    "name": "Charlie Time Zone",
+                    "abbrev": "C",
+                    "keywords":
+                    [
+                        {
+                            "value": "c"
+                        },
+                        {
+                            "value": "charlie"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-3"
+                        }
+                    ]
+                },
+                {
+                    "name": "Eastern Africa Time",
+                    "abbrev": "EAT",
+                    "keywords":
+                    [
+                        {
+                            "value": "eat"
+                        },
+                        {
+                            "value": "africa"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Africa/Khartoum"
+                        }
+                    ]
+                },
+                {
+                    "name": "Eastern European Summer Time",
+                    "abbrev": "EEDT",
+                    "keywords":
+                    [
+                        {
+                            "value": "eedt"
+                        },
+                        {
+                            "value": "eedst"
+                        },
+                        {
+                            "value": "oesz"
+                        }
+                    ],
+                    "databasenames":
+                    [   
+                        {
+                            "value": "Europe/Athens"
+                        }
+                    ]
+                },
+                {
+                    "name": "Further-Eastern European Time",
+                    "abbrev": "FET",
+                    "keywords":
+                    [
+                        {
+                            "value": "fet"
+                        },
+                        {
+                            "value": "further"
+                        },
+                        {
+                            "value": "further-eastern"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-3"
+                        }
+                    ]
+                },
+                {
+                    "name": "Israel Daylight Time",
+                    "abbrev": "IDT",
+                    "keywords":
+                    [
+                        {
+                            "value": "idt"
+                        },
+                        {
+                            "value": "idst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Jerusalem"
+                        }
+                    ]
+                },
+                {
+                    "name": "Moscow Standard Time",
+                    "abbrev": "MSK",
+                    "keywords":
+                    [
+                        {
+                            "value": "msk"
+                        },
+                        {
+                            "value": "mck"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Europe/Moscow"
+                        }
+                    ]
+                },
+                {
+                    "name": "Syowa Time",
+                    "abbrev": "SYOT",
+                    "keywords":
+                    [
+                        {
+                            "value": "syot"
+                        },
+                        {
+                            "value": "syowa"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Antarctica/Syowa"
+                        }
+                    ]
+                },
+                {
+                    "name": "Turkey Time",
+                    "abbrev": "TRT",
+                    "keywords":
+                    [
+                        {
+                            "value": "trt"
+                        },
+                        {
+                            "value": "turkey"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Europe/Istanbul"
+                        }
+                    ]
+                },
+                {
                     "name": "Volgograd Standard Time",
                     "abbrev": "VST",
                     "keywords":
                     [
                         {
-                            "value": "kst"
+                            "value": "vst"
                         }
                     ],
                     "databasenames":
@@ -2332,7 +2949,28 @@
             ]
         },
         {
-            "offset": 3.5
+            "offset": 3.5,
+            "utcname": "UTC+03:30",
+            "offsettext": "+03:30",
+            "timezones":
+            [
+                {
+                    "name": "Iran Standard Time",
+                    "abbrev": "IRST",
+                    "keywords":
+                    [
+                        {
+                            "value": "irst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Tehran"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "offset": 4,
@@ -2340,6 +2978,74 @@
             "offsettext": "+04:00",
             "timezones":
             [
+                {
+                    "name": "UTC+04:00",
+                    "abbrev": "UTC+4",
+                    "keywords":
+                    [
+                        {
+                        "value": "gmt−04:00"
+                        },
+                        {
+                            "value": "gmt-04:00"
+                        },
+                        {
+                            "value": "gmt−04:00"
+                        },
+                        {
+                            "value": "gmt−4:00"
+                        },
+                        {
+                            "value": "gmt-4:00"
+                        },
+                        {
+                            "value": "gmt−4"
+                        },
+                        {
+                            "value": "gmt-4"
+                        },
+                        {
+                            "value": "gmt-04"
+                        },
+                        {
+                            "value": "gmt−04"
+                        },
+                        {
+                            "value": "utc+4"
+                        },
+                        {
+                            "value": "utc+04:00"
+                        },
+                        {
+                            "value": "utc+04"
+                        },
+                        {
+                            "value": "utc+4:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-4"
+                        }
+                    ]
+                },
+                {
+                    "name": "Arabia Daylight Time",
+                    "abbrev": "ADT",
+                    "keywords":
+                    [
+                        {
+                            "value": "adt"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-4"
+                        }
+                    ]
+                },
                 {
                     "name": "Volgograd Time",
                     "abbrev": "VOLT",
@@ -2355,11 +3061,269 @@
                             "value": "Etc/GMT-4"
                         }
                     ]
+                },
+                {
+                    "name": "Armenia Time",
+                    "abbrev": "AMT",
+                    "keywords":
+                    [
+                        {
+                            "value": "amt"
+                        },
+                        {
+                            "value": "armenia"
+                        },
+                        {
+                            "value": "armenian"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Yerevan"
+                        }
+                    ]
+                },
+                {
+                    "name": "Azerbaijan Time",
+                    "abbrev": "AZT",
+                    "keywords": 
+                    [
+                        {
+                            "value": "azt"
+                        },
+                        {
+                            "value": "azerbaijan"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Baku"
+                        }
+                    ]
+                },
+                {
+                    "name": "Delta Time Zone",
+                    "abbrev": "D",
+                    "keywords":
+                    [
+                        {
+                            "value": "d"
+                        },
+                        {
+                            "value": "delta"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-4"
+                        }
+                    ]
+                },
+                {
+                    "name": "Georgia Standard Time",
+                    "abbrev": "GET",
+                    "keywords":
+                    [
+                        {
+                            "value": "get"
+                        },
+                        {
+                            "value": "georgia"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Tbilisi"
+                        }
+                    ]
+                },
+                {
+                    "name": "Gulf Standard Time",
+                    "abbrev": "GST",
+                    "keywords":
+                    [  
+                        {
+                            "value": "get"
+                        },
+                        {
+                            "value": "gulf"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Dubai"
+                        }
+                    ]
+                },
+                {
+                    "name": "Kuybyshev Time",
+                    "abbrev": "KUYT",
+                    "keywords":
+                    [
+                        {
+                            "value": "kuyt"
+                        },
+                        {
+                            "value": "samst"
+                        },
+                        {
+                            "value": "kuybyshev"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-4"
+                        }
+                    ]
+                },
+                {
+                    "name": "Moscow Daylight Savings Time",
+                    "abbrev": "MSD",
+                    "keywords":
+                    [
+                        {
+                            "value": "msd"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-4"
+                        }
+                    ]
+                },
+                {
+                    "name": "Mauritius Time",
+                    "abbrev": "MUT",
+                    "keywords":
+                    [
+                        {
+                            "value": "mut"
+                        },
+                        {
+                            "value": "mauritius"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Indian/Mauritius"
+                        }
+                    ]
+                },
+                {
+                    "name": "Réunion Time",
+                    "abbrev": "RET",
+                    "keywords":
+                    [
+                        {
+                            "value": "ret"
+                        },
+                        {
+                            "value": "reunion"
+                        },
+                        {
+                            "value": "réunion"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Indian/Reunion"
+                        }
+                    ]
+                },
+                {
+                    "name": "Samara Time",
+                    "abbrev": "SAMT",
+                    "keywords":
+                    [
+                        {
+                            "value": "samt"
+                        },
+                        {
+                            "value": "samara"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Europe/Samara"
+                        }
+                    ]
+                },
+                {
+                    "name": "Seychelles Time",
+                    "abbrev": "SCT",
+                    "keywords":
+                    [
+                        {
+                            "value": "sct"
+                        },
+                        {
+                            "value": "seychelles"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-4"
+                        }
+                    ]
                 }
             ]
         },
         {
-            "offset": 4.5
+            "offset": 4.5,
+            "utcname": "UTC+04:30",
+            "offsettext": "+04:30",
+            "timezones":
+            [
+                {
+                    "name": "Iran Daylight Savings Time",
+                    "abbrev": "IRDT",
+                    "keywords":
+                    [
+                        {
+                            "value": "irdt"
+                        },
+                        {
+                            "value": "irdst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Tehran"
+                        }
+                    ]
+                },
+                {
+                    "name": "Afghanistan Time",
+                    "abbrev": "AFT",
+                    "keywords":
+                    [
+                        {
+                            "value": "aft"
+                        },
+                        {
+                            "value": "afghanistan"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Kabul"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "offset": 5
@@ -2664,13 +3628,90 @@
             ]
         },
         {
-            "name": "WesterN European Time",
+            "name": "Western European Time",
             "abbrev": "WET",
-            "tzdatabase": "Atlantic/Canary",
+            "tzdatabase": "Europe/London",
             "keywords":
             [
                 {
                     "value": "wet"
+                },
+                {
+                    "value": "europe"
+                },
+                {
+                    "value": "european"
+                }
+            ]
+        },
+        {
+            "name": "Central European Time",
+            "abbrev": "CET",
+            "tzdatabase": "Europe/Rome",
+            "keywords":
+            [
+                {
+                    "value": "cet"
+                },
+                {
+                    "value": "ect"
+                },
+                {
+                    "value": "mez"
+                },
+                {
+                    "value": "europe"
+                },
+                {
+                    "value": "european"
+                }
+            ]
+        },
+        {
+            "name": "Eastern European Time",
+            "abbrev": "EET",
+            "tzdatabase": "Europe/Athens",
+            "keywords":
+            [
+                {
+                    "value": "eet"
+                },
+                {
+                    "value": "europe"
+                },
+                {
+                    "value": "european"
+                },
+                {
+                    "value": "oez"
+                }
+            ]
+        },
+        {
+            "name": "Israel Time",
+            "abbrev": "IT",
+            "tzdatabase": "Asia/Jerusalem",
+            "keywords":
+            [
+                {
+                    "value": "it"
+                },
+                {
+                    "value": "israel"
+                }
+            ]
+        },
+        {
+            "name": "Iran Time",
+            "abbrev": "IRT",
+            "tzdatabase": "Asia/Tehran",
+            "keywords":
+            [
+                {
+                    "value": "irt"
+                },
+                {
+                    "value": "iran"
                 }
             ]
         }
