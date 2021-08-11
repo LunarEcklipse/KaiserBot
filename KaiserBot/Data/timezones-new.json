@@ -13,22 +13,28 @@
                     "keywords":
                     [
                         {
+                            "value": "utc-12:00"
+                        },
+                        {
+                            "value": "utc−12:00"
+                        },
+                        {
                             "value": "utc−12"
                         },
                         {
                             "value": "utc-12"
                         },
                         {
-                            "value": "utc−12:00"
+                            "value": "gmt−12"
                         },
                         {
-                            "value": "utc-12:00"
+                            "value": "gmt-12"
                         },
                         {
-                            "value": "gmt+12"
+                            "value": "gmt-12:00"
                         },
                         {
-                            "value": "gmt+12:00"
+                            "value": "gmt−12:00"
                         }
                     ],
                     "databasenames":
@@ -87,22 +93,28 @@
                     "keywords":
                     [
                         {
+                            "value": "utc-11:00"
+                        },
+                        {
+                            "value": "utc−11:00"
+                        },
+                        {
                             "value": "utc−11"
                         },
                         {
                             "value": "utc-11"
                         },
                         {
-                            "value": "utc−11:00"
+                            "value": "gmt−11"
                         },
                         {
-                            "value": "utc-11:00"
+                            "value": "gmt-11"
                         },
                         {
-                            "value": "gmt+11"
+                            "value": "gmt-11:00"
                         },
                         {
-                            "value": "gmt+11:00"
+                            "value": "gmt−11:00"
                         }
                     ],
                     "databasenames":
@@ -185,24 +197,30 @@
                     "abbrev": "UTC−10",
                     "keywords":
                 [
-                        {
-                            "value": "utc−10"
-                        },
-                        {
-                            "value": "utc-10"
-                        },
-                        {
-                            "value": "utc−10:00"
-                        },
-                        {
-                            "value": "utc-10:00"
-                        },
-                        {
-                            "value": "gmt+10"
-                        },
-                        {
-                            "value": "gmt+10:00"
-                        }
+                    {
+                        "value": "utc-10:00"
+                    },
+                    {
+                        "value": "utc−10:00"
+                    },
+                    {
+                        "value": "utc−10"
+                    },
+                    {
+                        "value": "utc-10"
+                    },
+                    {
+                        "value": "gmt−10"
+                    },
+                    {
+                        "value": "gmt-10"
+                    },
+                    {
+                        "value": "gmt-10:00"
+                    },
+                    {
+                        "value": "gmt−10:00"
+                    }
                     ],
                     "databasenames":
                     [
@@ -338,22 +356,52 @@
                     "keywords":
                     [
                         {
-                        "value": "utc−09:00"
-                        },
-                        {
                             "value": "utc-09:00"
                         },
                         {
-                            "value": "utc−09"
+                            "value": "utc−09:00"
                         },
                         {
-                            "value": "utc-09"
+                            "value": "utc−9:00"
+                        },
+                        {
+                            "value": "utc-9:00"
                         },
                         {
                             "value": "utc−9"
                         },
                         {
                             "value": "utc-9"
+                        },
+                        {
+                            "value": "utc-09"
+                        },
+                        {
+                            "value": "utc−09"
+                        },
+                        {
+                            "value": "gmt−9"
+                        },
+                        {
+                            "value": "gmt-9"
+                        },
+                        {
+                            "value": "gmt-09:00"
+                        },
+                        {
+                            "value": "gmt−09:00"
+                        },
+                        {
+                            "value": "gmt-09"
+                        },
+                        {
+                            "value": "gmt−09"
+                        },
+                        {
+                            "value": "gmt−9:00"
+                        },
+                        {
+                            "value": "gmt-9:00"
                         }
                     ],
                     "databasenames":
@@ -447,9 +495,6 @@
                     "keywords":
                     [
                         {
-                        "value": "utc−08:00"
-                        },
-                        {
                             "value": "utc-08:00"
                         },
                         {
@@ -471,16 +516,31 @@
                             "value": "utc-08"
                         },
                         {
-                            "value": "gmt+8"
+                            "value": "utc−08"
                         },
                         {
-                            "value": "gmt+08:00"
+                            "value": "gmt−8"
                         },
                         {
-                            "value": "gmt+08"
+                            "value": "gmt-8"
                         },
                         {
-                            "value": "gmt+8:00"
+                            "value": "gmt-08:00"
+                        },
+                        {
+                            "value": "gmt−08:00"
+                        },
+                        {
+                            "value": "gmt-08"
+                        },
+                        {
+                            "value": "gmt−08"
+                        },
+                        {
+                            "value": "gmt−8:00"
+                        },
+                        {
+                            "value": "gmt-8:00"
                         }
                     ],
                     "databasenames":
@@ -586,9 +646,6 @@
                     "keywords":
                     [
                         {
-                        "value": "utc−07:00"
-                        },
-                        {
                             "value": "utc-07:00"
                         },
                         {
@@ -610,16 +667,31 @@
                             "value": "utc-07"
                         },
                         {
-                            "value": "gmt+7"
+                            "value": "utc−07"
                         },
                         {
-                            "value": "gmt+07:00"
+                            "value": "gmt−7"
                         },
                         {
-                            "value": "gmt+07"
+                            "value": "gmt-7"
                         },
                         {
-                            "value": "gmt+7:00"
+                            "value": "gmt-07:00"
+                        },
+                        {
+                            "value": "gmt−07:00"
+                        },
+                        {
+                            "value": "gmt-07"
+                        },
+                        {
+                            "value": "gmt−07"
+                        },
+                        {
+                            "value": "gmt−7:00"
+                        },
+                        {
+                            "value": "gmt-7:00"
                         }
                     ],
                     "databasenames":
@@ -715,9 +787,6 @@
                     "keywords":
                     [
                         {
-                        "value": "utc−06:00"
-                        },
-                        {
                             "value": "utc-06:00"
                         },
                         {
@@ -742,16 +811,28 @@
                             "value": "utc−06"
                         },
                         {
-                            "value": "gmt+6"
+                            "value": "gmt−6"
                         },
                         {
-                            "value": "gmt+06:00"
+                            "value": "gmt-6"
                         },
                         {
-                            "value": "gmt+06"
+                            "value": "gmt-06:00"
                         },
                         {
-                            "value": "gmt+6:00"
+                            "value": "gmt−06:00"
+                        },
+                        {
+                            "value": "gmt-06"
+                        },
+                        {
+                            "value": "gmt−06"
+                        },
+                        {
+                            "value": "gmt−6:00"
+                        },
+                        {
+                            "value": "gmt-6:00"
                         }
                     ],
                     "databasenames":
@@ -879,9 +960,6 @@
                     "keywords":
                     [
                         {
-                        "value": "utc−05:00"
-                        },
-                        {
                             "value": "utc-05:00"
                         },
                         {
@@ -906,16 +984,28 @@
                             "value": "utc−05"
                         },
                         {
-                            "value": "gmt+5"
+                            "value": "gmt−5"
                         },
                         {
-                            "value": "gmt+05:00"
+                            "value": "gmt-5"
                         },
                         {
-                            "value": "gmt+05"
+                            "value": "gmt-05:00"
                         },
                         {
-                            "value": "gmt+5:00"
+                            "value": "gmt−05:00"
+                        },
+                        {
+                            "value": "gmt-05"
+                        },
+                        {
+                            "value": "gmt−05"
+                        },
+                        {
+                            "value": "gmt−5:00"
+                        },
+                        {
+                            "value": "gmt-5:00"
                         }
                     ],
                     "databasenames":
@@ -1129,9 +1219,6 @@
                     "keywords":
                     [
                         {
-                        "value": "utc−04:00"
-                        },
-                        {
                             "value": "utc-04:00"
                         },
                         {
@@ -1153,16 +1240,31 @@
                             "value": "utc-04"
                         },
                         {
-                            "value": "gmt+4"
+                            "value": "utc−04"
                         },
                         {
-                            "value": "gmt+04:00"
+                            "value": "gmt−4"
                         },
                         {
-                            "value": "gmt+04"
+                            "value": "gmt-4"
                         },
                         {
-                            "value": "gmt+4:00"
+                            "value": "gmt-04:00"
+                        },
+                        {
+                            "value": "gmt−04:00"
+                        },
+                        {
+                            "value": "gmt-04"
+                        },
+                        {
+                            "value": "gmt−04"
+                        },
+                        {
+                            "value": "gmt−4:00"
+                        },
+                        {
+                            "value": "gmt-4:00"
                         }
                     ],
                     "databasenames":
@@ -1416,9 +1518,6 @@
                     "keywords":
                     [
                         {
-                        "value": "utc−03:00"
-                        },
-                        {
                             "value": "utc-03:00"
                         },
                         {
@@ -1443,16 +1542,28 @@
                             "value": "utc−03"
                         },
                         {
-                            "value": "gmt+3"
+                            "value": "gmt−3"
                         },
                         {
-                            "value": "gmt+03:00"
+                            "value": "gmt-3"
                         },
                         {
-                            "value": "gmt+03"
+                            "value": "gmt-03:00"
                         },
                         {
-                            "value": "gmt+3:00"
+                            "value": "gmt−03:00"
+                        },
+                        {
+                            "value": "gmt-03"
+                        },
+                        {
+                            "value": "gmt−03"
+                        },
+                        {
+                            "value": "gmt−3:00"
+                        },
+                        {
+                            "value": "gmt-3:00"
                         }
                     ],
                     "databasenames":
@@ -1779,9 +1890,6 @@
                     "keywords":
                     [
                         {
-                        "value": "utc−02:00"
-                        },
-                        {
                             "value": "utc-02:00"
                         },
                         {
@@ -1806,16 +1914,28 @@
                             "value": "utc−02"
                         },
                         {
-                            "value": "gmt+2"
+                            "value": "gmt−2"
                         },
                         {
-                            "value": "gmt+02:00"
+                            "value": "gmt-2"
                         },
                         {
-                            "value": "gmt+02"
+                            "value": "gmt-02:00"
                         },
                         {
-                            "value": "gmt+2:00"
+                            "value": "gmt−02:00"
+                        },
+                        {
+                            "value": "gmt-02"
+                        },
+                        {
+                            "value": "gmt−02"
+                        },
+                        {
+                            "value": "gmt−2:00"
+                        },
+                        {
+                            "value": "gmt-2:00"
                         }
                     ],
                     "databasenames":
@@ -1966,9 +2086,6 @@
                     "keywords":
                     [
                         {
-                        "value": "utc−01:00"
-                        },
-                        {
                             "value": "utc-01:00"
                         },
                         {
@@ -1993,16 +2110,28 @@
                             "value": "utc−01"
                         },
                         {
-                            "value": "gmt+1"
+                            "value": "gmt−1"
                         },
                         {
-                            "value": "gmt+01:00"
+                            "value": "gmt-1"
                         },
                         {
-                            "value": "gmt+01"
+                            "value": "gmt-01:00"
                         },
                         {
-                            "value": "gmt+1:00"
+                            "value": "gmt−01:00"
+                        },
+                        {
+                            "value": "gmt-01"
+                        },
+                        {
+                            "value": "gmt−01"
+                        },
+                        {
+                            "value": "gmt−1:00"
+                        },
+                        {
+                            "value": "gmt-1:00"
                         }
                     ],
                     "databasenames":
@@ -2318,31 +2447,16 @@
                     "keywords":
                     [
                         {
-                        "value": "gmt−01:00"
+                            "value": "gmt+01:00"
                         },
                         {
-                            "value": "gmt-01:00"
+                            "value": "gmt+1:00"
                         },
                         {
-                            "value": "gmt−01:00"
+                            "value": "gmt+1"
                         },
                         {
-                            "value": "gmt−1:00"
-                        },
-                        {
-                            "value": "gmt-1:00"
-                        },
-                        {
-                            "value": "gmt−1"
-                        },
-                        {
-                            "value": "gmt-1"
-                        },
-                        {
-                            "value": "gmt-01"
-                        },
-                        {
-                            "value": "gmt−01"
+                            "value": "gmt+01"
                         },
                         {
                             "value": "utc+1"
@@ -2514,31 +2628,16 @@
                     "keywords":
                     [
                         {
-                        "value": "gmt−02:00"
+                        "value": "gmt+02:00"
                         },
                         {
-                            "value": "gmt-02:00"
+                            "value": "gmt+2:00"
                         },
                         {
-                            "value": "gmt−02:00"
+                            "value": "gmt+2"
                         },
                         {
-                            "value": "gmt−2:00"
-                        },
-                        {
-                            "value": "gmt-2:00"
-                        },
-                        {
-                            "value": "gmt−2"
-                        },
-                        {
-                            "value": "gmt-2"
-                        },
-                        {
-                            "value": "gmt-02"
-                        },
-                        {
-                            "value": "gmt−02"
+                            "value": "gmt+02"
                         },
                         {
                             "value": "utc+2"
@@ -2701,31 +2800,16 @@
                     "keywords":
                     [
                         {
-                        "value": "gmt−03:00"
+                        "value": "gmt+03:00"
                         },
                         {
-                            "value": "gmt-03:00"
+                            "value": "gmt+3:00"
                         },
                         {
-                            "value": "gmt−03:00"
+                            "value": "gmt+3"
                         },
                         {
-                            "value": "gmt−3:00"
-                        },
-                        {
-                            "value": "gmt-3:00"
-                        },
-                        {
-                            "value": "gmt−3"
-                        },
-                        {
-                            "value": "gmt-3"
-                        },
-                        {
-                            "value": "gmt-03"
-                        },
-                        {
-                            "value": "gmt−03"
+                            "value": "gmt+03"
                         },
                         {
                             "value": "utc+3"
@@ -2984,31 +3068,16 @@
                     "keywords":
                     [
                         {
-                        "value": "gmt−04:00"
+                            "value": "gmt+04:00"
                         },
                         {
-                            "value": "gmt-04:00"
+                            "value": "gmt+4:00"
                         },
                         {
-                            "value": "gmt−04:00"
+                            "value": "gmt+4"
                         },
                         {
-                            "value": "gmt−4:00"
-                        },
-                        {
-                            "value": "gmt-4:00"
-                        },
-                        {
-                            "value": "gmt−4"
-                        },
-                        {
-                            "value": "gmt-4"
-                        },
-                        {
-                            "value": "gmt-04"
-                        },
-                        {
-                            "value": "gmt−04"
+                            "value": "gmt+04"
                         },
                         {
                             "value": "utc+4"
@@ -3326,25 +3395,1181 @@
             ]
         },
         {
-            "offset": 5
+            "offset": 5,
+            "utcname": "UTC+05:00",
+            "offsettext": "+05:00",
+            "timezones":
+            [
+                {
+                    "name": "UTC+05:00",
+                    "abbrev": "UTC+5",
+                    "keywords":
+                    [
+                        {
+                        "value": "gmt+05:00"
+                        },
+                        {
+                            "value": "gmt+5:00"
+                        },
+                        {
+                            "value": "gmt+5"
+                        },
+                        {
+                            "value": "gmt+05"
+                        },
+                        {
+                            "value": "utc+5"
+                        },
+                        {
+                            "value": "utc+05:00"
+                        },
+                        {
+                            "value": "utc+05"
+                        },
+                        {
+                            "value": "utc+5:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-5"
+                        }
+                    ]
+                },
+                {
+                    "name": "Armenia Summer Time",
+                    "abbrev": "AMST",
+                    "keywords":
+                    [
+                        {
+                            "value": "amst"
+                        },
+                        {
+                            "value": "amdt"
+                        },
+                        {
+                            "value": "amdst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-5"
+                        }
+                    ]
+                },
+                {
+                    "name": "Aqtöbe Time",
+                    "abbrev": "AQTT",
+                    "keywords":
+                    [
+                        {
+                            "value": "aqtt"
+                        },
+                        {
+                            "value": "aqtobe"
+                        },
+                        {
+                            "value": "aqtöbe"
+                        },
+                        {
+                            "value": "aktobe"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Aqtobe"
+                        }
+                    ]
+                },
+                {
+                    "name": "Azerbaijan Summer Time",
+                    "abbrev": "AZST",
+                    "keywords":
+                    [
+                        {
+                            "value": "azst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-5"
+                        }
+                    ]
+                },
+                {
+                    "name": "Echo Time Zone",
+                    "abbrev": "E",
+                    "keywords":
+                    [
+                        {
+                            "value": "e"
+                        },
+                        {
+                            "value": "echo"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-5"
+                        }
+                    ]
+                },
+                {
+                    "name": "Mawson Time",
+                    "abbrev": "MAWT",
+                    "keywords":
+                    [
+                        {
+                            "value": "mawt"
+                        },
+                        {
+                            "value": "mawson"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Antarctica/Mawson"
+                        }
+                    ]
+                },
+                {
+                    "name": "Maldives Time",
+                    "abbrev": "MVT",
+                    "keywords":
+                    [
+                        {
+                            "value": "mvt"
+                        },
+                        {
+                            "value": "maldives"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Indian/Maldives"
+                        }
+                    ]
+                },
+                {
+                    "name": "Oral Time",
+                    "abbrev": "ORAT",
+                    "keywords":
+                    [
+                        {
+                            "value": "orat"
+                        },
+                        {
+                            "value": "oral"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Oral"
+                        }
+                    ]
+                },
+                {
+                    "name": "Pakistan Standard Time",
+                    "abbrev": "PKT",
+                    "keywords":
+                    [
+                        {
+                            "value": "pkt"
+                        },
+                        {
+                            "value": "pakistan"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Karachi"
+                        }
+                    ]
+                },
+                {
+                    "name": "French Southern and Antarctic Time",
+                    "abbrev": "TFT",
+                    "keywords":
+                    [
+                        {
+                            "value": "tft"
+                        },
+                        {
+                            "value": "kit"
+                        },
+                        {
+                            "value": "kerguelen"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Indian/Kerguelen"
+                        }
+                    ]
+                },
+                {
+                    "name": "Tajikistan Time",
+                    "abbrev": "TJT",
+                    "keywords":
+                    [
+                        {
+                            "value": "tjt"
+                        },
+                        {
+                            "value": "tajikistan"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Dushanbe"
+                        }
+                    ]
+                },
+                {
+                    "name": "Turkmenistan Time",
+                    "abbrev": "TMT",
+                    "keywords":
+                    [
+                        {
+                            "value": "tmt"
+                        },
+                        {
+                            "value": "turkmenistan"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Ashgabat"
+                        }
+                    ]
+                },
+                {
+                    "name": "Uzbekistan Time",
+                    "abbrev": "UZT",
+                    "keywords":
+                    [
+                        {
+                            "value": "uzt"
+                        },
+                        {
+                            "value": "uzbekistan"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Tashkent"
+                        }
+                    ]
+                },
+                {
+                    "name": "Yekaterinburg Time",
+                    "abbrev": "YEKT",
+                    "keywords":
+                    [
+                        {
+                            "value": "yekt"
+                        },
+                        {
+                            "value": "yekaterinburg"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Yekaterinburg"
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "offset": 5.5
+            "offset": 5.5,
+            "utcname": "UTC+05:30",
+            "offsettext": "+05:30",
+            "timezones":
+            [
+                {
+                    "name": "Indian Standard Time",
+                    "abbrev": "IST",
+                    "keywords":
+                    [
+                        {
+                            "value": "ist"
+                        },
+                        {
+                            "value": "it"
+                        },
+                        {
+                            "value": "india"
+                        },
+                        {
+                            "value": "indian"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Kolkata"
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "offset": 5.75
+            "offset": 5.75,
+            "utcname": "UTC+05:45",
+            "offsettext": "+05:45",
+            "timezones":
+            [
+                {
+                    "name": "Nepal Time",
+                    "abbrev": "NPT",
+                    "keywords":
+                    [
+                        {
+                            "value": "npt"
+                        },
+                        {
+                            "value": "nepal"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Kathmandu"
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "offset": 6
+            "offset": 6,
+            "utcname": "UTC+06:00",
+            "offsettext": "+06:00",
+            "timezones":
+            [
+                {
+                    "name": "UTC+06:00",
+                    "abbrev": "UTC+6",
+                    "keywords":
+                    [
+                        {
+                            "value": "gmt+06:00"
+                        },
+                        {
+                            "value": "gmt+6:00"
+                        },
+                        {
+                            "value": "gmt+6"
+                        },
+                        {
+                            "value": "gmt+06"
+                        },
+                        {
+                            "value": "utc+6"
+                        },
+                        {
+                            "value": "utc+06:00"
+                        },
+                        {
+                            "value": "utc+06"
+                        },
+                        {
+                            "value": "utc+6:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-6"
+                        }
+                    ]
+                },
+                {
+                    "name": "Alma-Ata Time",
+                    "abbrev": "ALMT",
+                    "keywords":
+                    [
+                        {
+                            "value": "almt"
+                        },
+                        {
+                            "value": "alma-ata"
+                        },
+                        {
+                            "value": "alma"
+                        },
+                        {
+                            "value": "ata"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Almaty"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bangladesh Standard Time",
+                    "abbrev": "BST",
+                    "keywords":
+                    [
+                        {
+                            "value": "bst"
+                        },
+                        {
+                            "value": "bangladesh"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Dhaka"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bhutan Time",
+                    "abbrev": "BTT",
+                    "keywords":
+                    [
+                        {
+                            "value": "btt"
+                        },
+                        {
+                            "value": "bhutan"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Thimphu"
+                        }
+                    ]
+                },
+                {
+                    "name": "Foxtrot Time Zone",
+                    "abbrev": "F",
+                    "keywords": 
+                    [
+                        {
+                            "value": "f"
+                        },
+                        {
+                            "value": "foxtrot"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-6"
+                        }
+                    ]
+                },
+                {
+                    "name": "Indian Chagos Time",
+                    "abbrev": "IOT",
+                    "keywords":
+                    [
+                        {
+                            "value": "iot"
+                        },
+                        {
+                            "value": "chagos"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Indian/Chagos"
+                        }
+                    ]
+                },
+                {
+                    "name": "Kyrgyzstan Time",
+                    "abbrev": "KGT",
+                    "keywords":
+                    [
+                        {
+                            "value": "kgt"
+                        },
+                        {
+                            "value": "kyrgyzstan"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Bishkek"
+                        }
+                    ]
+                },
+                {
+                    "name": "Omsk Standard Time",
+                    "abbrev": "OMST",
+                    "keywords":
+                    [
+                        {
+                            "value": "omst"
+                        },
+                        {
+                            "value": "omsk"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Omsk"
+                        }
+                    ]
+                },
+                {
+                    "name": "Qyzylorda Time",
+                    "abbrev": "QYZT",
+                    "keywords":
+                    [
+                        {
+                            "value": "qyzt"
+                        },
+                        {
+                            "value": "qyzylorda"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-6"
+                        }
+                    ]
+                },
+                {
+                    "name": "Vostok Time",
+                    "abbrev": "VOST",
+                    "keywords":
+                    [
+                        {
+                            "value": "vost"
+                        },
+                        {
+                            "value": "vostok"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Antarctica/Vostok"
+                        }
+                    ]
+                },
+                {
+                    "name": "Yekaterinburg Summer Time",
+                    "abbrev": "YEKST",
+                    "keywords":
+                    [
+                        {
+                            "value": "yekst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-6"
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "offset": 6.5
+            "offset": 6.5,
+            "utcname": "UTC+06:30",
+            "offsettext": "+06:30",
+            "timezones":
+            [
+                {
+                    "name": "Cocos Islands Time",
+                    "abbrev": "CCT",
+                    "keywords":
+                    [
+                        {
+                            "value": "cct"
+                        },
+                        {
+                            "value": "cocos"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Indian/Cocos"
+                        }
+                    ]
+                },
+                {
+                    "name": "Myanmar Time",
+                    "abbrev": "MMT",
+                    "keywords":
+                    [
+                        {
+                            "value": "mmt"
+                        },
+                        {
+                            "value": "myanmar"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Yangon"
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "offset": 7
+            "offset": 7,
+            "utcname": "UTC+07:00",
+            "offsettext": "+07:00",
+            "timezones":
+            [
+                {
+                    "name": "UTC+07:00",
+                    "abbrev": "UTC+7",
+                    "keywords":
+                    [
+                        {
+                            "value": "gmt+07:00"
+                        },
+                        {
+                            "value": "gmt+7:00"
+                        },
+                        {
+                            "value": "gmt+7"
+                        },
+                        {
+                            "value": "gmt+07"
+                        },
+                        {
+                            "value": "utc+7"
+                        },
+                        {
+                            "value": "utc+07:00"
+                        },
+                        {
+                            "value": "utc+07"
+                        },
+                        {
+                            "value": "utc+7:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-7"
+                        }
+                    ]
+                },
+                {
+                    "name": "Christmas Island Time",
+                    "abbrev": "CXT",
+                    "keywords":
+                    [
+                        {
+                            "value": "cxt"
+                        },
+                        {
+                            "value": "christmas"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Indian/Christmas"
+                        }
+                    ]
+                },
+                {
+                    "name": "Davis Time",
+                    "abbrev": "DAVT",
+                    "keywords":
+                    [
+                        {
+                            "value": "davt"
+                        },
+                        {
+                            "value": "davis"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Antarctica/Davis"
+                        }
+                    ]
+                },
+                {
+                    "name": "Golf Time Zone",
+                    "abbrev": "G",
+                    "keywords":
+                    [
+                        {
+                            "value": "g"
+                        },
+                        {
+                            "value": "golf"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-7"
+                        }
+                    ]
+                },
+                {
+                    "name": "Hovd Time",
+                    "abbrev": "HOVT",
+                    "keywords":
+                    [
+                        {
+                            "value": "hovt"
+                        },
+                        {
+                            "value": "hovd"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Hovd"
+                        }
+                    ]
+                },
+                {
+                    "name": "Indochina Time",
+                    "abbrev": "ICT",
+                    "keywords":
+                    [
+                        {
+                            "value": "ict"
+                        },
+                        {
+                            "value": "indochina"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Bangkok"
+                        }
+                    ]
+                },
+                {
+                    "name": "Krasnoyarsk Time",
+                    "abbrev": "KRAT",
+                    "keywords":
+                    [
+                        {
+                            "value": "krat"
+                        },
+                        {
+                            "value": "krasnoyarsk"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Krasnoyarsk"
+                        }
+                    ]
+                },
+                {
+                    "name": "Novosibirsk Summer Time",
+                    "abbrev": "NOVST",
+                    "keywords":
+                    [
+                        {
+                            "value": "novst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-7"
+                        }
+                    ]
+                },
+                {
+                    "name": "Novosibirsk Time",
+                    "abbrev": "NOVT",
+                    "keywords":
+                    [
+                        {
+                            "value": "novt"
+                        },
+                        {
+                            "value": "novosibirsk"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Novosibirsk"
+                        }
+                    ]
+                },
+                {
+                    "name": "Omsk Summer Time",
+                    "abbrev": "OMSST",
+                    "keywords":
+                    [
+                        {
+                            "value": "omsst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-7"
+                        }
+                    ]
+                },
+                {
+                    "name": "Western Indonesian Time",
+                    "abbrev": "WIB",
+                    "keywords":
+                    [
+                        {
+                            "value": "wib"
+                        },
+                        {
+                            "value": "indonesia"
+                        },
+                        {
+                            "value": "indonesian"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Jakarta"
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "offset": 8
+            "offset": 8,
+            "utcname": "UTC+08:00",
+            "offsettext": "+08:00",
+            "timezones":
+            [
+                {
+                    "name": "UTC+08:00",
+                    "abbrev": "UTC+8",
+                    "keywords":
+                    [
+                        {
+                            "value": "gmt+08:00"
+                        },
+                        {
+                            "value": "gmt+8:00"
+                        },
+                        {
+                            "value": "gmt+8"
+                        },
+                        {
+                            "value": "gmt+08"
+                        },
+                        {
+                            "value": "utc+8"
+                        },
+                        {
+                            "value": "utc+08:00"
+                        },
+                        {
+                            "value": "utc+08"
+                        },
+                        {
+                            "value": "utc+8:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-8"
+                        }
+                    ]
+                },
+                {
+                    "name": "Australian Western Standard Time",
+                    "abbrev": "AWST",
+                    "keywords":
+                    [
+                        {
+                            "value": "awst"
+                        },
+                        {
+                            "value": "wat"
+                        },
+                        {
+                            "value": "wst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Australia/Perth"
+                        }
+                    ]
+                },
+                {
+                    "name": "Brunei Darussalam Time",
+                    "abbrev": "BNT",
+                    "keywords":
+                    [
+                        {
+                            "value": "bnt"
+                        },
+                        {
+                            "value": "bdt"
+                        },
+                        {
+                            "value": "brunei"
+                        },
+                        {
+                            "value": "darussalam"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Brunei"
+                        }
+                    ]
+                },
+                {
+                    "name": "Casey Time",
+                    "abbrev": "CAST",
+                    "keywords":
+                    [
+                        {
+                            "value": "cast"
+                        },
+                        {
+                            "value": "casey"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Antarctica/Casey"
+                        }
+                    ]
+                },
+                {
+                    "name": "Choibalsan Time",
+                    "abbrev": "CHOT",
+                    "keywords":
+                    [
+                        {
+                            "value": "chot"
+                        },
+                        {
+                            "value": "choibalsan"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Choibalsan"
+                        }
+                    ]
+                },
+                {
+                    "name": "China Standard Time",
+                    "abbrev": "CST",
+                    "keywords":
+                    [
+                        {
+                            "value": "cst"
+                        },
+                        {
+                            "value": "china"
+                        },
+                        {
+                            "value": "chinese"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Shanghai"
+                        }
+                    ]
+                },
+                {
+                    "name": "Hotel Time Zone",
+                    "abbrev": "H",
+                    "keywords":
+                    [
+                        {
+                            "value": "h"
+                        },
+                        {
+                            "value": "hotel"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-8"
+                        }
+                    ]
+                },
+                {
+                    "name": "Hong Kong Time",
+                    "abbrev": "HKT",
+                    "keywords":
+                    [
+                        {
+                            "value": "hkt"
+                        },
+                        {
+                            "value": "hong"
+                        },
+                        {
+                            "value": "kong"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Hong_Kong"
+                        }
+                    ]
+                },
+                {
+                    "name": "Hovd Summer Time",
+                    "abbrev": "HOVST",
+                    "keywords":
+                    [
+                        {
+                            "value": "hovst"
+                        },
+                        {
+                            "value": "hovdt"
+                        },
+                        {
+                            "value": "hovdst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-8"
+                        }
+                    ]
+                },
+                {
+                    "name": "Irkutsk Time",
+                    "abbrev": "IRKT",
+                    "keywords":
+                    [
+                        {
+                            "value": "irkt"
+                        },
+                        {
+                            "value": "irkutsk"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Irkutsk"
+                        }
+                    ]
+                },
+                {
+                    "name": "Krasnoyarsk Summer Time",
+                    "abbrev": "KRAST",
+                    "keywords":
+                    [
+                        {
+                            "value": "krast"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-8"
+                        }
+                    ]
+                },
+                {
+                    "name": "Malaysia Time",
+                    "abbrev": "MYT",
+                    "keywords":
+                    [
+                        {
+                            "value": "myt"
+                        },
+                        {
+                            "value": "mst"
+                        },
+                        {
+                            "value": "malaysia"
+                        },
+                        {
+                            "value": "malaysian"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Kuala_Lumpur"
+                        }
+                    ]
+                },
+                {
+                    "name": "Philippine Time",
+                    "abbrev": "PHT",
+                    "keywords":
+                    [
+                        {
+                            "value": "pht"
+                        },
+                        {
+                            "value": "pst"
+                        },
+                        {
+                            "value": "philippine"
+                        },
+                        {
+                            "value": "philippines"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Manila"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "offset": 8.5,
