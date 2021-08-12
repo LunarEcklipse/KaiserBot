@@ -4568,6 +4568,75 @@
                             "value": "Asia/Manila"
                         }
                     ]
+                },
+                {
+                    "name": "Singapore Time",
+                    "abbrev": "SGT",
+                    "keywords":
+                    [
+                        {
+                            "value": "sgt"
+                        },
+                        {
+                            "value": "sst"
+                        },
+                        {
+                            "value": "singapore"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Singapore"
+                        }
+                    ]
+                },
+                {
+                    "name": "Ulaanbaatar Time",
+                    "abbrev": "ULAT",
+                    "keywords":
+                    [
+                        {
+                            "value": "ulat"
+                        },
+                        {
+                            "value": "ulaanbaatar"
+                        },
+                        {
+                            "value": "ulan"
+                        },
+                        {
+                            "value": "bator"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Ulaanbaatar"
+                        }
+                    ]
+                },
+                {
+                    "name": "Central Indonesian Time",
+                    "abbrev": "WITA",
+                    "keywords":
+                    [
+                        {
+                            "value": "wita"
+                        },
+                        {
+                            "value": "indonesia"
+                        },
+                        {
+                            "value": "indonesian"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Makassar"
+                        }
+                    ]
                 }
             ]
         },
@@ -4596,34 +4665,1058 @@
             ]
         },
         {
-            "offset": 8.75
+            "offset": 8.75,
+            "utcname": "UTC+08:45",
+            "offsettext": "+08:45",
+            "timezones":
+            [
+                {
+                    "name": "Australian Central Western Standard Time",
+                    "abbrev": "ACWST",
+                    "keywords":
+                    [
+                        {
+                            "value": "acwst"
+                        },
+                        {
+                            "value": "australia"
+                        },
+                        {
+                            "value": "australian"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Australia/Eucla"
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "offset": 9
+            "offset": 9,
+            "utcname": "UTC+09:00",
+            "offsettext": "+09:00",
+            "timezones":
+            [
+                {
+                    "name": "UTC+09:00",
+                    "abbrev": "UTC+9",
+                    "keywords":
+                    [
+                        {
+                            "value": "gmt+09:00"
+                        },
+                        {
+                            "value": "gmt+9:00"
+                        },
+                        {
+                            "value": "gmt+9"
+                        },
+                        {
+                            "value": "gmt+09"
+                        },
+                        {
+                            "value": "utc+9"
+                        },
+                        {
+                            "value": "utc+09:00"
+                        },
+                        {
+                            "value": "utc+09"
+                        },
+                        {
+                            "value": "utc+9:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-9"
+                        }
+                    ]
+                },
+                {
+                    "name": "Australian Western Daylight Savings Time",
+                    "abbrev": "AWDT",
+                    "keywords":
+                    [
+                        {
+                            "value": "awdt"
+                        },
+                        {
+                            "value": "awdst"
+                        },
+                        {
+                            "value": "wdt"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Australia/Perth"
+                        }
+                    ]
+                },
+                {
+                    "name": "Choibalsan Summer Time",
+                    "abbrev": "CHOST",
+                    "keywords":
+                    [
+                        {
+                            "value": "chost"
+                        },
+                        {
+                            "value": "chodt"
+                        },
+                        {
+                            "value": "chodst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-9"
+                        }
+                    ]
+                },
+                {
+                    "name": "India Time Zone",
+                    "abbrev": "I",
+                    "keywords":
+                    [
+                        {
+                            "value": "i"
+                        },
+                        {
+                            "value": "india"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-9"
+                        }
+                    ]
+                },
+                {
+                    "name": "Irkutsk Summer Time",
+                    "abbrev": "IRKST",
+                    "keywords":
+                    [
+                        {
+                            "value": "irkst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-9"
+                        }
+                    ]
+                },
+                {
+                    "name": "Japan Standard Time",
+                    "abbrev": "JST",
+                    "keywords":
+                    [
+                        {
+                            "value": "jst"
+                        },
+                        {
+                            "value": "japan"
+                        },
+                        {
+                            "value": "japanese"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Tokyo"
+                        }
+                    ]
+                },
+                {
+                    "name": "Korean Standard Time",
+                    "abbrev": "KST",
+                    "keywords":
+                    [
+                        {
+                            "value": "kst"
+                        },
+                        {
+                            "value": "kt"
+                        },
+                        {
+                            "value": "korea"
+                        },
+                        {
+                            "value": "korean"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Seoul"
+                        }
+                    ]
+                },
+                {
+                    "name": "Palau Time",
+                    "abbrev": "PWT",
+                    "keywords":
+                    [
+                        {
+                            "value": "pwt"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-9"
+                        }
+                    ]
+                },
+                {
+                    "name": "East Timor Time",
+                    "abbrev": "TLT",
+                    "keywords":
+                    [
+                        {
+                            "value": "tlt"
+                        },
+                        {
+                            "value": "timor"
+                        },
+                        {
+                            "value": "leste"
+                        },
+                        {
+                            "value": "timor-leste"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Dili"
+                        }
+                    ]
+                },
+                {
+                    "name": "Ulaanbaatar Summer Time",
+                    "abbrev": "ULAST",
+                    "keywords":
+                    [
+                        {
+                            "value": "ulast"
+                        },
+                        {
+                            "value": "uladt"
+                        },
+                        {
+                            "value": "uladst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-9"
+                        }
+                    ]
+                },
+                {
+                    "name": "Eastern Indonesian Time",
+                    "abbrev": "WIT",
+                    "keywords":
+                    [
+                        {
+                            "value": "wit"
+                        },
+                        {
+                            "value": "indonesia"
+                        },
+                        {
+                            "value": "indonesian"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Jayapura"
+                        }
+                    ]
+                },
+                {
+                    "name": "Yakutsk Time",
+                    "abbrev": "YAKT",
+                    "keywords":
+                    [
+                        {
+                            "value": "yakt"
+                        },
+                        {
+                            "value": "yakutsk"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Yakutsk"
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "offset": 9.5
+            "offset": 9.5,
+            "utcname": "UTC+09:30",
+            "offsettext": "+09:30",
+            "timezones":
+            [
+                {
+                    "name": "Australian Central Standard Time",
+                    "abbrev": "ACST",
+                    "keywords":
+                    [
+                        {
+                            "value": "acst"
+                        },
+                        {
+                            "value": "cst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Australia/Adelaide"
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "offset": 10
+            "offset": 10,
+            "utcname": "UTC+10:00",
+            "offsettext": "+10:00",
+            "timezones":
+            [
+                {
+                    "name": "UTC+10:00",
+                    "abbrev": "UTC+10",
+                    "keywords":
+                    [
+                        {
+                            "value": "gmt+10:00"
+                        },
+                        {
+                            "value": "gmt+10"
+                        },
+                        {
+                            "value": "utc+10"
+                        },
+                        {
+                            "value": "utc+10:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-10"
+                        }
+                    ]
+                },
+                {
+                    "name": "Australian Eastern Standard Time",
+                    "abbrev": "AEST",
+                    "keywords":
+                    [
+                        {
+                            "value": "aest"
+                        },
+                        {
+                            "value": "est"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Australia/Sydney"
+                        }
+                    ]
+                },
+                {
+                    "name": "Chuuk Time",
+                    "abbrev": "CHUT",
+                    "keywords":
+                    [
+                        {
+                            "value": "chut"
+                        },
+                        {
+                            "value": "chuuk"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-10"
+                        }
+                    ]
+                },
+                {
+                    "name": "Chamorro Standard Time",
+                    "abbrev": "ChST",
+                    "keywords":
+                    [
+                        {
+                            "value": "chst"
+                        },
+                        {
+                            "value": "chamorro"
+                        }
+                    ],
+                    "databasenames":
+                    [  
+                        {
+                            "value": "Pacific/Guam"
+                        }
+                    ]
+                },
+                {
+                    "name": "Guam Standard Time",
+                    "abbrev": "GST",
+                    "keywords":
+                    [
+                        {
+                            "value": "gst"
+                        },
+                        {
+                            "value": "guam"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Guam"
+                        }
+                    ]
+                },
+                {
+                    "name": "Dumont-d'Urville Time",
+                    "abbrev": "DDUT",
+                    "keywords":
+                    [
+                        {
+                            "value": "ddut"
+                        },
+                        {
+                            "value": "dumont"
+                        },
+                        {
+                            "value": "d'urville"
+                        },
+                        {
+                            "value": "durville"
+                        },
+                        {
+                            "value": "urville"
+                        },
+                        {
+                            "value": "dumont-d'urville"
+                        },
+                        {
+                            "value": "dumont-durville"
+                        },
+                        {
+                            "value": "dumontdurville"
+                        },
+                        {
+                            "value": "dumontd'urville"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Antarctica/DumontDUrville"
+                        }
+                    ]
+                },
+                {
+                    "name": "Kilo Time Zone",
+                    "abbrev": "K",
+                    "keywords":
+                    [
+                        {
+                            "value": "k"
+                        },
+                        {
+                            "value": "kilo"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-10"
+                        }
+                    ]
+                },
+                {
+                    "name": "Papua New Guinea Time",
+                    "abbrev": "PGT",
+                    "keywords":
+                    [
+                        {
+                            "value": "pgt"
+                        },
+                        {
+                            "value": "guinea"
+                        },
+                        {
+                            "value": "papua"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Port_Moresby"
+                        }
+                    ]
+                },
+                {
+                    "name": "Vladivostok Time",
+                    "abbrev": "VLAT",
+                    "keywords":
+                    [
+                        {
+                            "value": "vlat"
+                        },
+                        {
+                            "value": "vladivostok"
+                        }
+                    ],
+                    "databasenames":
+                    [  
+                        {
+                            "value": "Asia/Vladivostok"
+                        }
+                    ]
+                },
+                {
+                    "name": "Yakutsk Summer Time",
+                    "abbrev": "YAKST",
+                    "keywords":
+                    [
+                        {
+                            "value": "yakst"
+                        },
+                        {
+                            "value": "yakdt"
+                        },
+                        {
+                            "value": "yakdst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-10"
+                        }
+                    ]
+                },
+                {
+                    "name": "Yap Time",
+                    "abbrev": "YAPT",
+                    "keywords":
+                    [
+                        {
+                            "value": "yapt"
+                        },
+                        {
+                            "value": "yap"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-10"
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "offset": 10.5
+            "offset": 10.5,
+            "utcname": "UTC+10:30",
+            "offsettext": "+10:30",
+            "timezones":
+            [
+                {
+                    "name": "Australian Central Daylight Savings Time",
+                    "abbrev": "ACDT",
+                    "keywords":
+                    [
+                        {
+                            "value": "acdt"
+                        },
+                        {
+                            "value": "acdst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Australia/Adelaide"
+                        }
+                    ]
+                },
+                {
+                    "name": "Lord Howe Standard Time",
+                    "abbrev": "LHST",
+                    "keywords":
+                    [
+                        {
+                            "value": "lhst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Australia/Lord_Howe"
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "offset": 11
+            "offset": 11,
+            "utcname": "UTC+11:00",
+            "offsettext": "+11:00",
+            "timezones":
+            [
+                {
+                    "name": "UTC+11:00",
+                    "abbrev": "UTC+11",
+                    "keywords":
+                    [
+                        {
+                            "value": "gmt+11:00"
+                        },
+                        {
+                            "value": "gmt+11"
+                        },
+                        {
+                            "value": "utc+11"
+                        },
+                        {
+                            "value": "utc+11:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-11"
+                        }
+                    ]
+                },
+                {
+                    "name": "Australian Eastern Daylight Savings Time",
+                    "abbrev": "AEDT",
+                    "keywords":
+                    [
+                        {
+                            "value": "aedt"
+                        },
+                        {
+                            "value": "aedst"
+                        },
+                        {
+                            "value": "edt"
+                        },
+                        {
+                            "value": "edst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Australia/Sydney"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bougainville Standard Time",
+                    "abbrev": "BST",
+                    "keywords":
+                    [
+                        {
+                            "value": "bst"
+                        },
+                        {
+                            "value": "bougainville"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-11"
+                        }
+                    ]
+                },
+                {
+                    "name": "Kosrae Time",
+                    "abbrev": "KOST",
+                    "keywords":
+                    [
+                        {
+                            "value": "kost"
+                        },
+                        {
+                            "value": "kosrae"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-11"
+                        }
+                    ]
+                },
+                {
+                    "name": "Lima Time Zone",
+                    "abbrev": "L",
+                    "keywords":
+                    [
+                        {
+                            "value": "l"
+                        },
+                        {
+                            "value": "lima"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-11"
+                        }
+                    ]
+                },
+                {
+                    "name": "Lord Howe Daylight Savings Time",
+                    "abbrev": "LHDT",
+                    "keywords":
+                    [
+                        {
+                            "value": "lhdt"
+                        },
+                        {
+                            "value": "lhdst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Australia/Lord_Howe"
+                        }
+                    ]
+                },
+                {
+                    "name": "Magadan Time",
+                    "abbrev": "MAGT",
+                    "keywords":
+                    [
+                        {
+                            "value": "magt"
+                        },
+                        {
+                            "value": "magadan"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Magadan"
+                        }
+                    ]
+                },
+                {
+                    "name": "New Caledonia Time",
+                    "abbrev": "NCT",
+                    "keywords":
+                    [
+                        {
+                            "value": "nct"
+                        },
+                        {
+                            "value": "caledonia"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Noumea"
+                        }
+                    ]
+                },
+                {
+                    "name": "Norfolk Standard Time",
+                    "abbrev": "NFST",
+                    "keywords":
+                    [
+                        {
+                            "value": "nfst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Norfolk"
+                        }
+                    ]
+                },
+                {
+                    "name": "Pohnpei Standard Time",
+                    "abbrev": "PONT",
+                    "keywords":
+                    [
+                        {
+                            "value": "pont"
+                        },
+                        {
+                            "value": "pohnpei"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-11"
+                        }
+                    ]
+                },
+                {
+                    "name": "Sakhalin Time",
+                    "abbrev": "SAKT",
+                    "keywords":
+                    [
+                        {
+                            "value": "sakt"
+                        },
+                        {
+                            "value": "sakhalin"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Sakhalin"
+                        }
+                    ]
+                },
+                {
+                    "name": "Solomon Islands Time",
+                    "abbrev": "SBT",
+                    "keywords":
+                    [
+                        {
+                            "value": "sbt"
+                        },
+                        {
+                            "value": "solomon"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-11"
+                        }
+                    ]
+                },
+                {
+                    "name": "Srednekolymsk Time",
+                    "abbrev": "SRET",
+                    "keywords":
+                    [
+                        {
+                            "value": "sret"
+                        },
+                        {
+                            "value": "srednekolymsk"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Srednekolymsk"
+                        }
+                    ]
+                },
+                {
+                    "name": "Vladivostok Summer Time",
+                    "abbrev": "vlast",
+                    "keywords":
+                    [
+                        {
+                            "value": "vlast"
+                        },
+                        {
+                            "value": "vladt"
+                        },
+                        {
+                            "value": "vladst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-11"
+                        }
+                    ]
+                },
+                {
+                    "name": "Vanuatu Time",
+                    "abbrev": "VUT",
+                    "keywords":
+                    [
+                        {
+                            "value": "vut"
+                        },
+                        {
+                            "value": "vanuatu"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-11"
+                        }
+                    ]
+                },
+                {
+                    "name": "Efate Time",
+                    "abbrev": "EFATE",
+                    "keywords":
+                    [
+                        {
+                            "value": "efate"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-11"
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "offset": 12
+            "offset": 12,
+            "utcname": "UTC+12:00",
+            "offsettext": "+12:00",
+            "timezones":
+            [
+                {
+                    "name": "UTC+12:00",
+                    "abbrev": "UTC+12",
+                    "keywords":
+                    [
+                        {
+                            "value": "gmt+12:00"
+                        },
+                        {
+                            "value": "gmt+12"
+                        },
+                        {
+                            "value": "utc+12"
+                        },
+                        {
+                            "value": "utc+12:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-12"
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "offset": 12.75
+            "offset": 12.75,
+            "utcname": "UTC+12:45",
+            "offsettext": "+12:45",
+            "timezones":
+            [
+
+            ]
         },
         {
-            "offset": 13
+            "offset": 13,
+            "utcname": "UTC+13:00",
+            "offsettext": "+13:00",
+            "timezones":
+            [
+                {
+                    "name": "UTC+13:00",
+                    "abbrev": "UTC+13",
+                    "keywords":
+                    [
+                        {
+                            "value": "gmt+13:00"
+                        },
+                        {
+                            "value": "gmt+13"
+                        },
+                        {
+                            "value": "utc+13"
+                        },
+                        {
+                            "value": "utc+13:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-13"
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "offset": 14
+            "offset": 14,
+            "utcname": "UTC+14:00",
+            "offsettext": "+14:00",
+            "timezones":
+            [
+                {
+                    "name": "UTC+14:00",
+                    "abbrev": "UTC+14",
+                    "keywords":
+                    [
+                        {
+                            "value": "gmt+14:00"
+                        },
+                        {
+                            "value": "gmt+14"
+                        },
+                        {
+                            "value": "utc+14"
+                        },
+                        {
+                            "value": "utc+14:00"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-14"
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "dst":
@@ -4937,6 +6030,97 @@
                 },
                 {
                     "value": "iran"
+                }
+            ]
+        },
+        {
+            "name": "Australian Western Time",
+            "abbrev": "AWT",
+            "tzdatabase": "Australia/Perth",
+            "keywords":
+            [
+                {
+                    "value": "AWT"
+                },
+                {
+                    "value": "australia"
+                },
+                {
+                    "value": "australian"
+                }
+            ]
+        },
+        {
+            "name": "Australian Central Time",
+            "abbrev": "ACT",
+            "tzdatabase": "Australia/Adelaide",
+            "keywords":
+            [
+                {
+                    "value": "act"
+                },
+                {
+                    "value": "australia"
+                },
+                {
+                    "value": "australian"
+                }
+            ]
+        },
+        {
+            "name": "Australian Eastern Time",
+            "abbrev": "AET",
+            "tzdatabase":"Australia/Sydney",
+            "keywords":
+            [
+                {
+                    "value": "aet"
+                },
+                {
+                    "value": "australia"
+                },
+                {
+                    "value": "australian"
+                }
+            ]
+        },
+        {
+            "name": "Lord Howe Time",
+            "abbrev": "LHT",
+            "tzdatabase": "Australia/Lord_Howe",
+            "keywords":
+            [
+                {
+                    "value": "lht"
+                },
+                {
+                    "value": "lord"
+                },
+                {
+                    "value": "howe"
+                },
+                {
+                    "value": "lord-howe"
+                },
+                {
+                    "value": "lord_howe"
+                },
+                {
+                    "value": "lordhowe"
+                }
+            ]
+        },
+        {
+            "name": "Norfolk Time",
+            "abbrev": "NFT",
+            "tzdatabase": "Pacific/Norfolk",
+            "keywords":
+            [
+                {
+                    "value": "nft"
+                },
+                {
+                    "value": "norfolk"
                 }
             ]
         }
