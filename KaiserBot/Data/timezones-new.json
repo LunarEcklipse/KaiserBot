@@ -5640,6 +5640,300 @@
                             "value": "Etc/GMT-12"
                         }
                     ]
+                },
+                {
+                    "name": "Anadyr Summer Time",
+                    "abbrev": "ANAST",
+                    "keywords":
+                    [
+                        {
+                            "value": "anast"
+                        },
+                        {
+                            "value": "anadt"
+                        },
+                        {
+                            "value": "anadst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-12"
+                        }
+                    ]
+                },
+                {
+                    "name": "Anadyr Time",
+                    "abbrev": "ANAT",
+                    "keywords":
+                    [
+                        {
+                            "value": "anat"
+                        },
+                        {
+                            "value": "anadyr"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Anadyr"
+                        }
+                    ]
+                },
+                {
+                    "name": "Fiji Standard Time",
+                    "abbrev": "FJST",
+                    "keywords":
+                    [
+                        {
+                            "value": "fjst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Fiji"
+                        }
+                    ]
+                },
+                {
+                    "name": "Gilbert Island Time",
+                    "abbrev": "GILT",
+                    "keywords":
+                    [
+                        {
+                            "value": "gilt"
+                        },
+                        {
+                            "value": "gilbert"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Tarawa"
+                        }
+                    ]
+                },
+                {
+                    "name": "Mike Time Zone",
+                    "abbrev": "M",
+                    "keywords":
+                    [
+                        {
+                            "value": "m"
+                        },
+                        {
+                            "value": "mike"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-12"
+                        }
+                    ]
+                },
+                {
+                    "name": "Magadan Summer Time",
+                    "abbrev": "MAGST",
+                    "keywords":
+                    [
+                        {
+                            "value": "magst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-12"
+                        }
+                    ]
+                },
+                {
+                    "name": "Marshall Islands Time",
+                    "abbrev": "MHT",
+                    "keywords":
+                    [
+                        {
+                            "value": "mht"
+                        },
+                        {
+                            "value": "marshall"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Majuro"
+                        }
+                    ]
+                },
+                {
+                    "name": "Norfolk Daylight Savings Time",
+                    "abbrev": "NFDT",
+                    "keywords":
+                    [
+                        {
+                            "value": "nfdt"
+                        },
+                        {
+                            "value": "nfdst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Norfolk"
+                        }
+                    ]
+                },
+                {
+                    "name": "Nauru Time",
+                    "abbrev": "NRT",
+                    "keywords":
+                    [
+                        {
+                            "value": "nrt"
+                        },
+                        {
+                            "value": "nauru"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Nauru"
+                        }
+                    ]
+                },
+                {
+                    "name": "New Zealand Standard Time",
+                    "abbrev": "NZST",
+                    "keywords":
+                    [
+                        {
+                            "value": "nzst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Auckland"
+                        }
+                    ]
+                },
+                {
+                    "name": "Kamchatka Summer Time",
+                    "abbrev": "PETST",
+                    "keywords":
+                    [
+                        {
+                            "value": "petst"
+                        },
+                        {
+                            "value": "petdt"
+                        },
+                        {
+                            "value": "petdst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-12"
+                        }
+                    ]
+                },
+                {
+                    "name": "Kamchatka Time",
+                    "abbrev": "PETT",
+                    "keywords":
+                    [
+                        {
+                            "value": "pett"
+                        },
+                        {
+                            "value": "kamchatka"
+                        },
+                        {
+                            "value": "petropavlovsk"
+                        },
+                        {
+                            "value": "kamchatski"
+                        },
+                        {
+                            "value": "petropavlovsk-kamchatski"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Asia/Kamchatka"
+                        }
+                    ]
+                },
+                {
+                    "name": "Tuvalu Time",
+                    "abbrev": "TVT",
+                    "keywords":
+                    [
+                        {
+                            "value": "tvt"
+                        },
+                        {
+                            "value": "tuvalu"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Funafuti"
+                        }
+                    ]
+                },
+                {
+                    "name": "Wake Time",
+                    "abbrev": "WAKT",
+                    "keywords":
+                    [
+                        {
+                            "value": "wakt"
+                        },
+                        {
+                            "value": "wake"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Wake"
+                        }
+                    ]
+                },
+                {
+                    "name": "Wallis and Futuna Time",
+                    "abbrev": "WFT",
+                    "keywords":
+                    [
+                        {
+                            "value": "wft"
+                        },
+                        {
+                            "value": "wallis"
+                        },
+                        {
+                            "value": "futuna"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Wallis"
+                        }
+                    ]
                 }
             ]
         },
@@ -5649,7 +5943,22 @@
             "offsettext": "+12:45",
             "timezones":
             [
-
+                {
+                    "name": "Chatham Island Standard Time",
+                    "abbrev": "CHAST",
+                    "keywords":
+                    [
+                        {
+                            "value": "chast"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Chatham"
+                        }
+                    ]
+                }
             ]
         },
         {
@@ -5680,6 +5989,147 @@
                     [
                         {
                             "value": "Etc/GMT-13"
+                        }
+                    ]
+                },
+                {
+                    "name": "Fiji Daylight Savings Time",
+                    "abbrev": "FJDT",
+                    "keywords":
+                    [
+                        {
+                            "value": "fjdt"
+                        },
+                        {
+                            "value": "fjdst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Fiji"
+                        }
+                    ]
+                },
+                {
+                    "name": "New Zealand Daylight Savings Time",
+                    "abbrev": "NZDT",
+                    "keywords":
+                    [
+                        {
+                            "value": "nzdt"
+                        },
+                        {
+                            "value": "nzdst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Auckland"
+                        }
+                    ]
+                },
+                {
+                    "name": "Phoenix Island Time",
+                    "abbrev": "PHOT",
+                    "keywords":
+                    [
+                        {
+                            "value": "phot"
+                        },
+                        {
+                            "value": "phoenix"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Enderbury"
+                        }
+                    ]
+                },
+                {
+                    "name": "Tokelau Time",
+                    "abbrev": "TKT",
+                    "keywords":
+                    [
+                        {
+                            "value": "tkt"
+                        },
+                        {
+                            "value": "tokelau"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Fakaofo"
+                        }
+                    ]
+                },
+                {
+                    "name": "Tonga Time",
+                    "abbrev": "TOT",
+                    "keywords":
+                    [
+                        {
+                            "value": "tot"
+                        },
+                        {
+                            "value": "tonga"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Tongatapu"
+                        }
+                    ]
+                },
+                {
+                    "name": "West Samoa Standard Time",
+                    "abbrev": "WSST",
+                    "keywords":
+                    [
+                        {
+                            "value": "wsst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Apia"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "offset": 13.75,
+            "utcname": "UTC+13:45",
+            "offsettext": "+13:45",
+            "timezones":
+            [
+                {
+                    "name": "Chatham Island Daylight Savings Time",
+                    "abbrev": "CHADT",
+                    "keywords":
+                    [
+                        {
+                            "value": "chadt"
+                        },
+                        {
+                            "value": "chadst"
+                        },
+                        {
+                            "value": "cdt"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Chatham"
                         }
                     ]
                 }
@@ -5713,6 +6163,60 @@
                     [
                         {
                             "value": "Etc/GMT-14"
+                        }
+                    ]
+                },
+                {
+                    "name": "West Samoa Daylight Savings Time",
+                    "abbrev": "WSDT",
+                    "keywords":
+                    [
+                        {
+                            "value": "wsdt"
+                        },
+                        {
+                            "value": "wsdst"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Apia"
+                        }
+                    ]
+                },
+                {
+                    "name": "Tonga Summer Time",
+                    "abbrev": "TOST",
+                    "keywords":
+                    [
+                        {
+                            "value": "tost"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Etc/GMT-14"
+                        }
+                    ]
+                },
+                {
+                    "name": "Line Islands Time",
+                    "abbrev": "LINT",
+                    "keywords":
+                    [
+                        {
+                            "value": "lint"
+                        },
+                        {
+                            "value": "line"
+                        }
+                    ],
+                    "databasenames":
+                    [
+                        {
+                            "value": "Pacific/Kiritimati"
                         }
                     ]
                 }
@@ -6121,6 +6625,65 @@
                 },
                 {
                     "value": "norfolk"
+                }
+            ]
+        },
+        {
+            "name": "Fiji Time",
+            "abbrev": "FJT",
+            "tzdatabase": "Pacific/Fiji",
+            "keywords":
+            [
+                {
+                    "value": "fjt"
+                },
+                {
+                    "value": "fiji"
+                }
+            ]
+        },
+        {
+            "name": "New Zealand Time",
+            "abbrev": "NZT",
+            "tzdatabase": "Pacific/Auckland",
+            "keywords":
+            [
+                {
+                    "value": "nzt"
+                },
+                {
+                    "value": "zealand"
+                },
+                {
+                    "value": "nz"
+                }
+            ]
+        },
+        {
+            "name": "Chatham Island Time",
+            "abbrev": "CHAT",
+            "tzdatabase": "Pacific/Chatham",
+            "keywords":
+            [
+                {
+                    "value": "chat"
+                },
+                {
+                    "value": "chatham"
+                }
+            ]
+        },
+        {
+            "name": "West Samoa Time",
+            "abbrev": "WST",
+            "tzdatabase": "Pacific/Apia",
+            "keywords":
+            [
+                {
+                    "value": "wst"
+                },
+                {
+                    "value": "samoa"
                 }
             ]
         }
