@@ -2,13 +2,15 @@ import discord
 import discord.ext.tasks
 import json
 import asyncio
-from datetime import datetime
+from datetime import datetime, timedelta
 import time
 import random
 import math
 import os
 import pytz
+from fuzywuzzy import fuzz
 from pytz import timezone
+import pytz
 from dpyConsole import Console
 
 version = "1.1.0-alpha"
@@ -40,9 +42,11 @@ def CreateTimestamp():
 
 ### TIME ZONE SHIT ###
 
+
+
 ### MESSAGE HANDLER ###
 
-async def MessageHandler(client, message, timezones):
+async def MessageHandler(client, message):
 
     file = open(".//Data//blacklist.json", 'r')
     raw = file.read()
@@ -120,10 +124,10 @@ async def MessageHandler(client, message, timezones):
                     userIsBlacklisted = True
 
         if respID == 0:
-            await CommandDifference(message, msgSplit, timezones)
+            await CommandDifference(message, msgSplit)
             return
         if respID == 1:
-            await CommandTime(message, msgSplit, timezones)
+            await CommandTime(message, msgSplit)
             return
         if respID == 2:
             blacklistSuccess = CommandBlacklist(message, msgSplit)
@@ -326,6 +330,7 @@ def WhitelistChannel(ChannelID):
     file.close()
     return
 
+### GET DICTS ###
 
 def GetReactionDict():
     reactionDict = { # I had to do it this way because json encodes shit out
@@ -552,17 +557,37 @@ async def CommandDifference(message, msgSplit, timezone):
     tlocal = time.localtime()
     tgmt = time.gmtime()
 
-async def CommandTimeTZ(message, msgSplit, timezones):
+async def CommandTimeTZ(message, msgSplit):
+
     try:
-        timezoneSpec = msgSplit[2].upper()
+        testopen = open(".\\Data\\timezones.json", 'r')
+        testopen.close()
+    except (FileNotFoundError) as exception:
+        print(CreateTimestamp(), "timezones.json is missing! This command won't work until it's restored!")
+        return
+    file = open(".\\Data\\timezones.json", 'r')
+    raw = file.read()
+    file.close()
+    timezones = json.loads(raw)
+
+    try:
+        timezoneSpec = msgSplit[2].lower()
     except(IndexError) as exception:
-        timezoneSpec = msgSplit[1].upper()
+        timezoneSpec = msgSplit[1].lower()
     timezonePossibilities = []
     timezoneCount = 0
     for i in timezones:
-        if i["abbr"] == timezoneSpec:
-            timezonePossibilities.append(i["value"])
-            timezoneCount += 1
+        for j in i["dst"]: # DST timezones are prioritized.
+            for k in j["keywords"]:
+                if k["value"] == timezoneSpec:
+                    timezonePossibilities.append(k["name"])
+                    timezoneCount += 1
+        for j in i["nodst"]:
+            for k in j["timezones"]:
+                for l in k["keywords"]:
+                    if l["value"] == timezoneSpec:
+                        timezonePossibilities.append(k["name"])
+                        timezoneCount += 1
     if timezoneCount == 0:
         await message.channel.send(message.author.mention + " 'Tis not a timezone by my recollection, I fear.")
         return
@@ -570,11 +595,13 @@ async def CommandTimeTZ(message, msgSplit, timezones):
         await message.channel.send(message.author.mention + " 'Tis " + str(timezoneCount) + " timezones by that abbreviation in my recollection.")
     for i in timezonePossibilities:
         for j in timezones:
-            if j["value"] == i:
-                value = j["value"]
-                abbrev = j["abbr"]
-                offset = j["offset"]
-                text = j["text"]
+            for k in j["dst"]: # Again, DST is prioritized
+                if k["name"] == i:
+                tzname = k["name"]
+                tzabbrev = j["abbrev"]
+                tzdatabase = j["tzdatabase"]
+
+
 
                 timeNowEpoch = time.time()
                 offsetSec = offset * 3600 # converts the offset to seconds to add to epoch
@@ -639,8 +666,30 @@ async def CommandTimeTZ(message, msgSplit, timezones):
 
                 await message.channel.send(embed=msgEmbedReady)
 
+async def CommandTimezoneSendMsg(tzname, tzabbrev, tzdatabase="", offset=0):
+    utc = datetime.now(timezone.utc) # Gets our current UTC time. Now we can either do this the easy way, or the hard way.
+    if tzdatabase != "": # The easy way
+        timelocalized = utc.astimezone(tzdatabase)
+    else: # The hard way
+        isNegative = False
+        if offset < 0:
+            isNegative = True:
+        offsethrs = abs(math.floor(offset))
+        offsetmins = abs(60 * (offset % 1))
+        if isNegative:
+            timelocalized = utc - timedelta(minutes=offsetmins, hours=offsethrs)
+        else:
+            timelocalized = utc + timedelta(minutes=offsetmins, hours=offsethrs)
 
-async def CommandTime(message, msgSplit, timezones):
+    timeyear = int(timelocalized.strftime(%Y))
+    timemonth = int(timelocalized.strftime(%m))
+    timedate = int(timelocalized.strftime(%d))
+    timehour = int(timelocalized.strftime(%H))
+    timemin = int(timelocalized.strftime(%M)) # CONTINUE HERE
+
+
+
+async def CommandTime(message, msgSplit):
     noTimezone = False
     try:
         testGet = msgSplit[1]
@@ -649,7 +698,7 @@ async def CommandTime(message, msgSplit, timezones):
     except(IndexError) as exception:
         noTimezone = True
     if noTimezone == False:
-        await CommandTimeTZ(message, msgSplit, timezones)
+        await CommandTimeTZ(message, msgSplit)
         return
     noTimezone = False
     try:
@@ -661,8 +710,9 @@ async def CommandTime(message, msgSplit, timezones):
         return
     ts = time.localtime()
     hourInt = ts.tm_hour
-    if hourInt > 12:
-        hourInt = hourInt - 12
+    if hourInt > 1:
+        if hourInt != 12:
+            hourInt = hourInt - 12
         AMPM = "PM"
     else:
         AMPM = "AM"
@@ -769,11 +819,7 @@ async def on_message(message):
     if message.author == client.user: # Don't answer messages from yourself.
         return
     cwd = os.getcwd()
-    file = open(".\\Data\\Timezones.json", 'r')
-    raw = file.read()
-    timezones = json.loads(raw)
-    file.close()
-    await MessageHandler(client, message, timezones)
+    await MessageHandler(client, message)
 
 file = open(".\\Data\\BotToken.key", 'r')
 token = file.read()
