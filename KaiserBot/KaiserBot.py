@@ -707,7 +707,8 @@ async def CommandTimezoneSendMsg(tzname, tzabbrev, tzdatabase="", offset=0):
                     if timemonth == i["mon"]:
                         currMonth = i["name"]
                         break
-
+    
+    WeekdayDict = GetWeekdayDict()
                 currWkday = ""
                 for i in WeekdayDict["Weekdays"]:
                     if weekday == i["wday"]:
