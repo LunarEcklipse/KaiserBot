@@ -686,6 +686,41 @@ async def CommandTimezoneSendMsg(tzname, tzabbrev, tzdatabase="", offset=0):
     timedate = int(timelocalized.strftime(%d))
     timehour = int(timelocalized.strftime(%H))
     timemin = int(timelocalized.strftime(%M)) # CONTINUE HERE
+    weekday = timelocalized.weekday()
+
+    AMPM = "AM"
+    if timehour > 11: # Update this later to support preferences for 12 or 24 hour time.
+        AMPM = "PM"
+        it timehour != 12:
+            timehour -= 12
+    if timehour = 0:
+        timehour = 12:
+    
+    timehourstr = AddZeroBelowTen(timehour)
+    timeminstr = AddZeroBelowTen(timemin)
+
+    titlestring = "In " + tzname + ", 'tis currently " + timehourstr + ":" + timeminstr + " " + AMPM + "."
+
+    currMonth = ""
+    MonthDict = GetMonthConversion()
+        for i in MonthDict["Months"]:
+                    if timemonth == i["mon"]:
+                        currMonth = i["name"]
+                        break
+
+                currWkday = ""
+                for i in WeekdayDict["Weekdays"]:
+                    if weekday == i["wday"]:
+                        currWkday = i["name"]
+                        break
+    
+                dateSuffix = "th"
+                if tzDay == 1 or tzDay == 21 or tzDay == 31:
+                    dateSuffix = "st"
+                elif tzDay == 2 or tzDay == 22:
+                    dateSuffix = "nd"
+                elif tzDay == 3 or tzDay == 23: ## CONTINUE HERE
+                    dateSuffix = "rd"
 
 
 
