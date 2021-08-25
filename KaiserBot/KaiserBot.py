@@ -8,7 +8,7 @@ import random
 import math
 import os
 import pytz
-from fuzywuzzy import fuzz
+from fuzzywuzzy import fuzz
 from pytz import timezone
 import pytz
 from dpyConsole import Console
@@ -576,104 +576,49 @@ async def CommandTimeTZ(message, msgSplit):
         timezoneSpec = msgSplit[1].lower()
     timezonePossibilities = []
     timezoneCount = 0
-    for i in timezones:
-        for j in i["dst"]: # DST timezones are prioritized.
+    for i in timezones["dst"]:
+        for j in i["keywords"]:
+            if j["value"] == timezoneSpec:
+                timezonePossibilities.append(i["name"])
+                timezoneCount += 1
+    for i in timezones["nodst"]:
+        for j in i["timezones"]:
             for k in j["keywords"]:
                 if k["value"] == timezoneSpec:
-                    timezonePossibilities.append(k["name"])
+                    timezonePossibilities.append(j["name"])
                     timezoneCount += 1
-        for j in i["nodst"]:
-            for k in j["timezones"]:
-                for l in k["keywords"]:
-                    if l["value"] == timezoneSpec:
-                        timezonePossibilities.append(k["name"])
-                        timezoneCount += 1
     if timezoneCount == 0:
         await message.channel.send(message.author.mention + " 'Tis not a timezone by my recollection, I fear.")
         return
     if timezoneCount > 1:
         await message.channel.send(message.author.mention + " 'Tis " + str(timezoneCount) + " timezones by that abbreviation in my recollection.")
     for i in timezonePossibilities:
-        for j in timezones:
-            for k in j["dst"]: # Again, DST is prioritized
-                if k["name"] == i:
-                tzname = k["name"]
+        for j in timezones["dst"]:
+            if j["name"] == i:
+                tzname = j["name"]
                 tzabbrev = j["abbrev"]
                 tzdatabase = j["tzdatabase"]
+                CommandTimezoneSendMsg(message, tzname, tzabbrev, tzdatabase)
+
+        for j in timezones["nodst"]:
+            for k in j["timezones"]:
+                if k["name"] == i:
+                    tzname = k["name"]
+                    tzabbrev = k["abbrev"]
+                    offset = j["offset"]
+                    await CommandTimezoneSendMsg(message, tzname, tzabbrev, offset)
 
 
+    return
 
-                timeNowEpoch = time.time()
-                offsetSec = offset * 3600 # converts the offset to seconds to add to epoch
-                timeNowEpoch += offsetSec
-                timenow = time.gmtime(timeNowEpoch)
-
-                tzYear = timenow.tm_year
-                tzMonth = timenow.tm_mon
-                tzDay = timenow.tm_mday
-                tzHour = timenow.tm_hour
-                tzMin = timenow.tm_min
-                tzWday = timenow.tm_wday
-                
-                msgEmbed = GetBlankEmbed()
-                WeekdayDict = GetWeekdayDict()
-                MonthDict = GetMonthConversion()
-
-                if tzHour > 11:
-                    if tzHour != 12:
-                        tzHour = tzHour - 12
-                    AMPM = "PM"
-                else:
-                    AMPM = "AM"
-                if tzHour == 0:
-                    tzHour = 12
-                hour = AddZeroBelowTen(tzHour)
-                min = AddZeroBelowTen(tzMin)
-                titleString = "In " + abbrev + ", 'tis currently " + hour + ":" + min + " " + AMPM + "."
-
-                currMonth = ""
-                for i in MonthDict["Months"]:
-                    if tzMonth == i["mon"]:
-                        currMonth = i["name"]
-                        break
-
-                currWkday = ""
-                for i in WeekdayDict["Weekdays"]:
-                    if tzWday == i["wday"]:
-                        currWkday = i["name"]
-                        break
-
-                dateSuffix = "th"
-                if tzDay == 1 or tzDay == 21 or tzDay == 31:
-                    dateSuffix = "st"
-                elif tzDay == 2 or tzDay == 22:
-                    dateSuffix = "nd"
-                elif tzDay == 3 or tzDay == 23:
-                    dateSuffix == "rd"
-
-                descString = "There, the date is currently " + currWkday + ", the " + str(tzDay) + dateSuffix + " of " + currMonth + ", " + str(tzYear) + ".\nI better recall this time zone as " + value + "."
-                funFactString = FunFactGenerator()
-
-                footerString = value
-
-                msgEmbed = GetBlankEmbed()
-                msgEmbed["title"] = titleString
-                msgEmbed["description"] = descString
-                msgEmbed["footer"]["text"] = footerString
-                msgEmbed["fields"][0]["value"] = funFactString
-
-                msgEmbedReady = discord.Embed.from_dict(msgEmbed)
-
-                await message.channel.send(embed=msgEmbedReady)
-
-async def CommandTimezoneSendMsg(tzname, tzabbrev, tzdatabase="", offset=0):
-    utc = datetime.now(timezone.utc) # Gets our current UTC time. Now we can either do this the easy way, or the hard way.
+async def CommandTimezoneSendMsg(message, tzname, tzabbrev, tzdatabase="", offset=0):
+    utc = datetime.utcnow() # Gets our current UTC time. Now we can either do this the easy way, or the hard way.
     if tzdatabase != "": # The easy way
-        timelocalized = utc.astimezone(tzdatabase)
+        timelocalized = utc.astimezone(tzdatabase) # TO FIX: tzinfo argument must be a None or of a tzinfo subclass, not type 'int'
     else: # The hard way
         isNegative = False
         if offset < 0:
-            isNegative = True:
+            isNegative = True
         offsethrs = abs(math.floor(offset))
         offsetmins = abs(60 * (offset % 1))
         if isNegative:
@@ -681,20 +626,20 @@ async def CommandTimezoneSendMsg(tzname, tzabbrev, tzdatabase="", offset=0):
         else:
             timelocalized = utc + timedelta(minutes=offsetmins, hours=offsethrs)
 
-    timeyear = int(timelocalized.strftime(%Y))
-    timemonth = int(timelocalized.strftime(%m))
-    timedate = int(timelocalized.strftime(%d))
-    timehour = int(timelocalized.strftime(%H))
-    timemin = int(timelocalized.strftime(%M)) # CONTINUE HERE
+    timeyear = int(timelocalized.strftime("%Y"))
+    timemonth = int(timelocalized.strftime("%m"))
+    timedate = int(timelocalized.strftime("%d"))
+    timehour = int(timelocalized.strftime("%H"))
+    timemin = int(timelocalized.strftime("%M"))
     weekday = timelocalized.weekday()
 
     AMPM = "AM"
     if timehour > 11: # Update this later to support preferences for 12 or 24 hour time.
         AMPM = "PM"
-        it timehour != 12:
+        if timehour != 12:
             timehour -= 12
-    if timehour = 0:
-        timehour = 12:
+    if timehour == 0:
+        timehour = 12
     
     timehourstr = AddZeroBelowTen(timehour)
     timeminstr = AddZeroBelowTen(timemin)
@@ -703,26 +648,39 @@ async def CommandTimezoneSendMsg(tzname, tzabbrev, tzdatabase="", offset=0):
 
     currMonth = ""
     MonthDict = GetMonthConversion()
-        for i in MonthDict["Months"]:
-                    if timemonth == i["mon"]:
-                        currMonth = i["name"]
-                        break
+    for i in MonthDict["Months"]:
+        if timemonth == i["mon"]:
+            currMonth = i["name"]
+            break
     
     WeekdayDict = GetWeekdayDict()
-                currWkday = ""
-                for i in WeekdayDict["Weekdays"]:
-                    if weekday == i["wday"]:
-                        currWkday = i["name"]
-                        break
+    currWkday = ""
+    for i in WeekdayDict["Weekdays"]:
+        if weekday == i["wday"]:
+            currWkday = i["name"]
+            break
     
-                dateSuffix = "th"
-                if tzDay == 1 or tzDay == 21 or tzDay == 31:
-                    dateSuffix = "st"
-                elif tzDay == 2 or tzDay == 22:
-                    dateSuffix = "nd"
-                elif tzDay == 3 or tzDay == 23: ## CONTINUE HERE
-                    dateSuffix = "rd"
+    dateSuffix = "th"
+    if tzDay == 1 or tzDay == 21 or tzDay == 31:
+        dateSuffix = "st"
+    elif tzDay == 2 or tzDay == 22:
+        dateSuffix = "nd"
+    elif tzDay == 3 or tzDay == 23: ## CONTINUE HERE
+        dateSuffix = "rd"
 
+    descString = "There, the date is currently " + currWkday + ", the " + str(timedate) + dateSuffix + " of " + currMonth + ", " + str(timeyear) + ".\nI better recall this time zone as " + tzname + "."
+    funFactString = FunFactGenerator()
+    
+    msgEmbed = GetBlankEmbed()
+    msgEmbed["title"] = titleString
+    msgEmbed["description"] = descString
+    msgEmbed["footer"]["text"] = tzname
+    msgEmbed["fields"][0]["value"] = funFactString
+
+    msgEmbedReady = discord.Embed.from_dict(msgEmbed)
+
+    await message.channel.send(embed=msgEmbedReady)
+    return
 
 
 async def CommandTime(message, msgSplit):
@@ -867,4 +825,7 @@ if token == "":
     sys.exit()
 
 console.start()
-client.run(token) # Make sure this is always at the bottom!
+try:
+    client.run(token) # Make sure this is always at the bottom!
+except(discord.errors.LoginFailure) as exception:
+    print(CreateTimestamp(), "Error: Failed to log in. Make sure that the token in BotToken.key is correct!")
