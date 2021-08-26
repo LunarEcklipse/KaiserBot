@@ -144,7 +144,7 @@ async def MessageHandler(client, message):
             return
         return
     else:
-        file = open(".\\Data\\response.json", 'r')
+        file = open(".\\data\\system\\response.json", 'r')
         raw = file.read()
         file.close()
         response = json.loads(raw)
@@ -560,12 +560,12 @@ async def CommandDifference(message, msgSplit, timezone):
 async def CommandTimeTZ(message, msgSplit):
 
     try:
-        testopen = open(".\\Data\\timezones.json", 'r')
+        testopen = open(".\\data\\system\\timezones.json", 'r')
         testopen.close()
     except (FileNotFoundError) as exception:
         print(CreateTimestamp(), "timezones.json is missing! This command won't work until it's restored!")
         return
-    file = open(".\\Data\\timezones.json", 'r')
+    file = open(".\\data\\system\\timezones.json", 'r')
     raw = file.read()
     file.close()
     timezones = json.loads(raw)
@@ -597,8 +597,8 @@ async def CommandTimeTZ(message, msgSplit):
             if j["name"] == i:
                 tzname = j["name"]
                 tzabbrev = j["abbrev"]
-                tzdatabase = j["tzdatabase"]
-                CommandTimezoneSendMsg(message, tzname, tzabbrev, tzdatabase)
+                tzdatabase = pytz.timezone(j["tzdatabase"])
+                await CommandTimezoneSendMsg(message, tzname, tzabbrev, tzdatabase, 0)
 
         for j in timezones["nodst"]:
             for k in j["timezones"]:
@@ -606,15 +606,13 @@ async def CommandTimeTZ(message, msgSplit):
                     tzname = k["name"]
                     tzabbrev = k["abbrev"]
                     offset = j["offset"]
-                    await CommandTimezoneSendMsg(message, tzname, tzabbrev, offset)
-
-
+                    await CommandTimezoneSendMsg(message, tzname, tzabbrev, None, offset)
     return
 
-async def CommandTimezoneSendMsg(message, tzname, tzabbrev, tzdatabase="", offset=0):
+async def CommandTimezoneSendMsg(message, tzname, tzabbrev, tzdatabase, offset):
     utc = datetime.utcnow() # Gets our current UTC time. Now we can either do this the easy way, or the hard way.
-    if tzdatabase != "": # The easy way
-        timelocalized = utc.astimezone(tzdatabase) # TO FIX: tzinfo argument must be a None or of a tzinfo subclass, not type 'int'
+    if tzdatabase != None: # The easy way
+        timelocalized = utc.astimezone(tzdatabase) # TO FIX: tzinfo argument must be a None or of a tzinfo subclass, not type 'str'
     else: # The hard way
         isNegative = False
         if offset < 0:
@@ -644,7 +642,7 @@ async def CommandTimezoneSendMsg(message, tzname, tzabbrev, tzdatabase="", offse
     timehourstr = AddZeroBelowTen(timehour)
     timeminstr = AddZeroBelowTen(timemin)
 
-    titlestring = "In " + tzname + ", 'tis currently " + timehourstr + ":" + timeminstr + " " + AMPM + "."
+    titleString = "In " + tzabbrev + ", 'tis currently " + timehourstr + ":" + timeminstr + " " + AMPM + "."
 
     currMonth = ""
     MonthDict = GetMonthConversion()
@@ -661,16 +659,20 @@ async def CommandTimezoneSendMsg(message, tzname, tzabbrev, tzdatabase="", offse
             break
     
     dateSuffix = "th"
-    if tzDay == 1 or tzDay == 21 or tzDay == 31:
+    if (timedate % 10) == 1 and timedate != 11:
         dateSuffix = "st"
-    elif tzDay == 2 or tzDay == 22:
+    elif (timedate % 10) == 2 and timedate != 12:
         dateSuffix = "nd"
-    elif tzDay == 3 or tzDay == 23: ## CONTINUE HERE
+    elif (timedate % 10) == 3 and timedate != 13: ## CONTINUE HERE
         dateSuffix = "rd"
 
     descString = "There, the date is currently " + currWkday + ", the " + str(timedate) + dateSuffix + " of " + currMonth + ", " + str(timeyear) + ".\nI better recall this time zone as " + tzname + "."
     funFactString = FunFactGenerator()
     
+    if tzdatabase != None:
+        tzname += " − " + tzdatabase.zone
+    tzname += " − Data from IANA Timezone Database"
+
     msgEmbed = GetBlankEmbed()
     msgEmbed["title"] = titleString
     msgEmbed["description"] = descString
@@ -700,9 +702,13 @@ async def CommandTime(message, msgSplit):
     except(IndexError) as exception: # This chunk tests if there is a second time zone, in which case a different command needs to be run.
         noTimezone = True
     if noTimezone == False:
-        await CommandTimeTZ(message, msgSplit, timezones)
+        await CommandTimeTZ(message, msgSplit)
         return
-    ts = time.localtime()
+
+    pytz.timezone("Etc/GMT")
+    await CommandTimezoneSendMsg(message, "Coordinated Universal Time", "UTC", pytz.timezone("Etc/GMT"), 0) # For the time being, a regular time command returns UTC. Make this a preference thing later.
+    return
+
     hourInt = ts.tm_hour
     if hourInt > 1:
         if hourInt != 12:
@@ -757,12 +763,13 @@ async def CommandTime(message, msgSplit):
 def FunFactGenerator():
     random.seed(round(time.time()))
     try:
-        file = open(".\\Data\\generalfacts.json", 'r')
+        file = open(".\\data\\system\\generalfacts.json", 'r')
         raw = file.read()
         file.close()
         generalfacts = json.loads(raw)
     except(FileNotFoundError) as exception:
-        return "Error: generalfacts.json is missing!"
+        print(CreateTimestamp(), "Error: generalfacts.json is missing!")
+        return
     count = -1 # starting at -1 since the first position is 0 in an array
     for i in generalfacts:
         count +=1
@@ -815,7 +822,7 @@ async def on_message(message):
     cwd = os.getcwd()
     await MessageHandler(client, message)
 
-file = open(".\\Data\\BotToken.key", 'r')
+file = open(".\\data\\BotToken.key", 'r')
 token = file.read()
 file.close()
 
