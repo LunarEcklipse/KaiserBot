@@ -338,6 +338,3 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
-
-# Ignore key file to keep it from putting the file up with the key every time.
-*.key

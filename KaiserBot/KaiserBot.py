@@ -44,7 +44,7 @@ def CreateTimestamp():
 
 async def MessageHandler(client, message):
 
-    file = open(".//data//blacklist.json", 'r')
+    file = open(".//data//system//blacklist.json", 'r')
     raw = file.read()
     file.close()
     blacklist = json.loads(raw)
@@ -217,15 +217,15 @@ def CommandWhitelist(message, msgSplit, userBlacklisted, channelBlacklisted):
 
 def BlacklistChannel(ChannelID):
     try:
-        file = open(".//data//blacklist.json", 'r')
+        file = open(".//data//system//blacklist.json", 'r')
     except(FileNotFoundError) as exception:
         print(CreateTimestamp(), "blacklist.json not found! Making a new one.")
-        file = open(".//data//blacklist.json", 'x')
+        file = open(".//data//system//blacklist.json", 'x')
         file.close()
-        file = open(".//data//blacklist.json", 'w')
+        file = open(".//data//system//blacklist.json", 'w')
         file.write("{\"Channels\": [], \"Users\": []}")
         file.close()
-        file = open(".//data//blacklist.json", 'r')
+        file = open(".//data//system//blacklist.json", 'r')
     raw = file.read()
     blacklist = json.loads(raw)
     file.close()
@@ -235,7 +235,7 @@ def BlacklistChannel(ChannelID):
             return
     blacklist["Channels"].append({"ChannelID": ChannelID})
     raw = json.dumps(blacklist)
-    file = open(".//data//blacklist.json", 'w')
+    file = open(".//data//system//blacklist.json", 'w')
     file.write(raw)
     file.close()
     print(CreateTimestamp(), "Channel with ID", ChannelID, "blacklisted.")
@@ -243,15 +243,15 @@ def BlacklistChannel(ChannelID):
 
 def BlacklistUser(UserID, GuildID, AdminBlacklist): # Admin blacklist means the user was blacklisted by someone with privileges and they cannot whitelist themselves if they do not have the same perms.
     try:
-        file = open(".//data//blacklist.json", 'r')
+        file = open(".//data//system//blacklist.json", 'r')
     except(FileNotFoundError) as exception:
         print(CreateTimestamp(), "blacklist.json not found! Making a new one.")
-        file = open(".//data//blacklist.json", 'x')
+        file = open(".//data//system//blacklist.json", 'x')
         file.close()
-        file = open(".//data//blacklist.json", 'w')
+        file = open(".//data//system//blacklist.json", 'w')
         file.write("{\"Channels\": [], \"Users\": []}")
         file.close()
-        file = open(".//data//blacklist.json", 'r')
+        file = open(".//data//system//blacklist.json", 'r')
     raw = file.read()
     blacklist = json.loads(raw)
     file.close()
@@ -261,7 +261,7 @@ def BlacklistUser(UserID, GuildID, AdminBlacklist): # Admin blacklist means the 
             return
     blacklist["Users"].append({"GuildID": GuildID, "UserID": UserID, "AdminBlacklisted": AdminBlacklist})
     raw = json.dumps(blacklist)
-    file = open(".//data//blacklist.json", 'w')
+    file = open(".//data//system//blacklist.json", 'w')
     file.write(raw)
     file.close()
     print(CreateTimestamp(), "User with ID: " + str(UserID) + " blacklisted in guild with ID: " + str(GuildID) + ".")
@@ -269,10 +269,10 @@ def BlacklistUser(UserID, GuildID, AdminBlacklist): # Admin blacklist means the 
 
 def WhitelistUser(UserID, GuildID, AdminWhitelist):
     try:
-        file = open(".//data//blacklist.json", 'r')
+        file = open(".//data//system//blacklist.json", 'r')
     except(FileNotFoundError) as exception:
         print(CreateTimestamp(), "blacklist.json not found! Making a new one.")
-        file = open(".//data//blacklist.json", 'x')
+        file = open(".//data//system//blacklist.json", 'x')
         file.close()
         return
     raw = file.read()
@@ -288,17 +288,17 @@ def WhitelistUser(UserID, GuildID, AdminWhitelist):
             print(CreateTimestamp(), "This user has been whitelisted.")
             break
     raw = json.dumps(blacklist)
-    file = open(".//data//blacklist.json", 'w')
+    file = open(".//data//system//blacklist.json", 'w')
     file.write(raw)
     file.close()
     return
 
 def WhitelistChannel(ChannelID):
     try:
-        file = open(".//data//blacklist.json", 'r')
+        file = open(".//data//system//blacklist.json", 'r')
     except(FileNotFoundError) as exception:
         print(CreateTimestamp(), "blacklist.json not found! Making a new one.")
-        file = open(".//data//blacklist.json", 'x')
+        file = open(".//data//system//blacklist.json", 'x')
         file.close()
         return
     raw = file.read()
@@ -310,7 +310,7 @@ def WhitelistChannel(ChannelID):
             print(CreateTimestamp(), "This channel has been whitelisted.")
             break
     raw = json.dumps(blacklist)
-    file = open(".//data//blacklist.json", 'w')
+    file = open(".//data//system//blacklist.json", 'w')
     file.write(raw)
     file.close()
     return
@@ -800,7 +800,7 @@ async def on_message(message):
     cwd = os.getcwd()
     await MessageHandler(client, message)
 
-file = open(".\\data\\BotToken.key", 'r')
+file = open(".\\data\\system\\BotToken.key", 'r')
 token = file.read()
 file.close()
 
