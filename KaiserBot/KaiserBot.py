@@ -53,14 +53,6 @@ async def MessageHandler(client, message):
         "Responses":
         [
             {
-                "Keyword": "difference", # Difference between two time zones
-                "RespID": 0
-            },
-            {
-                "Keyword": "diff",
-                "RespID": 0
-            },
-            {
                 "Keyword": "time",
                 "RespID": 1
             },
@@ -119,9 +111,6 @@ async def MessageHandler(client, message):
                 if message.author.id == i["UserID"]:
                     userIsBlacklisted = True
 
-        if respID == 0:
-            await CommandDifference(message, msgSplit)
-            return
         if respID == 1:
             await CommandTime(message, msgSplit)
             return
@@ -543,15 +532,6 @@ def GetWeekdayDict():
         ]
     }
     return WeekdayDict
-
-async def CommandDifference(message, msgSplit, timezone):
-    try:
-        tzOne = msgSplit[2]
-    except(IndexError) as exception: # If this fails, the command fails.
-        message.channel.send()
-
-    tlocal = time.localtime()
-    tgmt = time.gmtime()
 
 async def CommandTimeTZ(message, msgSplit):
 
