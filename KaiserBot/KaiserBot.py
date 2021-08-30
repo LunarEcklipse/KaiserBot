@@ -13,7 +13,7 @@ from pytz import timezone
 import pytz
 from dpyConsole import Console
 
-version = "1.1.0-alpha"
+version = "1.2.0-alpha"
 
 absPath = os.path.abspath(__file__) # This little chunk makes sure the working directory is correct.
 dname = os.path.dirname(absPath)
